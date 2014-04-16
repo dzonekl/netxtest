@@ -1,0 +1,47 @@
+/**
+ * The DragonX DSL is a grammar for definition and execution of tests. 
+ * 
+ * author: Christophe Bouhier
+ * 
+ * */
+grammar com.netxforge.netxtest.DragonX with org.eclipse.xtext.common.Terminals
+
+generate dragonX "http://www.netxforge.com/netxtest/DragonX"
+
+DragonX:
+	tests+=Test*;
+
+Test:
+	'TEST' name=ID
+	meta=TestMeta
+	procedure=Procedure;
+
+TestMeta:
+	meta+=TestMetaObject;
+
+
+TestMetaObject:
+	'[' metatype=METATYPE ']' metaValue=MetaValue;
+
+MetaValue:
+	STRING;
+
+Procedure:
+	actions+=Action;
+
+Action:
+	action=ACTIONS parameters+=Parameter;
+
+Parameter:
+	'#' name=ID ':' value=Value;
+
+Value:
+	INT | STRING
+;
+
+enum METATYPE:
+	description='Description';
+
+enum ACTIONS:
+	call='CALL' | ussd='USSD' | sms='SMS' | data='DATA';
+

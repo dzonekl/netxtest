@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dragonX" nsURI="http://www.netxforge.com/netxtest/DragonX" nsPrefix="dragonX">
+  <eClassifiers xsi:type="ecore:EClass" name="DragonX">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tests" upperBound="-1"
+        eType="#//Test" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Test">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meta" eType="#//TestMeta"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="procedure" eType="#//Procedure"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestMeta">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meta" upperBound="-1" eType="#//TestMetaObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestMetaObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metatype" eType="#//METATYPE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metaValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Procedure">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="#//ACTIONS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="METATYPE">
+    <eLiterals name="description" literal="Description"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ACTIONS">
+    <eLiterals name="call" literal="CALL"/>
+    <eLiterals name="ussd" value="1" literal="USSD"/>
+    <eLiterals name="sms" value="2" literal="SMS"/>
+    <eLiterals name="data" value="3" literal="DATA"/>
+  </eClassifiers>
+</ecore:EPackage>
