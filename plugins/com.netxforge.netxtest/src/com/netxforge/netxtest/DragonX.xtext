@@ -9,16 +9,27 @@ grammar com.netxforge.netxtest.DragonX with org.eclipse.xtext.common.Terminals
 generate dragonX "http://www.netxforge.com/netxtest/DragonX"
 
 DragonX:
-	tests+=Test*;
+	tests+=Test*
+	ues+=UE+;
+
+	// A User Equipment Definition. 
+UE:
+	'{' meta=UEMeta '}';
+
+UEMeta:
+	ueMeta+=UEMetaObject;
+
+UEMetaObject:
+	'[' params+=UEPARAMS ']' paramValue=UEValue;
+
+UEValue:
+	STRING | ID;
 
 Test:
-	'TEST' name=ID
-	meta=TestMeta
-	procedure=Procedure;
+	'TestCase' name=ID meta=TestMeta procedure=Procedure;
 
 TestMeta:
-	meta+=TestMetaObject;
-
+	meta+=TestMetaObject+;
 
 TestMetaObject:
 	'[' metatype=METATYPE ']' metaValue=MetaValue;
@@ -32,12 +43,15 @@ Procedure:
 Action:
 	action=ACTIONS parameters+=Parameter;
 
+	// Free form parameter, but could be. 
 Parameter:
 	'#' name=ID ':' value=Value;
 
 Value:
-	INT | STRING
-;
+	INT | STRING;
+
+enum UEPARAMS:
+	imei='IMEI' | name='Name' | msidn='MSISDN';
 
 enum METATYPE:
 	description='Description';
@@ -45,3 +59,5 @@ enum METATYPE:
 enum ACTIONS:
 	call='CALL' | ussd='USSD' | sms='SMS' | data='DATA';
 
+QUALIFIED_ID:
+	ID ('.' ID)*;
