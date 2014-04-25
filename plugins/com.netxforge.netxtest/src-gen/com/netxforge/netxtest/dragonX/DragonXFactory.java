@@ -32,13 +32,31 @@ public interface DragonXFactory extends EFactory
   DragonX createDragonX();
 
   /**
-   * Returns a new object of class '<em>Test</em>'.
+   * Returns a new object of class '<em>UE</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Test</em>'.
+   * @return a new object of class '<em>UE</em>'.
    * @generated
    */
-  Test createTest();
+  UE createUE();
+
+  /**
+   * Returns a new object of class '<em>UE Meta Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>UE Meta Object</em>'.
+   * @generated
+   */
+  UEMetaObject createUEMetaObject();
+
+  /**
+   * Returns a new object of class '<em>Test Case</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Test Case</em>'.
+   * @generated
+   */
+  TestCase createTestCase();
 
   /**
    * Returns a new object of class '<em>Test Meta</em>'.
@@ -75,6 +93,15 @@ public interface DragonXFactory extends EFactory
    * @generated
    */
   Action createAction();
+
+  /**
+   * Returns a new object of class '<em>Parameter Set</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parameter Set</em>'.
+   * @generated
+   */
+  ParameterSet createParameterSet();
 
   /**
    * Returns a new object of class '<em>Parameter</em>'.

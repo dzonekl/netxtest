@@ -3,8 +3,6 @@
  */
 package com.netxforge.netxtest.ui.contentassist
 
-import com.netxforge.netxtest.ui.contentassist.AbstractDragonXProposalProvider
-
 /**
  * see http://www.eclipse.org/Xtext/documentation.html#contentAssist on how to customize content assistant
  */

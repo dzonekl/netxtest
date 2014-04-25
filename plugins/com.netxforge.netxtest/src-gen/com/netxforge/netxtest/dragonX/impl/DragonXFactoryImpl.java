@@ -66,11 +66,14 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
     switch (eClass.getClassifierID())
     {
       case DragonXPackage.DRAGON_X: return createDragonX();
-      case DragonXPackage.TEST: return createTest();
+      case DragonXPackage.UE: return createUE();
+      case DragonXPackage.UE_META_OBJECT: return createUEMetaObject();
+      case DragonXPackage.TEST_CASE: return createTestCase();
       case DragonXPackage.TEST_META: return createTestMeta();
       case DragonXPackage.TEST_META_OBJECT: return createTestMetaObject();
       case DragonXPackage.PROCEDURE: return createProcedure();
       case DragonXPackage.ACTION: return createAction();
+      case DragonXPackage.PARAMETER_SET: return createParameterSet();
       case DragonXPackage.PARAMETER: return createParameter();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -87,6 +90,10 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case DragonXPackage.ACTIONPARAMS:
+        return createACTIONPARAMSFromString(eDataType, initialValue);
+      case DragonXPackage.UEPARAMS:
+        return createUEPARAMSFromString(eDataType, initialValue);
       case DragonXPackage.METATYPE:
         return createMETATYPEFromString(eDataType, initialValue);
       case DragonXPackage.ACTIONS:
@@ -106,6 +113,10 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case DragonXPackage.ACTIONPARAMS:
+        return convertACTIONPARAMSToString(eDataType, instanceValue);
+      case DragonXPackage.UEPARAMS:
+        return convertUEPARAMSToString(eDataType, instanceValue);
       case DragonXPackage.METATYPE:
         return convertMETATYPEToString(eDataType, instanceValue);
       case DragonXPackage.ACTIONS:
@@ -131,10 +142,32 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Test createTest()
+  public UE createUE()
   {
-    TestImpl test = new TestImpl();
-    return test;
+    UEImpl ue = new UEImpl();
+    return ue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UEMetaObject createUEMetaObject()
+  {
+    UEMetaObjectImpl ueMetaObject = new UEMetaObjectImpl();
+    return ueMetaObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TestCase createTestCase()
+  {
+    TestCaseImpl testCase = new TestCaseImpl();
+    return testCase;
   }
 
   /**
@@ -186,10 +219,65 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ParameterSet createParameterSet()
+  {
+    ParameterSetImpl parameterSet = new ParameterSetImpl();
+    return parameterSet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Parameter createParameter()
   {
     ParameterImpl parameter = new ParameterImpl();
     return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ACTIONPARAMS createACTIONPARAMSFromString(EDataType eDataType, String initialValue)
+  {
+    ACTIONPARAMS result = ACTIONPARAMS.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertACTIONPARAMSToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UEPARAMS createUEPARAMSFromString(EDataType eDataType, String initialValue)
+  {
+    UEPARAMS result = UEPARAMS.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertUEPARAMSToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

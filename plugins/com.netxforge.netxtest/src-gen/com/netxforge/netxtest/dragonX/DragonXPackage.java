@@ -68,13 +68,22 @@ public interface DragonXPackage extends EPackage
   int DRAGON_X = 0;
 
   /**
+   * The feature id for the '<em><b>Ues</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRAGON_X__UES = 0;
+
+  /**
    * The feature id for the '<em><b>Tests</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DRAGON_X__TESTS = 0;
+  int DRAGON_X__TESTS = 1;
 
   /**
    * The number of structural features of the '<em>Dragon X</em>' class.
@@ -83,17 +92,82 @@ public interface DragonXPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DRAGON_X_FEATURE_COUNT = 1;
+  int DRAGON_X_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.TestImpl <em>Test</em>}' class.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.UEImpl <em>UE</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.TestImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getTest()
+   * @see com.netxforge.netxtest.dragonX.impl.UEImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUE()
    * @generated
    */
-  int TEST = 1;
+  int UE = 1;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UE__META = 0;
+
+  /**
+   * The number of structural features of the '<em>UE</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.UEMetaObjectImpl <em>UE Meta Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.impl.UEMetaObjectImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUEMetaObject()
+   * @generated
+   */
+  int UE_META_OBJECT = 2;
+
+  /**
+   * The feature id for the '<em><b>Params</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UE_META_OBJECT__PARAMS = 0;
+
+  /**
+   * The feature id for the '<em><b>Param Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UE_META_OBJECT__PARAM_VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>UE Meta Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UE_META_OBJECT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.TestCaseImpl <em>Test Case</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.impl.TestCaseImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getTestCase()
+   * @generated
+   */
+  int TEST_CASE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,7 +176,7 @@ public interface DragonXPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEST__NAME = 0;
+  int TEST_CASE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Meta</b></em>' containment reference.
@@ -111,7 +185,7 @@ public interface DragonXPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEST__META = 1;
+  int TEST_CASE__META = 1;
 
   /**
    * The feature id for the '<em><b>Procedure</b></em>' containment reference.
@@ -120,16 +194,16 @@ public interface DragonXPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEST__PROCEDURE = 2;
+  int TEST_CASE__PROCEDURE = 2;
 
   /**
-   * The number of structural features of the '<em>Test</em>' class.
+   * The number of structural features of the '<em>Test Case</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEST_FEATURE_COUNT = 3;
+  int TEST_CASE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.TestMetaImpl <em>Test Meta</em>}' class.
@@ -139,7 +213,7 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getTestMeta()
    * @generated
    */
-  int TEST_META = 2;
+  int TEST_META = 4;
 
   /**
    * The feature id for the '<em><b>Meta</b></em>' containment reference list.
@@ -167,7 +241,7 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getTestMetaObject()
    * @generated
    */
-  int TEST_META_OBJECT = 3;
+  int TEST_META_OBJECT = 5;
 
   /**
    * The feature id for the '<em><b>Metatype</b></em>' attribute.
@@ -204,7 +278,7 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getProcedure()
    * @generated
    */
-  int PROCEDURE = 4;
+  int PROCEDURE = 6;
 
   /**
    * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -232,25 +306,25 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getAction()
    * @generated
    */
-  int ACTION = 5;
+  int ACTION = 7;
 
   /**
-   * The feature id for the '<em><b>Action</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION__ACTION = 0;
+  int ACTION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Parameter Set</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION__PARAMETERS = 1;
+  int ACTION__PARAMETER_SET = 1;
 
   /**
    * The number of structural features of the '<em>Action</em>' class.
@@ -262,6 +336,34 @@ public interface DragonXPackage extends EPackage
   int ACTION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetImpl <em>Parameter Set</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSet()
+   * @generated
+   */
+  int PARAMETER_SET = 8;
+
+  /**
+   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_SET__PARAMETERS = 0;
+
+  /**
+   * The number of structural features of the '<em>Parameter Set</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_SET_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl <em>Parameter</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -269,7 +371,7 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 6;
+  int PARAMETER = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -290,13 +392,42 @@ public interface DragonXPackage extends EPackage
   int PARAMETER__VALUE = 1;
 
   /**
+   * The feature id for the '<em><b>Ue Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER__UE_REF = 2;
+
+  /**
    * The number of structural features of the '<em>Parameter</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_FEATURE_COUNT = 2;
+  int PARAMETER_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.ACTIONPARAMS <em>ACTIONPARAMS</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.ACTIONPARAMS
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getACTIONPARAMS()
+   * @generated
+   */
+  int ACTIONPARAMS = 10;
+
+  /**
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.UEPARAMS <em>UEPARAMS</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.UEPARAMS
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUEPARAMS()
+   * @generated
+   */
+  int UEPARAMS = 11;
 
   /**
    * The meta object id for the '{@link com.netxforge.netxtest.dragonX.METATYPE <em>METATYPE</em>}' enum.
@@ -306,7 +437,7 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getMETATYPE()
    * @generated
    */
-  int METATYPE = 7;
+  int METATYPE = 12;
 
   /**
    * The meta object id for the '{@link com.netxforge.netxtest.dragonX.ACTIONS <em>ACTIONS</em>}' enum.
@@ -316,7 +447,7 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getACTIONS()
    * @generated
    */
-  int ACTIONS = 8;
+  int ACTIONS = 13;
 
 
   /**
@@ -330,6 +461,17 @@ public interface DragonXPackage extends EPackage
   EClass getDragonX();
 
   /**
+   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.DragonX#getUes <em>Ues</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ues</em>'.
+   * @see com.netxforge.netxtest.dragonX.DragonX#getUes()
+   * @see #getDragonX()
+   * @generated
+   */
+  EReference getDragonX_Ues();
+
+  /**
    * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.DragonX#getTests <em>Tests</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -341,47 +483,100 @@ public interface DragonXPackage extends EPackage
   EReference getDragonX_Tests();
 
   /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.Test <em>Test</em>}'.
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.UE <em>UE</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Test</em>'.
-   * @see com.netxforge.netxtest.dragonX.Test
+   * @return the meta object for class '<em>UE</em>'.
+   * @see com.netxforge.netxtest.dragonX.UE
    * @generated
    */
-  EClass getTest();
+  EClass getUE();
 
   /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.Test#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.UE#getMeta <em>Meta</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Meta</em>'.
+   * @see com.netxforge.netxtest.dragonX.UE#getMeta()
+   * @see #getUE()
+   * @generated
+   */
+  EReference getUE_Meta();
+
+  /**
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.UEMetaObject <em>UE Meta Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>UE Meta Object</em>'.
+   * @see com.netxforge.netxtest.dragonX.UEMetaObject
+   * @generated
+   */
+  EClass getUEMetaObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.UEMetaObject#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Params</em>'.
+   * @see com.netxforge.netxtest.dragonX.UEMetaObject#getParams()
+   * @see #getUEMetaObject()
+   * @generated
+   */
+  EAttribute getUEMetaObject_Params();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.UEMetaObject#getParamValue <em>Param Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Param Value</em>'.
+   * @see com.netxforge.netxtest.dragonX.UEMetaObject#getParamValue()
+   * @see #getUEMetaObject()
+   * @generated
+   */
+  EAttribute getUEMetaObject_ParamValue();
+
+  /**
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.TestCase <em>Test Case</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Test Case</em>'.
+   * @see com.netxforge.netxtest.dragonX.TestCase
+   * @generated
+   */
+  EClass getTestCase();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.TestCase#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see com.netxforge.netxtest.dragonX.Test#getName()
-   * @see #getTest()
+   * @see com.netxforge.netxtest.dragonX.TestCase#getName()
+   * @see #getTestCase()
    * @generated
    */
-  EAttribute getTest_Name();
+  EAttribute getTestCase_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.Test#getMeta <em>Meta</em>}'.
+   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.TestCase#getMeta <em>Meta</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Meta</em>'.
-   * @see com.netxforge.netxtest.dragonX.Test#getMeta()
-   * @see #getTest()
+   * @see com.netxforge.netxtest.dragonX.TestCase#getMeta()
+   * @see #getTestCase()
    * @generated
    */
-  EReference getTest_Meta();
+  EReference getTestCase_Meta();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.Test#getProcedure <em>Procedure</em>}'.
+   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.TestCase#getProcedure <em>Procedure</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Procedure</em>'.
-   * @see com.netxforge.netxtest.dragonX.Test#getProcedure()
-   * @see #getTest()
+   * @see com.netxforge.netxtest.dragonX.TestCase#getProcedure()
+   * @see #getTestCase()
    * @generated
    */
-  EReference getTest_Procedure();
+  EReference getTestCase_Procedure();
 
   /**
    * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.TestMeta <em>Test Meta</em>}'.
@@ -468,26 +663,47 @@ public interface DragonXPackage extends EPackage
   EClass getAction();
 
   /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.Action#getAction <em>Action</em>}'.
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.Action#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Action</em>'.
-   * @see com.netxforge.netxtest.dragonX.Action#getAction()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.netxforge.netxtest.dragonX.Action#getName()
    * @see #getAction()
    * @generated
    */
-  EAttribute getAction_Action();
+  EAttribute getAction_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.Action#getParameters <em>Parameters</em>}'.
+   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.Action#getParameterSet <em>Parameter Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter Set</em>'.
+   * @see com.netxforge.netxtest.dragonX.Action#getParameterSet()
+   * @see #getAction()
+   * @generated
+   */
+  EReference getAction_ParameterSet();
+
+  /**
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSet <em>Parameter Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parameter Set</em>'.
+   * @see com.netxforge.netxtest.dragonX.ParameterSet
+   * @generated
+   */
+  EClass getParameterSet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSet#getParameters <em>Parameters</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.Action#getParameters()
-   * @see #getAction()
+   * @see com.netxforge.netxtest.dragonX.ParameterSet#getParameters()
+   * @see #getParameterSet()
    * @generated
    */
-  EReference getAction_Parameters();
+  EReference getParameterSet_Parameters();
 
   /**
    * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.Parameter <em>Parameter</em>}'.
@@ -520,6 +736,37 @@ public interface DragonXPackage extends EPackage
    * @generated
    */
   EAttribute getParameter_Value();
+
+  /**
+   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.Parameter#getUeRef <em>Ue Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Ue Ref</em>'.
+   * @see com.netxforge.netxtest.dragonX.Parameter#getUeRef()
+   * @see #getParameter()
+   * @generated
+   */
+  EReference getParameter_UeRef();
+
+  /**
+   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.ACTIONPARAMS <em>ACTIONPARAMS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>ACTIONPARAMS</em>'.
+   * @see com.netxforge.netxtest.dragonX.ACTIONPARAMS
+   * @generated
+   */
+  EEnum getACTIONPARAMS();
+
+  /**
+   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.UEPARAMS <em>UEPARAMS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>UEPARAMS</em>'.
+   * @see com.netxforge.netxtest.dragonX.UEPARAMS
+   * @generated
+   */
+  EEnum getUEPARAMS();
 
   /**
    * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.METATYPE <em>METATYPE</em>}'.
@@ -575,6 +822,14 @@ public interface DragonXPackage extends EPackage
     EClass DRAGON_X = eINSTANCE.getDragonX();
 
     /**
+     * The meta object literal for the '<em><b>Ues</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DRAGON_X__UES = eINSTANCE.getDragonX_Ues();
+
+    /**
      * The meta object literal for the '<em><b>Tests</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -583,14 +838,58 @@ public interface DragonXPackage extends EPackage
     EReference DRAGON_X__TESTS = eINSTANCE.getDragonX_Tests();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.TestImpl <em>Test</em>}' class.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.UEImpl <em>UE</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.TestImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getTest()
+     * @see com.netxforge.netxtest.dragonX.impl.UEImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUE()
      * @generated
      */
-    EClass TEST = eINSTANCE.getTest();
+    EClass UE = eINSTANCE.getUE();
+
+    /**
+     * The meta object literal for the '<em><b>Meta</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UE__META = eINSTANCE.getUE_Meta();
+
+    /**
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.UEMetaObjectImpl <em>UE Meta Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.impl.UEMetaObjectImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUEMetaObject()
+     * @generated
+     */
+    EClass UE_META_OBJECT = eINSTANCE.getUEMetaObject();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute UE_META_OBJECT__PARAMS = eINSTANCE.getUEMetaObject_Params();
+
+    /**
+     * The meta object literal for the '<em><b>Param Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute UE_META_OBJECT__PARAM_VALUE = eINSTANCE.getUEMetaObject_ParamValue();
+
+    /**
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.TestCaseImpl <em>Test Case</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.impl.TestCaseImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getTestCase()
+     * @generated
+     */
+    EClass TEST_CASE = eINSTANCE.getTestCase();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -598,7 +897,7 @@ public interface DragonXPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEST__NAME = eINSTANCE.getTest_Name();
+    EAttribute TEST_CASE__NAME = eINSTANCE.getTestCase_Name();
 
     /**
      * The meta object literal for the '<em><b>Meta</b></em>' containment reference feature.
@@ -606,7 +905,7 @@ public interface DragonXPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TEST__META = eINSTANCE.getTest_Meta();
+    EReference TEST_CASE__META = eINSTANCE.getTestCase_Meta();
 
     /**
      * The meta object literal for the '<em><b>Procedure</b></em>' containment reference feature.
@@ -614,7 +913,7 @@ public interface DragonXPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TEST__PROCEDURE = eINSTANCE.getTest_Procedure();
+    EReference TEST_CASE__PROCEDURE = eINSTANCE.getTestCase_Procedure();
 
     /**
      * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.TestMetaImpl <em>Test Meta</em>}' class.
@@ -689,12 +988,30 @@ public interface DragonXPackage extends EPackage
     EClass ACTION = eINSTANCE.getAction();
 
     /**
-     * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ACTION__ACTION = eINSTANCE.getAction_Action();
+    EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter Set</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTION__PARAMETER_SET = eINSTANCE.getAction_ParameterSet();
+
+    /**
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetImpl <em>Parameter Set</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSet()
+     * @generated
+     */
+    EClass PARAMETER_SET = eINSTANCE.getParameterSet();
 
     /**
      * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
@@ -702,7 +1019,7 @@ public interface DragonXPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ACTION__PARAMETERS = eINSTANCE.getAction_Parameters();
+    EReference PARAMETER_SET__PARAMETERS = eINSTANCE.getParameterSet_Parameters();
 
     /**
      * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -729,6 +1046,34 @@ public interface DragonXPackage extends EPackage
      * @generated
      */
     EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Ue Ref</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER__UE_REF = eINSTANCE.getParameter_UeRef();
+
+    /**
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.ACTIONPARAMS <em>ACTIONPARAMS</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.ACTIONPARAMS
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getACTIONPARAMS()
+     * @generated
+     */
+    EEnum ACTIONPARAMS = eINSTANCE.getACTIONPARAMS();
+
+    /**
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.UEPARAMS <em>UEPARAMS</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.UEPARAMS
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUEPARAMS()
+     * @generated
+     */
+    EEnum UEPARAMS = eINSTANCE.getUEPARAMS();
 
     /**
      * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.METATYPE <em>METATYPE</em>}' enum.

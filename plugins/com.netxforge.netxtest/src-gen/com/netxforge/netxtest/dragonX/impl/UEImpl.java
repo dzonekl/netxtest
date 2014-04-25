@@ -2,10 +2,9 @@
  */
 package com.netxforge.netxtest.dragonX.impl;
 
-import com.netxforge.netxtest.dragonX.DragonX;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
-import com.netxforge.netxtest.dragonX.TestCase;
 import com.netxforge.netxtest.dragonX.UE;
+import com.netxforge.netxtest.dragonX.UEMetaObject;
 
 import java.util.Collection;
 
@@ -23,46 +22,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dragon X</b></em>'.
+ * An implementation of the model object '<em><b>UE</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.DragonXImpl#getUes <em>Ues</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.DragonXImpl#getTests <em>Tests</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.UEImpl#getMeta <em>Meta</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
+public class UEImpl extends MinimalEObjectImpl.Container implements UE
 {
   /**
-   * The cached value of the '{@link #getUes() <em>Ues</em>}' containment reference list.
+   * The cached value of the '{@link #getMeta() <em>Meta</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getUes()
+   * @see #getMeta()
    * @generated
    * @ordered
    */
-  protected EList<UE> ues;
-
-  /**
-   * The cached value of the '{@link #getTests() <em>Tests</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTests()
-   * @generated
-   * @ordered
-   */
-  protected EList<TestCase> tests;
+  protected EList<UEMetaObject> meta;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DragonXImpl()
+  protected UEImpl()
   {
     super();
   }
@@ -75,7 +63,7 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
   @Override
   protected EClass eStaticClass()
   {
-    return DragonXPackage.Literals.DRAGON_X;
+    return DragonXPackage.Literals.UE;
   }
 
   /**
@@ -83,27 +71,13 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<UE> getUes()
+  public EList<UEMetaObject> getMeta()
   {
-    if (ues == null)
+    if (meta == null)
     {
-      ues = new EObjectContainmentEList<UE>(UE.class, this, DragonXPackage.DRAGON_X__UES);
+      meta = new EObjectContainmentEList<UEMetaObject>(UEMetaObject.class, this, DragonXPackage.UE__META);
     }
-    return ues;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<TestCase> getTests()
-  {
-    if (tests == null)
-    {
-      tests = new EObjectContainmentEList<TestCase>(TestCase.class, this, DragonXPackage.DRAGON_X__TESTS);
-    }
-    return tests;
+    return meta;
   }
 
   /**
@@ -116,10 +90,8 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
   {
     switch (featureID)
     {
-      case DragonXPackage.DRAGON_X__UES:
-        return ((InternalEList<?>)getUes()).basicRemove(otherEnd, msgs);
-      case DragonXPackage.DRAGON_X__TESTS:
-        return ((InternalEList<?>)getTests()).basicRemove(otherEnd, msgs);
+      case DragonXPackage.UE__META:
+        return ((InternalEList<?>)getMeta()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,10 +106,8 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
   {
     switch (featureID)
     {
-      case DragonXPackage.DRAGON_X__UES:
-        return getUes();
-      case DragonXPackage.DRAGON_X__TESTS:
-        return getTests();
+      case DragonXPackage.UE__META:
+        return getMeta();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -153,13 +123,9 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
   {
     switch (featureID)
     {
-      case DragonXPackage.DRAGON_X__UES:
-        getUes().clear();
-        getUes().addAll((Collection<? extends UE>)newValue);
-        return;
-      case DragonXPackage.DRAGON_X__TESTS:
-        getTests().clear();
-        getTests().addAll((Collection<? extends TestCase>)newValue);
+      case DragonXPackage.UE__META:
+        getMeta().clear();
+        getMeta().addAll((Collection<? extends UEMetaObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -175,11 +141,8 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
   {
     switch (featureID)
     {
-      case DragonXPackage.DRAGON_X__UES:
-        getUes().clear();
-        return;
-      case DragonXPackage.DRAGON_X__TESTS:
-        getTests().clear();
+      case DragonXPackage.UE__META:
+        getMeta().clear();
         return;
     }
     super.eUnset(featureID);
@@ -195,12 +158,10 @@ public class DragonXImpl extends MinimalEObjectImpl.Container implements DragonX
   {
     switch (featureID)
     {
-      case DragonXPackage.DRAGON_X__UES:
-        return ues != null && !ues.isEmpty();
-      case DragonXPackage.DRAGON_X__TESTS:
-        return tests != null && !tests.isEmpty();
+      case DragonXPackage.UE__META:
+        return meta != null && !meta.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //DragonXImpl
+} //UEImpl

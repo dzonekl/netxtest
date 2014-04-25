@@ -2,12 +2,15 @@
  */
 package com.netxforge.netxtest.dragonX.impl;
 
+import com.netxforge.netxtest.dragonX.ACTIONPARAMS;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
 import com.netxforge.netxtest.dragonX.Parameter;
+import com.netxforge.netxtest.dragonX.UE;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -21,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl#getUeRef <em>Ue Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,7 +40,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final ACTIONPARAMS NAME_EDEFAULT = ACTIONPARAMS.UE;
 
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -46,7 +50,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected ACTIONPARAMS name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -67,6 +71,16 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @ordered
    */
   protected String value = VALUE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getUeRef() <em>Ue Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUeRef()
+   * @generated
+   * @ordered
+   */
+  protected UE ueRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -94,7 +108,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public ACTIONPARAMS getName()
   {
     return name;
   }
@@ -104,10 +118,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setName(ACTIONPARAMS newName)
   {
-    String oldName = name;
-    name = newName;
+    ACTIONPARAMS oldName = name;
+    name = newName == null ? NAME_EDEFAULT : newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER__NAME, oldName, name));
   }
@@ -140,6 +154,49 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
+  public UE getUeRef()
+  {
+    if (ueRef != null && ueRef.eIsProxy())
+    {
+      InternalEObject oldUeRef = (InternalEObject)ueRef;
+      ueRef = (UE)eResolveProxy(oldUeRef);
+      if (ueRef != oldUeRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DragonXPackage.PARAMETER__UE_REF, oldUeRef, ueRef));
+      }
+    }
+    return ueRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UE basicGetUeRef()
+  {
+    return ueRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUeRef(UE newUeRef)
+  {
+    UE oldUeRef = ueRef;
+    ueRef = newUeRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER__UE_REF, oldUeRef, ueRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -149,6 +206,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
         return getName();
       case DragonXPackage.PARAMETER__VALUE:
         return getValue();
+      case DragonXPackage.PARAMETER__UE_REF:
+        if (resolve) return getUeRef();
+        return basicGetUeRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -164,10 +224,13 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     switch (featureID)
     {
       case DragonXPackage.PARAMETER__NAME:
-        setName((String)newValue);
+        setName((ACTIONPARAMS)newValue);
         return;
       case DragonXPackage.PARAMETER__VALUE:
         setValue((String)newValue);
+        return;
+      case DragonXPackage.PARAMETER__UE_REF:
+        setUeRef((UE)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,6 +252,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
       case DragonXPackage.PARAMETER__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
+      case DragonXPackage.PARAMETER__UE_REF:
+        setUeRef((UE)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -204,9 +270,11 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     switch (featureID)
     {
       case DragonXPackage.PARAMETER__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        return name != NAME_EDEFAULT;
       case DragonXPackage.PARAMETER__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case DragonXPackage.PARAMETER__UE_REF:
+        return ueRef != null;
     }
     return super.eIsSet(featureID);
   }

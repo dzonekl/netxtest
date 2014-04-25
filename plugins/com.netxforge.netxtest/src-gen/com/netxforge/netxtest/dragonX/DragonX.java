@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.netxforge.netxtest.dragonX.DragonX#getUes <em>Ues</em>}</li>
  *   <li>{@link com.netxforge.netxtest.dragonX.DragonX#getTests <em>Tests</em>}</li>
  * </ul>
  * </p>
@@ -25,8 +26,24 @@ import org.eclipse.emf.ecore.EObject;
 public interface DragonX extends EObject
 {
   /**
+   * Returns the value of the '<em><b>Ues</b></em>' containment reference list.
+   * The list contents are of type {@link com.netxforge.netxtest.dragonX.UE}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ues</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ues</em>' containment reference list.
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getDragonX_Ues()
+   * @model containment="true"
+   * @generated
+   */
+  EList<UE> getUes();
+
+  /**
    * Returns the value of the '<em><b>Tests</b></em>' containment reference list.
-   * The list contents are of type {@link com.netxforge.netxtest.dragonX.Test}.
+   * The list contents are of type {@link com.netxforge.netxtest.dragonX.TestCase}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Tests</em>' containment reference list isn't clear,
@@ -38,6 +55,6 @@ public interface DragonX extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Test> getTests();
+  EList<TestCase> getTests();
 
 } // DragonX

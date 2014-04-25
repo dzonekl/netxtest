@@ -7,10 +7,12 @@ import com.netxforge.netxtest.dragonX.DragonX;
 import com.netxforge.netxtest.dragonX.DragonXFactory;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
 import com.netxforge.netxtest.dragonX.Parameter;
+import com.netxforge.netxtest.dragonX.ParameterSet;
 import com.netxforge.netxtest.dragonX.Procedure;
-import com.netxforge.netxtest.dragonX.Test;
+import com.netxforge.netxtest.dragonX.TestCase;
 import com.netxforge.netxtest.dragonX.TestMeta;
 import com.netxforge.netxtest.dragonX.TestMetaObject;
+import com.netxforge.netxtest.dragonX.UEMetaObject;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -40,7 +42,21 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass testEClass = null;
+  private EClass ueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ueMetaObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass testCaseEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,7 +91,28 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass parameterSetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass parameterEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum actionparamsEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum ueparamsEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -169,7 +206,7 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDragonX_Tests()
+  public EReference getDragonX_Ues()
   {
     return (EReference)dragonXEClass.getEStructuralFeatures().get(0);
   }
@@ -179,9 +216,9 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getTest()
+  public EReference getDragonX_Tests()
   {
-    return testEClass;
+    return (EReference)dragonXEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -189,9 +226,9 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTest_Name()
+  public EClass getUE()
   {
-    return (EAttribute)testEClass.getEStructuralFeatures().get(0);
+    return ueEClass;
   }
 
   /**
@@ -199,9 +236,9 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTest_Meta()
+  public EReference getUE_Meta()
   {
-    return (EReference)testEClass.getEStructuralFeatures().get(1);
+    return (EReference)ueEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -209,9 +246,69 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTest_Procedure()
+  public EClass getUEMetaObject()
   {
-    return (EReference)testEClass.getEStructuralFeatures().get(2);
+    return ueMetaObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getUEMetaObject_Params()
+  {
+    return (EAttribute)ueMetaObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getUEMetaObject_ParamValue()
+  {
+    return (EAttribute)ueMetaObjectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTestCase()
+  {
+    return testCaseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTestCase_Name()
+  {
+    return (EAttribute)testCaseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTestCase_Meta()
+  {
+    return (EReference)testCaseEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTestCase_Procedure()
+  {
+    return (EReference)testCaseEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -299,7 +396,7 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAction_Action()
+  public EAttribute getAction_Name()
   {
     return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
   }
@@ -309,9 +406,29 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAction_Parameters()
+  public EReference getAction_ParameterSet()
   {
     return (EReference)actionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParameterSet()
+  {
+    return parameterSetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParameterSet_Parameters()
+  {
+    return (EReference)parameterSetEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -342,6 +459,36 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
   public EAttribute getParameter_Value()
   {
     return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParameter_UeRef()
+  {
+    return (EReference)parameterEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getACTIONPARAMS()
+  {
+    return actionparamsEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getUEPARAMS()
+  {
+    return ueparamsEEnum;
   }
 
   /**
@@ -395,12 +542,20 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
 
     // Create classes and their features
     dragonXEClass = createEClass(DRAGON_X);
+    createEReference(dragonXEClass, DRAGON_X__UES);
     createEReference(dragonXEClass, DRAGON_X__TESTS);
 
-    testEClass = createEClass(TEST);
-    createEAttribute(testEClass, TEST__NAME);
-    createEReference(testEClass, TEST__META);
-    createEReference(testEClass, TEST__PROCEDURE);
+    ueEClass = createEClass(UE);
+    createEReference(ueEClass, UE__META);
+
+    ueMetaObjectEClass = createEClass(UE_META_OBJECT);
+    createEAttribute(ueMetaObjectEClass, UE_META_OBJECT__PARAMS);
+    createEAttribute(ueMetaObjectEClass, UE_META_OBJECT__PARAM_VALUE);
+
+    testCaseEClass = createEClass(TEST_CASE);
+    createEAttribute(testCaseEClass, TEST_CASE__NAME);
+    createEReference(testCaseEClass, TEST_CASE__META);
+    createEReference(testCaseEClass, TEST_CASE__PROCEDURE);
 
     testMetaEClass = createEClass(TEST_META);
     createEReference(testMetaEClass, TEST_META__META);
@@ -413,14 +568,20 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
     createEReference(procedureEClass, PROCEDURE__ACTIONS);
 
     actionEClass = createEClass(ACTION);
-    createEAttribute(actionEClass, ACTION__ACTION);
-    createEReference(actionEClass, ACTION__PARAMETERS);
+    createEAttribute(actionEClass, ACTION__NAME);
+    createEReference(actionEClass, ACTION__PARAMETER_SET);
+
+    parameterSetEClass = createEClass(PARAMETER_SET);
+    createEReference(parameterSetEClass, PARAMETER_SET__PARAMETERS);
 
     parameterEClass = createEClass(PARAMETER);
     createEAttribute(parameterEClass, PARAMETER__NAME);
     createEAttribute(parameterEClass, PARAMETER__VALUE);
+    createEReference(parameterEClass, PARAMETER__UE_REF);
 
     // Create enums
+    actionparamsEEnum = createEEnum(ACTIONPARAMS);
+    ueparamsEEnum = createEEnum(UEPARAMS);
     metatypeEEnum = createEEnum(METATYPE);
     actionsEEnum = createEEnum(ACTIONS);
   }
@@ -457,12 +618,20 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(dragonXEClass, DragonX.class, "DragonX", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDragonX_Tests(), this.getTest(), null, "tests", null, 0, -1, DragonX.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDragonX_Ues(), this.getUE(), null, "ues", null, 0, -1, DragonX.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDragonX_Tests(), this.getTestCase(), null, "tests", null, 0, -1, DragonX.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTest_Name(), ecorePackage.getEString(), "name", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTest_Meta(), this.getTestMeta(), null, "meta", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTest_Procedure(), this.getProcedure(), null, "procedure", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(ueEClass, com.netxforge.netxtest.dragonX.UE.class, "UE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getUE_Meta(), this.getUEMetaObject(), null, "meta", null, 0, -1, com.netxforge.netxtest.dragonX.UE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ueMetaObjectEClass, UEMetaObject.class, "UEMetaObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUEMetaObject_Params(), this.getUEPARAMS(), "params", null, 0, 1, UEMetaObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getUEMetaObject_ParamValue(), ecorePackage.getEString(), "paramValue", null, 0, 1, UEMetaObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(testCaseEClass, TestCase.class, "TestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTestCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, TestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTestCase_Meta(), this.getTestMeta(), null, "meta", null, 0, 1, TestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTestCase_Procedure(), this.getProcedure(), null, "procedure", null, 0, 1, TestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(testMetaEClass, TestMeta.class, "TestMeta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTestMeta_Meta(), this.getTestMetaObject(), null, "meta", null, 0, -1, TestMeta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -475,19 +644,33 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
     initEReference(getProcedure_Actions(), this.getAction(), null, "actions", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAction_Action(), this.getACTIONS(), "action", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAction_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAction_Name(), this.getACTIONS(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAction_ParameterSet(), this.getParameterSet(), null, "parameterSet", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parameterSetEClass, ParameterSet.class, "ParameterSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParameterSet_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, ParameterSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getParameter_Name(), this.getACTIONPARAMS(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParameter_UeRef(), this.getUE(), null, "ueRef", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
+    initEEnum(actionparamsEEnum, com.netxforge.netxtest.dragonX.ACTIONPARAMS.class, "ACTIONPARAMS");
+    addEEnumLiteral(actionparamsEEnum, com.netxforge.netxtest.dragonX.ACTIONPARAMS.UE);
+    addEEnumLiteral(actionparamsEEnum, com.netxforge.netxtest.dragonX.ACTIONPARAMS.ANSWER_TIME);
+
+    initEEnum(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.class, "UEPARAMS");
+    addEEnumLiteral(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.IMEI);
+    addEEnumLiteral(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.NAME);
+    addEEnumLiteral(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.MSIDN);
+
     initEEnum(metatypeEEnum, com.netxforge.netxtest.dragonX.METATYPE.class, "METATYPE");
     addEEnumLiteral(metatypeEEnum, com.netxforge.netxtest.dragonX.METATYPE.DESCRIPTION);
 
     initEEnum(actionsEEnum, com.netxforge.netxtest.dragonX.ACTIONS.class, "ACTIONS");
     addEEnumLiteral(actionsEEnum, com.netxforge.netxtest.dragonX.ACTIONS.CALL);
+    addEEnumLiteral(actionsEEnum, com.netxforge.netxtest.dragonX.ACTIONS.ANSWER);
     addEEnumLiteral(actionsEEnum, com.netxforge.netxtest.dragonX.ACTIONS.USSD);
     addEEnumLiteral(actionsEEnum, com.netxforge.netxtest.dragonX.ACTIONS.SMS);
     addEEnumLiteral(actionsEEnum, com.netxforge.netxtest.dragonX.ACTIONS.DATA);

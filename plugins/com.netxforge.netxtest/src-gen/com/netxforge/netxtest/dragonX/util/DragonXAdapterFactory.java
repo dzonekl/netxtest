@@ -80,9 +80,19 @@ public class DragonXAdapterFactory extends AdapterFactoryImpl
         return createDragonXAdapter();
       }
       @Override
-      public Adapter caseTest(Test object)
+      public Adapter caseUE(UE object)
       {
-        return createTestAdapter();
+        return createUEAdapter();
+      }
+      @Override
+      public Adapter caseUEMetaObject(UEMetaObject object)
+      {
+        return createUEMetaObjectAdapter();
+      }
+      @Override
+      public Adapter caseTestCase(TestCase object)
+      {
+        return createTestCaseAdapter();
       }
       @Override
       public Adapter caseTestMeta(TestMeta object)
@@ -103,6 +113,11 @@ public class DragonXAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAction(Action object)
       {
         return createActionAdapter();
+      }
+      @Override
+      public Adapter caseParameterSet(ParameterSet object)
+      {
+        return createParameterSetAdapter();
       }
       @Override
       public Adapter caseParameter(Parameter object)
@@ -147,16 +162,46 @@ public class DragonXAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.Test <em>Test</em>}'.
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.UE <em>UE</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.Test
+   * @see com.netxforge.netxtest.dragonX.UE
    * @generated
    */
-  public Adapter createTestAdapter()
+  public Adapter createUEAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.UEMetaObject <em>UE Meta Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.netxforge.netxtest.dragonX.UEMetaObject
+   * @generated
+   */
+  public Adapter createUEMetaObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.TestCase <em>Test Case</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.netxforge.netxtest.dragonX.TestCase
+   * @generated
+   */
+  public Adapter createTestCaseAdapter()
   {
     return null;
   }
@@ -217,6 +262,21 @@ public class DragonXAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSet <em>Parameter Set</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.netxforge.netxtest.dragonX.ParameterSet
+   * @generated
+   */
+  public Adapter createParameterSetAdapter()
   {
     return null;
   }

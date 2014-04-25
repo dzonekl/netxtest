@@ -7,22 +7,40 @@
     editorPluginID="com.netxforge.netxtest.editor" runtimeVersion="2.9">
   <genPackages prefix="DragonX" basePackage="com.netxforge.netxtest" disposableProviderFactory="true"
       fileExtensions="dragonx" ecorePackage="DragonX.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//ACTIONPARAMS">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONPARAMS/ue"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONPARAMS/answerTime"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//UEPARAMS">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/imei"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/name"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/msidn"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//METATYPE">
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//METATYPE/description"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//ACTIONS">
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/call"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/answer"/>
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/ussd"/>
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/sms"/>
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/data"/>
     </genEnums>
     <genClasses ecoreClass="DragonX.ecore#//DragonX">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//DragonX/ues"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//DragonX/tests"/>
     </genClasses>
-    <genClasses ecoreClass="DragonX.ecore#//Test">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Test/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Test/meta"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Test/procedure"/>
+    <genClasses ecoreClass="DragonX.ecore#//UE">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//UE/meta"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//UEMetaObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//UEMetaObject/params"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//UEMetaObject/paramValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//TestCase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//TestCase/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestCase/meta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestCase/procedure"/>
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//TestMeta">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestMeta/meta"/>
@@ -35,12 +53,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Procedure/actions"/>
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//Action">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Action/action"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Action/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Action/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Action/parameterSet"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSet/parameters"/>
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Parameter/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Parameter/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//Parameter/ueRef"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

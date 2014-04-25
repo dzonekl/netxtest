@@ -79,10 +79,24 @@ public class DragonXSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DragonXPackage.TEST:
+      case DragonXPackage.UE:
       {
-        Test test = (Test)theEObject;
-        T result = caseTest(test);
+        UE ue = (UE)theEObject;
+        T result = caseUE(ue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DragonXPackage.UE_META_OBJECT:
+      {
+        UEMetaObject ueMetaObject = (UEMetaObject)theEObject;
+        T result = caseUEMetaObject(ueMetaObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DragonXPackage.TEST_CASE:
+      {
+        TestCase testCase = (TestCase)theEObject;
+        T result = caseTestCase(testCase);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -114,6 +128,13 @@ public class DragonXSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DragonXPackage.PARAMETER_SET:
+      {
+        ParameterSet parameterSet = (ParameterSet)theEObject;
+        T result = caseParameterSet(parameterSet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DragonXPackage.PARAMETER:
       {
         Parameter parameter = (Parameter)theEObject;
@@ -142,17 +163,49 @@ public class DragonXSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Test</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>UE</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Test</em>'.
+   * @return the result of interpreting the object as an instance of '<em>UE</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTest(Test object)
+  public T caseUE(UE object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>UE Meta Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>UE Meta Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUEMetaObject(UEMetaObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Test Case</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Test Case</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTestCase(TestCase object)
   {
     return null;
   }
@@ -217,6 +270,22 @@ public class DragonXSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAction(Action object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parameter Set</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parameter Set</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParameterSet(ParameterSet object)
   {
     return null;
   }

@@ -30,6 +30,16 @@ public enum ACTIONS implements Enumerator
   CALL(0, "call", "CALL"),
 
   /**
+   * The '<em><b>Answer</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ANSWER_VALUE
+   * @generated
+   * @ordered
+   */
+  ANSWER(1, "answer", "ANSWER"),
+
+  /**
    * The '<em><b>Ussd</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -37,7 +47,7 @@ public enum ACTIONS implements Enumerator
    * @generated
    * @ordered
    */
-  USSD(1, "ussd", "USSD"),
+  USSD(2, "ussd", "USSD"),
 
   /**
    * The '<em><b>Sms</b></em>' literal object.
@@ -47,7 +57,7 @@ public enum ACTIONS implements Enumerator
    * @generated
    * @ordered
    */
-  SMS(2, "sms", "SMS"),
+  SMS(3, "sms", "SMS"),
 
   /**
    * The '<em><b>Data</b></em>' literal object.
@@ -57,7 +67,7 @@ public enum ACTIONS implements Enumerator
    * @generated
    * @ordered
    */
-  DATA(3, "data", "DATA");
+  DATA(4, "data", "DATA");
 
   /**
    * The '<em><b>Call</b></em>' literal value.
@@ -75,6 +85,21 @@ public enum ACTIONS implements Enumerator
   public static final int CALL_VALUE = 0;
 
   /**
+   * The '<em><b>Answer</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Answer</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ANSWER
+   * @model name="answer" literal="ANSWER"
+   * @generated
+   * @ordered
+   */
+  public static final int ANSWER_VALUE = 1;
+
+  /**
    * The '<em><b>Ussd</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
@@ -87,7 +112,7 @@ public enum ACTIONS implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int USSD_VALUE = 1;
+  public static final int USSD_VALUE = 2;
 
   /**
    * The '<em><b>Sms</b></em>' literal value.
@@ -102,7 +127,7 @@ public enum ACTIONS implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int SMS_VALUE = 2;
+  public static final int SMS_VALUE = 3;
 
   /**
    * The '<em><b>Data</b></em>' literal value.
@@ -117,7 +142,7 @@ public enum ACTIONS implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int DATA_VALUE = 3;
+  public static final int DATA_VALUE = 4;
 
   /**
    * An array of all the '<em><b>ACTIONS</b></em>' enumerators.
@@ -129,6 +154,7 @@ public enum ACTIONS implements Enumerator
     new ACTIONS[]
     {
       CALL,
+      ANSWER,
       USSD,
       SMS,
       DATA,
@@ -191,6 +217,7 @@ public enum ACTIONS implements Enumerator
     switch (value)
     {
       case CALL_VALUE: return CALL;
+      case ANSWER_VALUE: return ANSWER;
       case USSD_VALUE: return USSD;
       case SMS_VALUE: return SMS;
       case DATA_VALUE: return DATA;

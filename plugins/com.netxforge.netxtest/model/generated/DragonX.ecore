@@ -2,10 +2,20 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dragonX" nsURI="http://www.netxforge.com/netxtest/DragonX" nsPrefix="dragonX">
   <eClassifiers xsi:type="ecore:EClass" name="DragonX">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ues" upperBound="-1" eType="#//UE"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" upperBound="-1"
-        eType="#//Test" containment="true"/>
+        eType="#//TestCase" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Test">
+  <eClassifiers xsi:type="ecore:EClass" name="UE">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meta" upperBound="-1" eType="#//UEMetaObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UEMetaObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="params" eType="#//UEPARAMS"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paramValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestCase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="meta" eType="#//TestMeta"
         containment="true"/>
@@ -25,21 +35,36 @@
         eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="#//ACTIONS"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//ACTIONS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterSet" eType="#//ParameterSet"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSet">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//Parameter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//ACTIONPARAMS"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ueRef" eType="#//UE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ACTIONPARAMS">
+    <eLiterals name="ue" literal="UE"/>
+    <eLiterals name="answerTime" value="1" literal="AnswerTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UEPARAMS">
+    <eLiterals name="imei" literal="IMEI"/>
+    <eLiterals name="name" value="1" literal="Name"/>
+    <eLiterals name="msidn" value="2" literal="MSISDN"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="METATYPE">
     <eLiterals name="description" literal="Description"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ACTIONS">
     <eLiterals name="call" literal="CALL"/>
-    <eLiterals name="ussd" value="1" literal="USSD"/>
-    <eLiterals name="sms" value="2" literal="SMS"/>
-    <eLiterals name="data" value="3" literal="DATA"/>
+    <eLiterals name="answer" value="1" literal="ANSWER"/>
+    <eLiterals name="ussd" value="2" literal="USSD"/>
+    <eLiterals name="sms" value="3" literal="SMS"/>
+    <eLiterals name="data" value="4" literal="DATA"/>
   </eClassifiers>
 </ecore:EPackage>

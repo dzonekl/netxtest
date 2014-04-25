@@ -9,46 +9,49 @@ grammar com.netxforge.netxtest.DragonX with org.eclipse.xtext.common.Terminals
 generate dragonX "http://www.netxforge.com/netxtest/DragonX"
 
 DragonX:
-	tests+=Test*
-	ues+=UE+;
+	ues+=UE+
+	tests+=TestCase+;
 
 	// A User Equipment Definition. 
 UE:
-	'{' meta=UEMeta '}';
-
-UEMeta:
-	ueMeta+=UEMetaObject;
+	'UE' '{' meta+=UEMetaObject+ '}';
 
 UEMetaObject:
-	'[' params+=UEPARAMS ']' paramValue=UEValue;
+	params=UEPARAMS ':' paramValue=UEValue;
 
 UEValue:
-	STRING | ID;
+	STRING | ID | INT;
 
-Test:
-	'TestCase' name=ID meta=TestMeta procedure=Procedure;
+TestCase:
+	'TestCase' '{' name=ID meta=TestMeta procedure=Procedure '}';
 
 TestMeta:
 	meta+=TestMetaObject+;
 
 TestMetaObject:
-	'[' metatype=METATYPE ']' metaValue=MetaValue;
+	metatype=METATYPE ':' metaValue=MetaValue;
 
 MetaValue:
 	STRING;
 
 Procedure:
-	actions+=Action;
+	'Test' '{' actions+=Action '}';
 
 Action:
-	action=ACTIONS parameters+=Parameter;
+	name=ACTIONS parameterSet=ParameterSet;
+
+ParameterSet:
+	'{' parameters+=Parameter+ '}';
 
 	// Free form parameter, but could be. 
 Parameter:
-	'#' name=ID ':' value=Value;
+	name=ACTIONPARAMS ' : ' value=ParameterValue | ueRef=[UE];
 
-Value:
+ParameterValue:
 	INT | STRING;
+
+enum ACTIONPARAMS:
+	ue='UE' | answerTime='AnswerTime';
 
 enum UEPARAMS:
 	imei='IMEI' | name='Name' | msidn='MSISDN';
@@ -57,7 +60,7 @@ enum METATYPE:
 	description='Description';
 
 enum ACTIONS:
-	call='CALL' | ussd='USSD' | sms='SMS' | data='DATA';
+	call='CALL' | answer='ANSWER' | ussd='USSD' | sms='SMS' | data='DATA';
 
 QUALIFIED_ID:
-	ID ('.' ID)*;
+	ID (' . ' ID)*;

@@ -12,11 +12,18 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalDragonXLexer extends Lexer {
-    public static final int RULE_ID=6;
+    public static final int RULE_ID=5;
+    public static final int T__27=27;
+    public static final int T__26=26;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
+    public static final int RULE_SL_COMMENT=8;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__19=19;
     public static final int RULE_STRING=4;
@@ -28,7 +35,7 @@ public class InternalDragonXLexer extends Lexer {
     public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=6;
     public static final int RULE_WS=9;
 
     // delegates
@@ -70,10 +77,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:12:7: ( 'CALL' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:12:9: 'CALL'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:12:7: ( 'UE' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:12:9: 'UE'
             {
-            match("CALL"); 
+            match("UE"); 
 
 
             }
@@ -91,10 +98,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:13:7: ( 'USSD' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:13:9: 'USSD'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:13:7: ( 'AnswerTime' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:13:9: 'AnswerTime'
             {
-            match("USSD"); 
+            match("AnswerTime"); 
 
 
             }
@@ -112,10 +119,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:14:7: ( 'SMS' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:14:9: 'SMS'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:14:7: ( 'IMEI' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:14:9: 'IMEI'
             {
-            match("SMS"); 
+            match("IMEI"); 
 
 
             }
@@ -133,10 +140,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:15:7: ( 'DATA' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:15:9: 'DATA'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:15:7: ( 'Name' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:15:9: 'Name'
             {
-            match("DATA"); 
+            match("Name"); 
 
 
             }
@@ -154,10 +161,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:16:7: ( 'TEST' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:16:9: 'TEST'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:16:7: ( 'MSISDN' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:16:9: 'MSISDN'
             {
-            match("TEST"); 
+            match("MSISDN"); 
 
 
             }
@@ -175,10 +182,11 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:17:7: ( '[' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:17:9: '['
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:17:7: ( 'CALL' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:17:9: 'CALL'
             {
-            match('['); 
+            match("CALL"); 
+
 
             }
 
@@ -195,10 +203,11 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:18:7: ( ']' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:18:9: ']'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:18:7: ( 'ANSWER' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:18:9: 'ANSWER'
             {
-            match(']'); 
+            match("ANSWER"); 
+
 
             }
 
@@ -215,10 +224,11 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:19:7: ( '#' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:19:9: '#'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:19:7: ( 'USSD' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:19:9: 'USSD'
             {
-            match('#'); 
+            match("USSD"); 
+
 
             }
 
@@ -235,10 +245,11 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:20:7: ( ':' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:20:9: ':'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:20:7: ( 'SMS' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:20:9: 'SMS'
             {
-            match(':'); 
+            match("SMS"); 
+
 
             }
 
@@ -250,15 +261,159 @@ public class InternalDragonXLexer extends Lexer {
     }
     // $ANTLR end "T__20"
 
+    // $ANTLR start "T__21"
+    public final void mT__21() throws RecognitionException {
+        try {
+            int _type = T__21;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:21:7: ( 'DATA' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:21:9: 'DATA'
+            {
+            match("DATA"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__21"
+
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
+        try {
+            int _type = T__22;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:22:7: ( '{' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:22:9: '{'
+            {
+            match('{'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__22"
+
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
+        try {
+            int _type = T__23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:23:7: ( '}' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:23:9: '}'
+            {
+            match('}'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__23"
+
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
+        try {
+            int _type = T__24;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:24:7: ( ':' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:24:9: ':'
+            {
+            match(':'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__24"
+
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
+        try {
+            int _type = T__25;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:25:7: ( 'TestCase' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:25:9: 'TestCase'
+            {
+            match("TestCase"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:26:7: ( 'Test' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:26:9: 'Test'
+            {
+            match("Test"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:27:7: ( ' : ' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:27:9: ' : '
+            {
+            match(" : "); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1035:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1035:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1939:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1939:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1035:11: ( '^' )?
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1939:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -267,7 +422,7 @@ public class InternalDragonXLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1035:11: '^'
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1939:11: '^'
                     {
                     match('^'); 
 
@@ -285,7 +440,7 @@ public class InternalDragonXLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1035:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1939:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -334,10 +489,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1037:10: ( ( '0' .. '9' )+ )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1037:12: ( '0' .. '9' )+
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1941:10: ( ( '0' .. '9' )+ )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1941:12: ( '0' .. '9' )+
             {
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1037:12: ( '0' .. '9' )+
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1941:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -351,7 +506,7 @@ public class InternalDragonXLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1037:13: '0' .. '9'
+            	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1941:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -383,10 +538,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -404,10 +559,10 @@ public class InternalDragonXLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -423,7 +578,7 @@ public class InternalDragonXLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -439,7 +594,7 @@ public class InternalDragonXLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -464,10 +619,10 @@ public class InternalDragonXLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -483,7 +638,7 @@ public class InternalDragonXLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -499,7 +654,7 @@ public class InternalDragonXLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1039:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1943:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -542,12 +697,12 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1041:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1041:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1945:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1945:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1041:24: ( options {greedy=false; } : . )*
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1945:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -572,7 +727,7 @@ public class InternalDragonXLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1041:52: .
+            	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1945:52: .
             	    {
             	    matchAny(); 
 
@@ -602,12 +757,12 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -620,7 +775,7 @@ public class InternalDragonXLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -640,7 +795,7 @@ public class InternalDragonXLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:40: ( ( '\\r' )? '\\n' )?
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -649,9 +804,9 @@ public class InternalDragonXLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:41: ( '\\r' )? '\\n'
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:41: ( '\\r' )?
+                    // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -660,7 +815,7 @@ public class InternalDragonXLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1043:41: '\\r'
+                            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1947:41: '\\r'
                             {
                             match('\r'); 
 
@@ -692,10 +847,10 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1045:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1045:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1949:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1949:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1045:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1949:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -749,8 +904,8 @@ public class InternalDragonXLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1047:16: ( . )
-            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1047:18: .
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1951:16: ( . )
+            // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1951:18: .
             {
             matchAny(); 
 
@@ -765,8 +920,8 @@ public class InternalDragonXLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=17;
+        // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=24;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -840,49 +995,98 @@ public class InternalDragonXLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:70: RULE_ID
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:70: T__21
+                {
+                mT__21(); 
+
+                }
+                break;
+            case 12 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:76: T__22
+                {
+                mT__22(); 
+
+                }
+                break;
+            case 13 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:82: T__23
+                {
+                mT__23(); 
+
+                }
+                break;
+            case 14 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:88: T__24
+                {
+                mT__24(); 
+
+                }
+                break;
+            case 15 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:94: T__25
+                {
+                mT__25(); 
+
+                }
+                break;
+            case 16 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:100: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 17 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:106: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 18 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:112: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 12 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:78: RULE_INT
+            case 19 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:120: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 13 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:87: RULE_STRING
+            case 20 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:129: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 14 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:99: RULE_ML_COMMENT
+            case 21 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:141: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 15 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:115: RULE_SL_COMMENT
+            case 22 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:157: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 16 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:131: RULE_WS
+            case 23 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:173: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 17 :
-                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:139: RULE_ANY_OTHER
+            case 24 :
+                // ../com.netxforge.netxtest.ui/src-gen/com/netxforge/netxtest/ui/contentassist/antlr/internal/InternalDragonX.g:1:181: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -896,87 +1100,141 @@ public class InternalDragonXLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\5\24\4\uffff\1\21\2\uffff\3\21\2\uffff\2\24\1\uffff\4\24"+
-        "\11\uffff\4\24\1\54\2\24\1\57\1\60\1\61\1\uffff\1\62\1\24\4\uffff"+
-        "\5\24\1\71\1\uffff";
+        "\1\uffff\10\30\3\uffff\1\30\1\47\1\25\2\uffff\3\25\2\uffff\2\30"+
+        "\1\uffff\1\56\10\30\3\uffff\1\30\6\uffff\2\30\1\uffff\7\30\1\101"+
+        "\2\30\1\104\1\105\2\30\1\110\1\111\1\30\1\113\1\uffff\1\115\1\30"+
+        "\2\uffff\2\30\2\uffff\1\30\1\uffff\1\30\1\uffff\2\30\1\125\1\126"+
+        "\3\30\2\uffff\3\30\1\135\2\30\1\uffff\1\30\1\141\1\142\2\uffff";
     static final String DFA12_eofS =
-        "\72\uffff";
+        "\143\uffff";
     static final String DFA12_minS =
-        "\1\0\2\101\1\123\1\115\1\105\4\uffff\1\101\2\uffff\2\0\1\52\2\uffff"+
-        "\1\163\1\124\1\uffff\1\114\3\123\11\uffff\1\143\1\101\1\114\1\104"+
-        "\1\60\1\124\1\162\3\60\1\uffff\1\60\1\151\4\uffff\1\160\1\164\1"+
-        "\151\1\157\1\156\1\60\1\uffff";
+        "\1\0\1\101\1\105\1\116\1\115\1\141\1\123\1\101\1\115\3\uffff\1\145"+
+        "\1\72\1\101\2\uffff\2\0\1\52\2\uffff\1\163\1\124\1\uffff\1\60\1"+
+        "\123\1\163\1\123\1\105\1\155\1\111\1\114\1\123\3\uffff\1\163\6\uffff"+
+        "\1\143\1\101\1\uffff\1\104\1\167\1\127\1\111\1\145\1\123\1\114\1"+
+        "\60\1\164\1\162\2\60\1\145\1\105\2\60\1\104\1\60\1\uffff\1\60\1"+
+        "\151\2\uffff\1\162\1\122\2\uffff\1\116\1\uffff\1\141\1\uffff\1\160"+
+        "\1\124\2\60\1\163\1\164\1\151\2\uffff\1\145\1\151\1\155\1\60\1\157"+
+        "\1\145\1\uffff\1\156\2\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\145\1\101\1\123\1\115\1\105\4\uffff\1\172\2\uffff\2\uffff"+
-        "\1\57\2\uffff\1\163\1\124\1\uffff\1\114\3\123\11\uffff\1\143\1\101"+
-        "\1\114\1\104\1\172\1\124\1\162\3\172\1\uffff\1\172\1\151\4\uffff"+
-        "\1\160\1\164\1\151\1\157\1\156\1\172\1\uffff";
+        "\1\uffff\1\145\1\123\1\156\1\115\1\141\1\123\1\101\1\115\3\uffff"+
+        "\1\145\1\72\1\172\2\uffff\2\uffff\1\57\2\uffff\1\163\1\124\1\uffff"+
+        "\1\172\1\123\1\163\1\123\1\105\1\155\1\111\1\114\1\123\3\uffff\1"+
+        "\163\6\uffff\1\143\1\101\1\uffff\1\104\1\167\1\127\1\111\1\145\1"+
+        "\123\1\114\1\172\1\164\1\162\2\172\1\145\1\105\2\172\1\104\1\172"+
+        "\1\uffff\1\172\1\151\2\uffff\1\162\1\122\2\uffff\1\116\1\uffff\1"+
+        "\141\1\uffff\1\160\1\124\2\172\1\163\1\164\1\151\2\uffff\1\145\1"+
+        "\151\1\155\1\172\1\157\1\145\1\uffff\1\156\2\172\2\uffff";
     static final String DFA12_acceptS =
-        "\6\uffff\1\7\1\10\1\11\1\12\1\uffff\1\13\1\14\3\uffff\1\20\1\21"+
-        "\2\uffff\1\13\4\uffff\1\7\1\10\1\11\1\12\1\14\1\15\1\16\1\17\1\20"+
-        "\12\uffff\1\4\2\uffff\1\5\1\2\1\3\1\6\6\uffff\1\1";
+        "\11\uffff\1\14\1\15\1\16\3\uffff\1\22\1\23\3\uffff\1\27\1\30\2\uffff"+
+        "\1\22\11\uffff\1\14\1\15\1\16\1\uffff\1\21\1\27\1\23\1\24\1\25\1"+
+        "\26\2\uffff\1\2\22\uffff\1\12\2\uffff\1\13\1\11\2\uffff\1\4\1\5"+
+        "\1\uffff\1\7\1\uffff\1\20\7\uffff\1\10\1\6\6\uffff\1\17\3\uffff"+
+        "\1\3\1\1";
     static final String DFA12_specialS =
-        "\1\2\14\uffff\1\1\1\0\53\uffff}>";
+        "\1\0\20\uffff\1\2\1\1\120\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\21\2\20\2\21\1\20\22\21\1\20\1\21\1\15\1\10\3\21\1\16\7"+
-            "\21\1\17\12\14\1\11\6\21\2\13\1\2\1\1\16\13\1\4\1\5\1\3\5\13"+
-            "\1\6\1\21\1\7\1\12\1\13\1\21\32\13\uff85\21",
-            "\1\23\43\uffff\1\22",
-            "\1\25",
-            "\1\26",
-            "\1\27",
-            "\1\30",
+            "\11\25\2\24\2\25\1\24\22\25\1\15\1\25\1\21\4\25\1\22\7\25\1"+
+            "\23\12\20\1\13\6\25\1\3\1\17\1\7\1\1\4\17\1\4\3\17\1\6\1\5\4"+
+            "\17\1\10\1\14\1\2\5\17\3\25\1\16\1\17\1\25\32\17\1\11\1\25\1"+
+            "\12\uff82\25",
+            "\1\27\43\uffff\1\26",
+            "\1\31\15\uffff\1\32",
+            "\1\34\37\uffff\1\33",
+            "\1\35",
+            "\1\36",
+            "\1\37",
+            "\1\40",
+            "\1\41",
             "",
             "",
             "",
-            "",
-            "\32\24\4\uffff\1\24\1\uffff\32\24",
-            "",
-            "",
-            "\0\36",
-            "\0\36",
-            "\1\37\4\uffff\1\40",
-            "",
-            "",
-            "\1\42",
-            "\1\43",
-            "",
-            "\1\44",
             "\1\45",
             "\1\46",
-            "\1\47",
+            "\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "",
+            "\0\51",
+            "\0\51",
+            "\1\52\4\uffff\1\53",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\50",
-            "\1\51",
-            "\1\52",
-            "\1\53",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\54",
             "\1\55",
-            "\1\56",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
             "",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\57",
+            "\1\60",
+            "\1\61",
+            "\1\62",
             "\1\63",
-            "",
-            "",
-            "",
-            "",
             "\1\64",
             "\1\65",
             "\1\66",
+            "",
+            "",
+            "",
             "\1\67",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\70",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\71",
+            "",
+            "\1\72",
+            "\1\73",
+            "\1\74",
+            "\1\75",
+            "\1\76",
+            "\1\77",
+            "\1\100",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\102",
+            "\1\103",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\106",
+            "\1\107",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\112",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "",
+            "\12\30\7\uffff\2\30\1\114\27\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\116",
+            "",
+            "",
+            "\1\117",
+            "\1\120",
+            "",
+            "",
+            "\1\121",
+            "",
+            "\1\122",
+            "",
+            "\1\123",
+            "\1\124",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\127",
+            "\1\130",
+            "\1\131",
+            "",
+            "",
+            "\1\132",
+            "\1\133",
+            "\1\134",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\136",
+            "\1\137",
+            "",
+            "\1\140",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "",
             ""
     };
 
@@ -1010,69 +1268,77 @@ public class InternalDragonXLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_14 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_14>='\u0000' && LA12_14<='\uFFFF')) ) {s = 30;}
-
-                        else s = 17;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_13 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_13>='\u0000' && LA12_13<='\uFFFF')) ) {s = 30;}
-
-                        else s = 17;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
                         if ( (LA12_0=='D') ) {s = 1;}
 
-                        else if ( (LA12_0=='C') ) {s = 2;}
+                        else if ( (LA12_0=='U') ) {s = 2;}
 
-                        else if ( (LA12_0=='U') ) {s = 3;}
+                        else if ( (LA12_0=='A') ) {s = 3;}
 
-                        else if ( (LA12_0=='S') ) {s = 4;}
+                        else if ( (LA12_0=='I') ) {s = 4;}
 
-                        else if ( (LA12_0=='T') ) {s = 5;}
+                        else if ( (LA12_0=='N') ) {s = 5;}
 
-                        else if ( (LA12_0=='[') ) {s = 6;}
+                        else if ( (LA12_0=='M') ) {s = 6;}
 
-                        else if ( (LA12_0==']') ) {s = 7;}
+                        else if ( (LA12_0=='C') ) {s = 7;}
 
-                        else if ( (LA12_0=='#') ) {s = 8;}
+                        else if ( (LA12_0=='S') ) {s = 8;}
 
-                        else if ( (LA12_0==':') ) {s = 9;}
+                        else if ( (LA12_0=='{') ) {s = 9;}
 
-                        else if ( (LA12_0=='^') ) {s = 10;}
+                        else if ( (LA12_0=='}') ) {s = 10;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='B')||(LA12_0>='E' && LA12_0<='R')||(LA12_0>='V' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 11;}
+                        else if ( (LA12_0==':') ) {s = 11;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 12;}
+                        else if ( (LA12_0=='T') ) {s = 12;}
 
-                        else if ( (LA12_0=='\"') ) {s = 13;}
+                        else if ( (LA12_0==' ') ) {s = 13;}
 
-                        else if ( (LA12_0=='\'') ) {s = 14;}
+                        else if ( (LA12_0=='^') ) {s = 14;}
 
-                        else if ( (LA12_0=='/') ) {s = 15;}
+                        else if ( (LA12_0=='B'||(LA12_0>='E' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='L')||(LA12_0>='O' && LA12_0<='R')||(LA12_0>='V' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 15;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 16;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 16;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='$' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=';' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 17;}
+                        else if ( (LA12_0=='\"') ) {s = 17;}
+
+                        else if ( (LA12_0=='\'') ) {s = 18;}
+
+                        else if ( (LA12_0=='/') ) {s = 19;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r') ) {s = 20;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=';' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 21;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_18 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 41;}
+
+                        else s = 21;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_17 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_17>='\u0000' && LA12_17<='\uFFFF')) ) {s = 41;}
+
+                        else s = 21;
 
                         if ( s>=0 ) return s;
                         break;

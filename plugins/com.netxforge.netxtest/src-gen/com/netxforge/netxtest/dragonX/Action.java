@@ -2,8 +2,6 @@
  */
 package com.netxforge.netxtest.dragonX;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.netxforge.netxtest.dragonX.Action#getAction <em>Action</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.Action#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.Action#getName <em>Name</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.Action#getParameterSet <em>Parameter Set</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,48 +24,58 @@ import org.eclipse.emf.ecore.EObject;
 public interface Action extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Action</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * The literals are from the enumeration {@link com.netxforge.netxtest.dragonX.ACTIONS}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Action</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Action</em>' attribute.
+   * @return the value of the '<em>Name</em>' attribute.
    * @see com.netxforge.netxtest.dragonX.ACTIONS
-   * @see #setAction(ACTIONS)
-   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getAction_Action()
+   * @see #setName(ACTIONS)
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getAction_Name()
    * @model
    * @generated
    */
-  ACTIONS getAction();
+  ACTIONS getName();
 
   /**
-   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Action#getAction <em>Action</em>}' attribute.
+   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Action#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Action</em>' attribute.
+   * @param value the new value of the '<em>Name</em>' attribute.
    * @see com.netxforge.netxtest.dragonX.ACTIONS
-   * @see #getAction()
+   * @see #getName()
    * @generated
    */
-  void setAction(ACTIONS value);
+  void setName(ACTIONS value);
 
   /**
-   * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-   * The list contents are of type {@link com.netxforge.netxtest.dragonX.Parameter}.
+   * Returns the value of the '<em><b>Parameter Set</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Parameter Set</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameters</em>' containment reference list.
-   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getAction_Parameters()
+   * @return the value of the '<em>Parameter Set</em>' containment reference.
+   * @see #setParameterSet(ParameterSet)
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getAction_ParameterSet()
    * @model containment="true"
    * @generated
    */
-  EList<Parameter> getParameters();
+  ParameterSet getParameterSet();
+
+  /**
+   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Action#getParameterSet <em>Parameter Set</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Parameter Set</em>' containment reference.
+   * @see #getParameterSet()
+   * @generated
+   */
+  void setParameterSet(ParameterSet value);
 
 } // Action

@@ -6,23 +6,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Test</b></em>'.
+ * A representation of the model object '<em><b>Test Case</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.netxforge.netxtest.dragonX.Test#getName <em>Name</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.Test#getMeta <em>Meta</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.Test#getProcedure <em>Procedure</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getName <em>Name</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getMeta <em>Meta</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getProcedure <em>Procedure</em>}</li>
  * </ul>
  * </p>
  *
- * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTest()
+ * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTestCase()
  * @model
  * @generated
  */
-public interface Test extends EObject
+public interface TestCase extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -34,14 +34,14 @@ public interface Test extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTest_Name()
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTestCase_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Test#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.TestCase#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -60,14 +60,14 @@ public interface Test extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Meta</em>' containment reference.
    * @see #setMeta(TestMeta)
-   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTest_Meta()
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTestCase_Meta()
    * @model containment="true"
    * @generated
    */
   TestMeta getMeta();
 
   /**
-   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Test#getMeta <em>Meta</em>}' containment reference.
+   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.TestCase#getMeta <em>Meta</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Meta</em>' containment reference.
@@ -86,14 +86,14 @@ public interface Test extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Procedure</em>' containment reference.
    * @see #setProcedure(Procedure)
-   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTest_Procedure()
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTestCase_Procedure()
    * @model containment="true"
    * @generated
    */
   Procedure getProcedure();
 
   /**
-   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Test#getProcedure <em>Procedure</em>}' containment reference.
+   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.TestCase#getProcedure <em>Procedure</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Procedure</em>' containment reference.
@@ -102,4 +102,4 @@ public interface Test extends EObject
    */
   void setProcedure(Procedure value);
 
-} // Test
+} // TestCase

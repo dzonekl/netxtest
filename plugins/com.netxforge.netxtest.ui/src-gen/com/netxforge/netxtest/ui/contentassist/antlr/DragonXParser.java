@@ -37,24 +37,41 @@ public class DragonXParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
+					put(grammarAccess.getUEValueAccess().getAlternatives(), "rule__UEValue__Alternatives");
+					put(grammarAccess.getParameterAccess().getAlternatives(), "rule__Parameter__Alternatives");
+					put(grammarAccess.getParameterValueAccess().getAlternatives(), "rule__ParameterValue__Alternatives");
+					put(grammarAccess.getACTIONPARAMSAccess().getAlternatives(), "rule__ACTIONPARAMS__Alternatives");
+					put(grammarAccess.getUEPARAMSAccess().getAlternatives(), "rule__UEPARAMS__Alternatives");
 					put(grammarAccess.getACTIONSAccess().getAlternatives(), "rule__ACTIONS__Alternatives");
-					put(grammarAccess.getTestAccess().getGroup(), "rule__Test__Group__0");
+					put(grammarAccess.getDragonXAccess().getGroup(), "rule__DragonX__Group__0");
+					put(grammarAccess.getUEAccess().getGroup(), "rule__UE__Group__0");
+					put(grammarAccess.getUEMetaObjectAccess().getGroup(), "rule__UEMetaObject__Group__0");
+					put(grammarAccess.getTestCaseAccess().getGroup(), "rule__TestCase__Group__0");
 					put(grammarAccess.getTestMetaObjectAccess().getGroup(), "rule__TestMetaObject__Group__0");
+					put(grammarAccess.getProcedureAccess().getGroup(), "rule__Procedure__Group__0");
 					put(grammarAccess.getActionAccess().getGroup(), "rule__Action__Group__0");
-					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
-					put(grammarAccess.getDragonXAccess().getTestsAssignment(), "rule__DragonX__TestsAssignment");
-					put(grammarAccess.getTestAccess().getNameAssignment_1(), "rule__Test__NameAssignment_1");
-					put(grammarAccess.getTestAccess().getMetaAssignment_2(), "rule__Test__MetaAssignment_2");
-					put(grammarAccess.getTestAccess().getProcedureAssignment_3(), "rule__Test__ProcedureAssignment_3");
+					put(grammarAccess.getParameterSetAccess().getGroup(), "rule__ParameterSet__Group__0");
+					put(grammarAccess.getParameterAccess().getGroup_0(), "rule__Parameter__Group_0__0");
+					put(grammarAccess.getQUALIFIED_IDAccess().getGroup(), "rule__QUALIFIED_ID__Group__0");
+					put(grammarAccess.getQUALIFIED_IDAccess().getGroup_1(), "rule__QUALIFIED_ID__Group_1__0");
+					put(grammarAccess.getDragonXAccess().getUesAssignment_0(), "rule__DragonX__UesAssignment_0");
+					put(grammarAccess.getDragonXAccess().getTestsAssignment_1(), "rule__DragonX__TestsAssignment_1");
+					put(grammarAccess.getUEAccess().getMetaAssignment_2(), "rule__UE__MetaAssignment_2");
+					put(grammarAccess.getUEMetaObjectAccess().getParamsAssignment_0(), "rule__UEMetaObject__ParamsAssignment_0");
+					put(grammarAccess.getUEMetaObjectAccess().getParamValueAssignment_2(), "rule__UEMetaObject__ParamValueAssignment_2");
+					put(grammarAccess.getTestCaseAccess().getNameAssignment_2(), "rule__TestCase__NameAssignment_2");
+					put(grammarAccess.getTestCaseAccess().getMetaAssignment_3(), "rule__TestCase__MetaAssignment_3");
+					put(grammarAccess.getTestCaseAccess().getProcedureAssignment_4(), "rule__TestCase__ProcedureAssignment_4");
 					put(grammarAccess.getTestMetaAccess().getMetaAssignment(), "rule__TestMeta__MetaAssignment");
-					put(grammarAccess.getTestMetaObjectAccess().getMetatypeAssignment_1(), "rule__TestMetaObject__MetatypeAssignment_1");
-					put(grammarAccess.getTestMetaObjectAccess().getMetaValueAssignment_3(), "rule__TestMetaObject__MetaValueAssignment_3");
-					put(grammarAccess.getProcedureAccess().getActionsAssignment(), "rule__Procedure__ActionsAssignment");
-					put(grammarAccess.getActionAccess().getActionAssignment_0(), "rule__Action__ActionAssignment_0");
-					put(grammarAccess.getActionAccess().getParametersAssignment_1(), "rule__Action__ParametersAssignment_1");
-					put(grammarAccess.getParameterAccess().getNameAssignment_1(), "rule__Parameter__NameAssignment_1");
-					put(grammarAccess.getParameterAccess().getValueAssignment_3(), "rule__Parameter__ValueAssignment_3");
+					put(grammarAccess.getTestMetaObjectAccess().getMetatypeAssignment_0(), "rule__TestMetaObject__MetatypeAssignment_0");
+					put(grammarAccess.getTestMetaObjectAccess().getMetaValueAssignment_2(), "rule__TestMetaObject__MetaValueAssignment_2");
+					put(grammarAccess.getProcedureAccess().getActionsAssignment_2(), "rule__Procedure__ActionsAssignment_2");
+					put(grammarAccess.getActionAccess().getNameAssignment_0(), "rule__Action__NameAssignment_0");
+					put(grammarAccess.getActionAccess().getParameterSetAssignment_1(), "rule__Action__ParameterSetAssignment_1");
+					put(grammarAccess.getParameterSetAccess().getParametersAssignment_1(), "rule__ParameterSet__ParametersAssignment_1");
+					put(grammarAccess.getParameterAccess().getNameAssignment_0_0(), "rule__Parameter__NameAssignment_0_0");
+					put(grammarAccess.getParameterAccess().getValueAssignment_0_2(), "rule__Parameter__ValueAssignment_0_2");
+					put(grammarAccess.getParameterAccess().getUeRefAssignment_1(), "rule__Parameter__UeRefAssignment_1");
 				}
 			};
 		}
