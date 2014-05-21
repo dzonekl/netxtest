@@ -84,6 +84,7 @@ public class DragonXInterpreter {
 
 	protected Object internalEvaluate(Action a,
 			ImmutableMap<String, Object> values) {
+		extDispatcher.dispatch(a);
 		return null;
 	}
 
