@@ -4,7 +4,7 @@
     editorDirectory="/com.netxforge.netxtest.editor/src" modelPluginID="com.netxforge.netxtest"
     forceOverwrite="true" modelName="DragonX" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="com.netxforge.netxtest.edit"
-    editorPluginID="com.netxforge.netxtest.editor" runtimeVersion="2.9">
+    editorPluginID="com.netxforge.netxtest.editor" runtimeVersion="2.10">
   <genPackages prefix="DragonX" basePackage="com.netxforge.netxtest" disposableProviderFactory="true"
       fileExtensions="dragonx" ecorePackage="DragonX.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//ACTIONPARAMS">
