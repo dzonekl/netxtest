@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.netxforge.netxtest.ui
-Bundle-Vendor: My Company
+Bundle-Vendor: NetXForge
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: com.netxforge.netxtest.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
@@ -18,7 +18,7 @@ Require-Bundle: com.netxforge.netxtest;visibility:=reexport,
  org.eclipse.compare
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: com.netxforge.netxtest.ui.quickfix,
  com.netxforge.netxtest.ui.contentassist,
  com.netxforge.netxtest.ui.contentassist.antlr,
