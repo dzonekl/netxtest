@@ -236,9 +236,19 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getUE_Name()
+  {
+    return (EAttribute)ueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getUE_Meta()
   {
-    return (EReference)ueEClass.getEStructuralFeatures().get(0);
+    return (EReference)ueEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -546,6 +556,7 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
     createEReference(dragonXEClass, DRAGON_X__TESTS);
 
     ueEClass = createEClass(UE);
+    createEAttribute(ueEClass, UE__NAME);
     createEReference(ueEClass, UE__META);
 
     ueMetaObjectEClass = createEClass(UE_META_OBJECT);
@@ -622,6 +633,7 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
     initEReference(getDragonX_Tests(), this.getTestCase(), null, "tests", null, 0, -1, DragonX.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ueEClass, com.netxforge.netxtest.dragonX.UE.class, "UE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUE_Name(), ecorePackage.getEString(), "name", null, 0, 1, com.netxforge.netxtest.dragonX.UE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUE_Meta(), this.getUEMetaObject(), null, "meta", null, 0, -1, com.netxforge.netxtest.dragonX.UE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ueMetaObjectEClass, UEMetaObject.class, "UEMetaObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -662,7 +674,6 @@ public class DragonXPackageImpl extends EPackageImpl implements DragonXPackage
 
     initEEnum(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.class, "UEPARAMS");
     addEEnumLiteral(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.IMEI);
-    addEEnumLiteral(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.NAME);
     addEEnumLiteral(ueparamsEEnum, com.netxforge.netxtest.dragonX.UEPARAMS.MSIDN);
 
     initEEnum(metatypeEEnum, com.netxforge.netxtest.dragonX.METATYPE.class, "METATYPE");

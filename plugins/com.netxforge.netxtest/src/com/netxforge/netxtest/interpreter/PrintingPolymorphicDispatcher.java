@@ -94,6 +94,7 @@ public class PrintingPolymorphicDispatcher<RT> extends
 	@Override
 	public RT invoke(Object... params) {
 		RT eval = super.invoke(params);
+		@SuppressWarnings("unused")
 		String header = "unknown method call";
 		// params [0] is the class
 		if (params.length == 2) {
@@ -104,7 +105,7 @@ public class PrintingPolymorphicDispatcher<RT> extends
 				header = rule.getClass().getSimpleName();
 			}
 		}
-		System.out.println(header + eval);
+//		System.out.println(header + eval);
 		return eval;
 	}
 

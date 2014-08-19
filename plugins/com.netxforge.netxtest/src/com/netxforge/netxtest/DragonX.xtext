@@ -14,7 +14,7 @@ DragonX:
 
 	// A User Equipment Definition. 
 UE:
-	'UE' '{' meta+=UEMetaObject+ '}';
+	'UE' name=ID '{' meta+=UEMetaObject+ '}';
 
 UEMetaObject:
 	params=UEPARAMS ':' paramValue=UEValue;
@@ -45,7 +45,7 @@ ParameterSet:
 
 	// Free form parameter, but could be. 
 Parameter:
-	name=ACTIONPARAMS ' : ' value=ParameterValue | ueRef=[UE];
+	name=ACTIONPARAMS ':' (value=ParameterValue | ueRef=[UE|ID]);
 
 ParameterValue:
 	INT | STRING;
@@ -54,7 +54,7 @@ enum ACTIONPARAMS:
 	ue='UE' | answerTime='AnswerTime';
 
 enum UEPARAMS:
-	imei='IMEI' | name='Name' | msidn='MSISDN';
+	imei='IMEI' | msidn='MSISDN';
 
 enum METATYPE:
 	description='Description';

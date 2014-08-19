@@ -50,33 +50,41 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UE");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUEKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cMetaAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMetaUEMetaObjectParserRuleCall_2_0 = (RuleCall)cMetaAssignment_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cMetaAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cMetaUEMetaObjectParserRuleCall_3_0 = (RuleCall)cMetaAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//// A User Equipment Definition. 
 		//UE:
-		//	"UE" "{" meta+=UEMetaObject+ "}";
+		//	"UE" name=ID "{" meta+=UEMetaObject+ "}";
 		public ParserRule getRule() { return rule; }
 
-		//"UE" "{" meta+=UEMetaObject+ "}"
+		//"UE" name=ID "{" meta+=UEMetaObject+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"UE"
 		public Keyword getUEKeyword_0() { return cUEKeyword_0; }
 
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//meta+=UEMetaObject+
-		public Assignment getMetaAssignment_2() { return cMetaAssignment_2; }
+		public Assignment getMetaAssignment_3() { return cMetaAssignment_3; }
 
 		//UEMetaObject
-		public RuleCall getMetaUEMetaObjectParserRuleCall_2_0() { return cMetaUEMetaObjectParserRuleCall_2_0; }
+		public RuleCall getMetaUEMetaObjectParserRuleCall_3_0() { return cMetaUEMetaObjectParserRuleCall_3_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class UEMetaObjectElements extends AbstractParserRuleElementFinder {
@@ -333,51 +341,51 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ParameterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Parameter");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cNameACTIONPARAMSEnumRuleCall_0_0_0 = (RuleCall)cNameAssignment_0_0.eContents().get(0);
-		private final Keyword cSpaceColonSpaceKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cValueAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final RuleCall cValueParameterValueParserRuleCall_0_2_0 = (RuleCall)cValueAssignment_0_2.eContents().get(0);
-		private final Assignment cUeRefAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final CrossReference cUeRefUECrossReference_1_0 = (CrossReference)cUeRefAssignment_1.eContents().get(0);
-		private final RuleCall cUeRefUEIDTerminalRuleCall_1_0_1 = (RuleCall)cUeRefUECrossReference_1_0.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameACTIONPARAMSEnumRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cValueAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final RuleCall cValueParameterValueParserRuleCall_2_0_0 = (RuleCall)cValueAssignment_2_0.eContents().get(0);
+		private final Assignment cUeRefAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final CrossReference cUeRefUECrossReference_2_1_0 = (CrossReference)cUeRefAssignment_2_1.eContents().get(0);
+		private final RuleCall cUeRefUEIDTerminalRuleCall_2_1_0_1 = (RuleCall)cUeRefUECrossReference_2_1_0.eContents().get(1);
 		
 		//// Free form parameter, but could be. 
 		//Parameter:
-		//	name=ACTIONPARAMS " : " value=ParameterValue | ueRef=[UE];
+		//	name=ACTIONPARAMS ":" (value=ParameterValue | ueRef=[UE]);
 		public ParserRule getRule() { return rule; }
 
-		//name=ACTIONPARAMS " : " value=ParameterValue | ueRef=[UE]
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//name=ACTIONPARAMS " : " value=ParameterValue
-		public Group getGroup_0() { return cGroup_0; }
+		//name=ACTIONPARAMS ":" (value=ParameterValue | ueRef=[UE])
+		public Group getGroup() { return cGroup; }
 
 		//name=ACTIONPARAMS
-		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//ACTIONPARAMS
-		public RuleCall getNameACTIONPARAMSEnumRuleCall_0_0_0() { return cNameACTIONPARAMSEnumRuleCall_0_0_0; }
+		public RuleCall getNameACTIONPARAMSEnumRuleCall_0_0() { return cNameACTIONPARAMSEnumRuleCall_0_0; }
 
-		//" : "
-		public Keyword getSpaceColonSpaceKeyword_0_1() { return cSpaceColonSpaceKeyword_0_1; }
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+
+		//value=ParameterValue | ueRef=[UE]
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//value=ParameterValue
-		public Assignment getValueAssignment_0_2() { return cValueAssignment_0_2; }
+		public Assignment getValueAssignment_2_0() { return cValueAssignment_2_0; }
 
 		//ParameterValue
-		public RuleCall getValueParameterValueParserRuleCall_0_2_0() { return cValueParameterValueParserRuleCall_0_2_0; }
+		public RuleCall getValueParameterValueParserRuleCall_2_0_0() { return cValueParameterValueParserRuleCall_2_0_0; }
 
 		//ueRef=[UE]
-		public Assignment getUeRefAssignment_1() { return cUeRefAssignment_1; }
+		public Assignment getUeRefAssignment_2_1() { return cUeRefAssignment_2_1; }
 
 		//[UE]
-		public CrossReference getUeRefUECrossReference_1_0() { return cUeRefUECrossReference_1_0; }
+		public CrossReference getUeRefUECrossReference_2_1_0() { return cUeRefUECrossReference_2_1_0; }
 
 		//ID
-		public RuleCall getUeRefUEIDTerminalRuleCall_1_0_1() { return cUeRefUEIDTerminalRuleCall_1_0_1; }
+		public RuleCall getUeRefUEIDTerminalRuleCall_2_1_0_1() { return cUeRefUEIDTerminalRuleCall_2_1_0_1; }
 	}
 
 	public class ParameterValueElements extends AbstractParserRuleElementFinder {
@@ -462,16 +470,14 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cImeiEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cImeiIMEIKeyword_0_0 = (Keyword)cImeiEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cNameEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cNameNameKeyword_1_0 = (Keyword)cNameEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cMsidnEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cMsidnMSISDNKeyword_2_0 = (Keyword)cMsidnEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cMsidnEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cMsidnMSISDNKeyword_1_0 = (Keyword)cMsidnEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum UEPARAMS:
-		//	imei="IMEI" | name="Name" | msidn="MSISDN";
+		//	imei="IMEI" | msidn="MSISDN";
 		public EnumRule getRule() { return rule; }
 
-		//imei="IMEI" | name="Name" | msidn="MSISDN"
+		//imei="IMEI" | msidn="MSISDN"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//imei="IMEI"
@@ -480,17 +486,11 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 		//"IMEI"
 		public Keyword getImeiIMEIKeyword_0_0() { return cImeiIMEIKeyword_0_0; }
 
-		//name="Name"
-		public EnumLiteralDeclaration getNameEnumLiteralDeclaration_1() { return cNameEnumLiteralDeclaration_1; }
-
-		//"Name"
-		public Keyword getNameNameKeyword_1_0() { return cNameNameKeyword_1_0; }
-
 		//msidn="MSISDN"
-		public EnumLiteralDeclaration getMsidnEnumLiteralDeclaration_2() { return cMsidnEnumLiteralDeclaration_2; }
+		public EnumLiteralDeclaration getMsidnEnumLiteralDeclaration_1() { return cMsidnEnumLiteralDeclaration_1; }
 
 		//"MSISDN"
-		public Keyword getMsidnMSISDNKeyword_2_0() { return cMsidnMSISDNKeyword_2_0; }
+		public Keyword getMsidnMSISDNKeyword_1_0() { return cMsidnMSISDNKeyword_1_0; }
 	}
 
 	public class METATYPEElements extends AbstractEnumRuleElementFinder {
@@ -630,7 +630,7 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// A User Equipment Definition. 
 	//UE:
-	//	"UE" "{" meta+=UEMetaObject+ "}";
+	//	"UE" name=ID "{" meta+=UEMetaObject+ "}";
 	public UEElements getUEAccess() {
 		return (pUE != null) ? pUE : (pUE = new UEElements());
 	}
@@ -731,7 +731,7 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// Free form parameter, but could be. 
 	//Parameter:
-	//	name=ACTIONPARAMS " : " value=ParameterValue | ueRef=[UE];
+	//	name=ACTIONPARAMS ":" (value=ParameterValue | ueRef=[UE]);
 	public ParameterElements getParameterAccess() {
 		return (pParameter != null) ? pParameter : (pParameter = new ParameterElements());
 	}
@@ -761,7 +761,7 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum UEPARAMS:
-	//	imei="IMEI" | name="Name" | msidn="MSISDN";
+	//	imei="IMEI" | msidn="MSISDN";
 	public UEPARAMSElements getUEPARAMSAccess() {
 		return (unknownRuleUEPARAMS != null) ? unknownRuleUEPARAMS : (unknownRuleUEPARAMS = new UEPARAMSElements());
 	}

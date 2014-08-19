@@ -137,7 +137,7 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     ((name=ACTIONPARAMS value=ParameterValue) | ueRef=[UE|ID])
+	 *     (name=ACTIONPARAMS (value=ParameterValue | ueRef=[UE|ID]))
 	 */
 	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -224,7 +224,7 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     meta+=UEMetaObject+
+	 *     (name=ID meta+=UEMetaObject+)
 	 */
 	protected void sequence_UE(EObject context, UE semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

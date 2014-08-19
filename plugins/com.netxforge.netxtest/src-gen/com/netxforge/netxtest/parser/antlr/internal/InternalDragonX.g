@@ -139,31 +139,49 @@ ruleUE returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getUEAccess().getUEKeyword_0());
     }
-	otherlv_1='{' 
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getUEAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getUERule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getUEAccess().getLeftCurlyBracketKeyword_1());
+    	newLeafNode(otherlv_2, grammarAccess.getUEAccess().getLeftCurlyBracketKeyword_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getUEAccess().getMetaUEMetaObjectParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getUEAccess().getMetaUEMetaObjectParserRuleCall_3_0()); 
 	    }
-		lv_meta_2_0=ruleUEMetaObject		{
+		lv_meta_3_0=ruleUEMetaObject		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUERule());
 	        }
        		add(
        			$current, 
        			"meta",
-        		lv_meta_2_0, 
+        		lv_meta_3_0, 
         		"UEMetaObject");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+	otherlv_3='}' 
+)+	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getUEAccess().getRightCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getUEAccess().getRightCurlyBracketKeyword_4());
     }
 )
 ;
@@ -661,10 +679,10 @@ ruleParameter returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(((
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getParameterAccess().getNameACTIONPARAMSEnumRuleCall_0_0_0()); 
+	        newCompositeNode(grammarAccess.getParameterAccess().getNameACTIONPARAMSEnumRuleCall_0_0()); 
 	    }
 		lv_name_0_0=ruleACTIONPARAMS		{
 	        if ($current==null) {
@@ -679,14 +697,14 @@ ruleParameter returns [EObject current=null]
 	    }
 
 )
-)	otherlv_1=' : ' 
+)	otherlv_1=':' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getParameterAccess().getSpaceColonSpaceKeyword_0_1());
+    	newLeafNode(otherlv_1, grammarAccess.getParameterAccess().getColonKeyword_1());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getParameterAccess().getValueParameterValueParserRuleCall_0_2_0()); 
+	        newCompositeNode(grammarAccess.getParameterAccess().getValueParameterValueParserRuleCall_2_0_0()); 
 	    }
 		lv_value_2_0=ruleParameterValue		{
 	        if ($current==null) {
@@ -701,7 +719,7 @@ ruleParameter returns [EObject current=null]
 	    }
 
 )
-))
+)
     |(
 (
 		{
@@ -711,11 +729,11 @@ ruleParameter returns [EObject current=null]
         }
 	otherlv_3=RULE_ID
 	{
-		newLeafNode(otherlv_3, grammarAccess.getParameterAccess().getUeRefUECrossReference_1_0()); 
+		newLeafNode(otherlv_3, grammarAccess.getParameterAccess().getUeRefUECrossReference_2_1_0()); 
 	}
 
 )
-))
+)))
 ;
 
 
@@ -789,16 +807,10 @@ ruleUEPARAMS returns [Enumerator current=null]
         newLeafNode(enumLiteral_0, grammarAccess.getUEPARAMSAccess().getImeiEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='Name' 
+    |(	enumLiteral_1='MSISDN' 
 	{
-        $current = grammarAccess.getUEPARAMSAccess().getNameEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getUEPARAMSAccess().getNameEnumLiteralDeclaration_1()); 
-    }
-)
-    |(	enumLiteral_2='MSISDN' 
-	{
-        $current = grammarAccess.getUEPARAMSAccess().getMsidnEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getUEPARAMSAccess().getMsidnEnumLiteralDeclaration_2()); 
+        $current = grammarAccess.getUEPARAMSAccess().getMsidnEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getUEPARAMSAccess().getMsidnEnumLiteralDeclaration_1()); 
     }
 ));
 

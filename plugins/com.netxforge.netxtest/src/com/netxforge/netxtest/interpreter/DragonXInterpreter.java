@@ -24,7 +24,11 @@ import com.google.inject.Inject;
 import com.netxforge.netxtest.dragonX.Action;
 import com.netxforge.netxtest.dragonX.DragonX;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
+import com.netxforge.netxtest.dragonX.Parameter;
+import com.netxforge.netxtest.dragonX.ParameterSet;
 import com.netxforge.netxtest.dragonX.TestCase;
+import com.netxforge.netxtest.dragonX.UE;
+import com.netxforge.netxtest.dragonX.UEMetaObject;
 
 /**
  * A Dispatcher for instances of EClasses of the {@link DragonXPackage}.
@@ -78,15 +82,66 @@ public class DragonXInterpreter {
 				lastResult = result;
 			}
 		}
-		return lastResult;
 
+		// Make sure out TestCase is properly processed, and do a final
+		// execution on the test case.
+
+		return lastResult;
 	}
 
 	protected Object internalEvaluate(Action a,
 			ImmutableMap<String, Object> values) {
-		extDispatcher.dispatch(a);
+		extDispatcher.processAction(a);
+
+		ParameterSet parameterSet = a.getParameterSet();
+
+		// Put all the parameters in the RemoteMessage object
+		for (Parameter p : parameterSet.getParameters()) {
+
+			@SuppressWarnings("unused")
+			Object result = dispatcher.invoke(p, ImmutableMap.copyOf(values));
+		}
+		
+		// TODO, we should process the results of the invocations, and if no errors, 
+		// we call:
+		extDispatcher.execute();
+
 		return null;
 	}
+
+	protected Object internalEvaluate(Parameter param,
+			ImmutableMap<String, Object> values) {
+
+		extDispatcher.processParameter(param);
+		if (param.eIsSet(DragonXPackage.Literals.PARAMETER__UE_REF)) {
+
+			@SuppressWarnings("unused")
+			Object result = dispatcher.invoke(param.getUeRef(),
+					ImmutableMap.copyOf(values));
+		}
+
+		return null;
+	}
+
+	protected Object internalEvaluate(UE ue, ImmutableMap<String, Object> values) {
+
+		extDispatcher.processUE(ue);
+		for (UEMetaObject metaObject : ue.getMeta()) {
+			
+			@SuppressWarnings("unused")
+			Object result = dispatcher.invoke(metaObject,
+					ImmutableMap.copyOf(values));
+		}
+		return null;
+	}
+	
+	protected Object internalEvaluate(UEMetaObject metaObject, ImmutableMap<String, Object> values) {
+
+		extDispatcher.processMetaObject(metaObject);
+		
+		return null;
+	}
+	
 
 	public IExternalDispatcher getExtDispatcher() {
 		return extDispatcher;

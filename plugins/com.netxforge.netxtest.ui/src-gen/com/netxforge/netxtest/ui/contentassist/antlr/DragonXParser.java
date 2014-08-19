@@ -38,7 +38,7 @@ public class DragonXParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getUEValueAccess().getAlternatives(), "rule__UEValue__Alternatives");
-					put(grammarAccess.getParameterAccess().getAlternatives(), "rule__Parameter__Alternatives");
+					put(grammarAccess.getParameterAccess().getAlternatives_2(), "rule__Parameter__Alternatives_2");
 					put(grammarAccess.getParameterValueAccess().getAlternatives(), "rule__ParameterValue__Alternatives");
 					put(grammarAccess.getACTIONPARAMSAccess().getAlternatives(), "rule__ACTIONPARAMS__Alternatives");
 					put(grammarAccess.getUEPARAMSAccess().getAlternatives(), "rule__UEPARAMS__Alternatives");
@@ -51,12 +51,13 @@ public class DragonXParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProcedureAccess().getGroup(), "rule__Procedure__Group__0");
 					put(grammarAccess.getActionAccess().getGroup(), "rule__Action__Group__0");
 					put(grammarAccess.getParameterSetAccess().getGroup(), "rule__ParameterSet__Group__0");
-					put(grammarAccess.getParameterAccess().getGroup_0(), "rule__Parameter__Group_0__0");
+					put(grammarAccess.getParameterAccess().getGroup(), "rule__Parameter__Group__0");
 					put(grammarAccess.getQUALIFIED_IDAccess().getGroup(), "rule__QUALIFIED_ID__Group__0");
 					put(grammarAccess.getQUALIFIED_IDAccess().getGroup_1(), "rule__QUALIFIED_ID__Group_1__0");
 					put(grammarAccess.getDragonXAccess().getUesAssignment_0(), "rule__DragonX__UesAssignment_0");
 					put(grammarAccess.getDragonXAccess().getTestsAssignment_1(), "rule__DragonX__TestsAssignment_1");
-					put(grammarAccess.getUEAccess().getMetaAssignment_2(), "rule__UE__MetaAssignment_2");
+					put(grammarAccess.getUEAccess().getNameAssignment_1(), "rule__UE__NameAssignment_1");
+					put(grammarAccess.getUEAccess().getMetaAssignment_3(), "rule__UE__MetaAssignment_3");
 					put(grammarAccess.getUEMetaObjectAccess().getParamsAssignment_0(), "rule__UEMetaObject__ParamsAssignment_0");
 					put(grammarAccess.getUEMetaObjectAccess().getParamValueAssignment_2(), "rule__UEMetaObject__ParamValueAssignment_2");
 					put(grammarAccess.getTestCaseAccess().getNameAssignment_2(), "rule__TestCase__NameAssignment_2");
@@ -69,9 +70,9 @@ public class DragonXParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionAccess().getNameAssignment_0(), "rule__Action__NameAssignment_0");
 					put(grammarAccess.getActionAccess().getParameterSetAssignment_1(), "rule__Action__ParameterSetAssignment_1");
 					put(grammarAccess.getParameterSetAccess().getParametersAssignment_1(), "rule__ParameterSet__ParametersAssignment_1");
-					put(grammarAccess.getParameterAccess().getNameAssignment_0_0(), "rule__Parameter__NameAssignment_0_0");
-					put(grammarAccess.getParameterAccess().getValueAssignment_0_2(), "rule__Parameter__ValueAssignment_0_2");
-					put(grammarAccess.getParameterAccess().getUeRefAssignment_1(), "rule__Parameter__UeRefAssignment_1");
+					put(grammarAccess.getParameterAccess().getNameAssignment_0(), "rule__Parameter__NameAssignment_0");
+					put(grammarAccess.getParameterAccess().getValueAssignment_2_0(), "rule__Parameter__ValueAssignment_2_0");
+					put(grammarAccess.getParameterAccess().getUeRefAssignment_2_1(), "rule__Parameter__UeRefAssignment_2_1");
 				}
 			};
 		}

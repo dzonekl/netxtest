@@ -13,7 +13,6 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//UEPARAMS">
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/imei"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/name"/>
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/msidn"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//METATYPE">
@@ -31,6 +30,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//DragonX/tests"/>
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//UE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//UE/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//UE/meta"/>
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//UEMetaObject">

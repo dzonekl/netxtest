@@ -30,16 +30,6 @@ public enum UEPARAMS implements Enumerator
   IMEI(0, "imei", "IMEI"),
 
   /**
-   * The '<em><b>Name</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #NAME_VALUE
-   * @generated
-   * @ordered
-   */
-  NAME(1, "name", "Name"),
-
-  /**
    * The '<em><b>Msidn</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -47,7 +37,7 @@ public enum UEPARAMS implements Enumerator
    * @generated
    * @ordered
    */
-  MSIDN(2, "msidn", "MSISDN");
+  MSIDN(1, "msidn", "MSISDN");
 
   /**
    * The '<em><b>Imei</b></em>' literal value.
@@ -65,21 +55,6 @@ public enum UEPARAMS implements Enumerator
   public static final int IMEI_VALUE = 0;
 
   /**
-   * The '<em><b>Name</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Name</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #NAME
-   * @model name="name" literal="Name"
-   * @generated
-   * @ordered
-   */
-  public static final int NAME_VALUE = 1;
-
-  /**
    * The '<em><b>Msidn</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
@@ -92,7 +67,7 @@ public enum UEPARAMS implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int MSIDN_VALUE = 2;
+  public static final int MSIDN_VALUE = 1;
 
   /**
    * An array of all the '<em><b>UEPARAMS</b></em>' enumerators.
@@ -104,7 +79,6 @@ public enum UEPARAMS implements Enumerator
     new UEPARAMS[]
     {
       IMEI,
-      NAME,
       MSIDN,
     };
 
@@ -165,7 +139,6 @@ public enum UEPARAMS implements Enumerator
     switch (value)
     {
       case IMEI_VALUE: return IMEI;
-      case NAME_VALUE: return NAME;
       case MSIDN_VALUE: return MSIDN;
     }
     return null;

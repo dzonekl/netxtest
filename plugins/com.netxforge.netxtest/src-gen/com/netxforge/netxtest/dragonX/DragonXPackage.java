@@ -105,13 +105,22 @@ public interface DragonXPackage extends EPackage
   int UE = 1;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UE__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Meta</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UE__META = 0;
+  int UE__META = 1;
 
   /**
    * The number of structural features of the '<em>UE</em>' class.
@@ -120,7 +129,7 @@ public interface DragonXPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UE_FEATURE_COUNT = 1;
+  int UE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.UEMetaObjectImpl <em>UE Meta Object</em>}' class.
@@ -493,6 +502,17 @@ public interface DragonXPackage extends EPackage
   EClass getUE();
 
   /**
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.UE#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.netxforge.netxtest.dragonX.UE#getName()
+   * @see #getUE()
+   * @generated
+   */
+  EAttribute getUE_Name();
+
+  /**
    * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.UE#getMeta <em>Meta</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -846,6 +866,14 @@ public interface DragonXPackage extends EPackage
      * @generated
      */
     EClass UE = eINSTANCE.getUE();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute UE__NAME = eINSTANCE.getUE_Name();
 
     /**
      * The meta object literal for the '<em><b>Meta</b></em>' containment reference list feature.
