@@ -8,59 +8,106 @@ grammar com.netxforge.netxtest.DragonX with org.eclipse.xtext.common.Terminals
 
 generate dragonX "http://www.netxforge.com/netxtest/DragonX"
 
+// DragonX script exists of UE- and TestCase blocks
 DragonX:
 	ues+=UE+
 	tests+=TestCase+;
 
-	// A User Equipment Definition. 
+
+// UE block
 UE:
 	'UE' name=ID '{' meta+=UEMetaObject+ '}';
 
 UEMetaObject:
-	params=UEPARAMS ':' paramValue=UEValue;
+	(params=UEPARAMS ':' paramValue=UEValue) | (DescriptionObject);
 
 UEValue:
 	STRING | ID | INT;
 
+
+// TestCase block	
 TestCase:
-	'TestCase' '{' name=ID meta=TestMeta procedure=Procedure '}';
+	'TestCase' name=ID '{' (description = DescriptionObject)? procedure=Procedure '}';
 
-TestMeta:
-	meta+=TestMetaObject+;
-
-TestMetaObject:
-	metatype=METATYPE ':' metaValue=MetaValue;
-
-MetaValue:
-	STRING;
+	
+DescriptionObject:
+	'Description' ':' description = STRING;
 
 Procedure:
-	'Test' '{' actions+=Action '}';
+	'Test' '{' actions+=Action+ '}';
 
 Action:
-	name=ACTIONS parameterSet=ParameterSet;
+	((name='CALL' '{' parameterSet=ParameterSetCall) | (name='ANSWER'  '{' parameterSet=ParameterSetAnswer ) |
+	 (name= 'USSD'  '{' parameterSet=ParameterSetUssd) | (name='SMS' '{' parameterSet=ParameterSetSms) |
+	 (name='DATA' '{' parameterSet=ParameterSetData) | (name='MIXER' '{' parameterSet=ParameterSetMixer)) '}';
 
-ParameterSet:
-	'{' parameters+=Parameter+ '}';
+ParameterSetCall:
+	parameters+=ParameterCall;
 
-	// Free form parameter, but could be. 
-Parameter:
-	name=ACTIONPARAMS ':' (value=ParameterValue | ueRef=[UE|ID]);
+ParameterSetAnswer:
+	parameters+= ParameterAnswer;
 
-ParameterValue:
-	INT | STRING;
+ParameterSetUssd:
+	parameters+=ParameterUssd;
 
-enum ACTIONPARAMS:
-	ue='UE' | answerTime='AnswerTime';
+ParameterSetSms:
+	parameters+= ParameterSms;
+
+ParameterSetData:
+	parameters+=ParameterData;
+
+ParameterSetMixer:
+	(parameters += ParameterMixer+);
+
+ParameterCall:
+	 ('From' ':' from=[UE]) ('To' ':' to=[UE]) ('CallingTime' ':' callingTime=INT)? 
+	('OffHookResponse' ':' ofhookResponse=CALLRESPONSE ('ResponseTime' ':' responseTime=INT)?  );
+	
+ParameterAnswer:
+	('From' ':' from=[UE]) ('ListeningTime' ':' listeningTime=INT) ('AnswerTime' ':' answerTime=INT)? ('Response' ':' response= ANSWERRESPONSE)?;
+	
+ParameterUssd:
+	('From' ':' from=[UE]) (
+	(('USSDCode' ':' cfCode=CALLFORWARDING ('Destination' ':' destination= [UE])? ('ServiceDelay' ':' serviceDelay=INT)?)) |
+	 ('USSDCode' ':' barringCode = BARRING ('Code' ':' code= INT)? ) |
+     ('USSDCode' ':' liCode = LINEIDENTIFICATION )) (ussdregistration= USSDREGISTRATION)?;
+
+ParameterSms:
+	('From' ':' from=[UE]) ('To' ':' to=[UE]) (message=STRING);
+
+ParameterData:
+	('From' ':' from=[UE]) ('url' ':' url=STRING)? ('To' ':' to=[UE] 'data' ':' data= STRING)?;
+
+ParameterMixer:
+	(mixer= MIXER ':' value = INT)	| (option= MIXEROPTIONS);
+
+enum MIXEROPTIONS:
+	reset = 'Reset';
+		
+enum MIXER:
+	p1='P1' | p2='P2' | p3='p3' | p4='p4' | p5='p5' | p6='p6';
+
+enum USSDREGISTRATION:
+	activate='Activate' | deactivate='Deactivate';
+	
+enum CALLFORWARDING:
+	cfu='CFU' | cfb='CFB' |cfna='CFNA' |cfnr='CFNR' | acd='ACD';
+
+enum BARRING:
+	allOutgoingCalls = 'AllOutgoingCalls' | allIncommingCalls = 'AllIncomingCalls' |
+	 allOutgoingCallsExHome = 'AllOutgoingCallsExHome' |allIncommingCallsRoaming = 'AllIncommingCallsRoaming';
+
+enum LINEIDENTIFICATION:
+	clip = 'CLIP' | clir = 'CLIR' | colp = 'COLP' | colr = 'COLR';
+	
+enum ANSWERRESPONSE:
+	listening = 'Listening' | offhook='OffHook' | hangup='HangUp';
+
+enum CALLRESPONSE:
+	listening = 'Listening' | hangup='HangUp';
 
 enum UEPARAMS:
-	imei='IMEI' | msidn='MSISDN';
-
-enum METATYPE:
-	description='Description';
-
-enum ACTIONS:
-	call='CALL' | answer='ANSWER' | ussd='USSD' | sms='SMS' | data='DATA';
+	imei='IMEI' | msisdn='MSISDN';
 
 QUALIFIED_ID:
 	ID (' . ' ID)*;

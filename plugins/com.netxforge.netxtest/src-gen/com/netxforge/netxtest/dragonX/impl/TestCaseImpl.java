@@ -2,10 +2,10 @@
  */
 package com.netxforge.netxtest.dragonX.impl;
 
+import com.netxforge.netxtest.dragonX.DescriptionObject;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
 import com.netxforge.netxtest.dragonX.Procedure;
 import com.netxforge.netxtest.dragonX.TestCase;
-import com.netxforge.netxtest.dragonX.TestMeta;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.netxforge.netxtest.dragonX.impl.TestCaseImpl#getName <em>Name</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.TestCaseImpl#getMeta <em>Meta</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.TestCaseImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.netxforge.netxtest.dragonX.impl.TestCaseImpl#getProcedure <em>Procedure</em>}</li>
  * </ul>
  * </p>
@@ -54,14 +54,14 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getMeta() <em>Meta</em>}' containment reference.
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMeta()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected TestMeta meta;
+  protected DescriptionObject description;
 
   /**
    * The cached value of the '{@link #getProcedure() <em>Procedure</em>}' containment reference.
@@ -122,9 +122,9 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
    * <!-- end-user-doc -->
    * @generated
    */
-  public TestMeta getMeta()
+  public DescriptionObject getDescription()
   {
-    return meta;
+    return description;
   }
 
   /**
@@ -132,13 +132,13 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetMeta(TestMeta newMeta, NotificationChain msgs)
+  public NotificationChain basicSetDescription(DescriptionObject newDescription, NotificationChain msgs)
   {
-    TestMeta oldMeta = meta;
-    meta = newMeta;
+    DescriptionObject oldDescription = description;
+    description = newDescription;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DragonXPackage.TEST_CASE__META, oldMeta, newMeta);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DragonXPackage.TEST_CASE__DESCRIPTION, oldDescription, newDescription);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -149,20 +149,20 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMeta(TestMeta newMeta)
+  public void setDescription(DescriptionObject newDescription)
   {
-    if (newMeta != meta)
+    if (newDescription != description)
     {
       NotificationChain msgs = null;
-      if (meta != null)
-        msgs = ((InternalEObject)meta).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DragonXPackage.TEST_CASE__META, null, msgs);
-      if (newMeta != null)
-        msgs = ((InternalEObject)newMeta).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DragonXPackage.TEST_CASE__META, null, msgs);
-      msgs = basicSetMeta(newMeta, msgs);
+      if (description != null)
+        msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DragonXPackage.TEST_CASE__DESCRIPTION, null, msgs);
+      if (newDescription != null)
+        msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DragonXPackage.TEST_CASE__DESCRIPTION, null, msgs);
+      msgs = basicSetDescription(newDescription, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.TEST_CASE__META, newMeta, newMeta));
+      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.TEST_CASE__DESCRIPTION, newDescription, newDescription));
   }
 
   /**
@@ -223,8 +223,8 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
   {
     switch (featureID)
     {
-      case DragonXPackage.TEST_CASE__META:
-        return basicSetMeta(null, msgs);
+      case DragonXPackage.TEST_CASE__DESCRIPTION:
+        return basicSetDescription(null, msgs);
       case DragonXPackage.TEST_CASE__PROCEDURE:
         return basicSetProcedure(null, msgs);
     }
@@ -243,8 +243,8 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
     {
       case DragonXPackage.TEST_CASE__NAME:
         return getName();
-      case DragonXPackage.TEST_CASE__META:
-        return getMeta();
+      case DragonXPackage.TEST_CASE__DESCRIPTION:
+        return getDescription();
       case DragonXPackage.TEST_CASE__PROCEDURE:
         return getProcedure();
     }
@@ -264,8 +264,8 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
       case DragonXPackage.TEST_CASE__NAME:
         setName((String)newValue);
         return;
-      case DragonXPackage.TEST_CASE__META:
-        setMeta((TestMeta)newValue);
+      case DragonXPackage.TEST_CASE__DESCRIPTION:
+        setDescription((DescriptionObject)newValue);
         return;
       case DragonXPackage.TEST_CASE__PROCEDURE:
         setProcedure((Procedure)newValue);
@@ -287,8 +287,8 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
       case DragonXPackage.TEST_CASE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case DragonXPackage.TEST_CASE__META:
-        setMeta((TestMeta)null);
+      case DragonXPackage.TEST_CASE__DESCRIPTION:
+        setDescription((DescriptionObject)null);
         return;
       case DragonXPackage.TEST_CASE__PROCEDURE:
         setProcedure((Procedure)null);
@@ -309,8 +309,8 @@ public class TestCaseImpl extends MinimalEObjectImpl.Container implements TestCa
     {
       case DragonXPackage.TEST_CASE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case DragonXPackage.TEST_CASE__META:
-        return meta != null;
+      case DragonXPackage.TEST_CASE__DESCRIPTION:
+        return description != null;
       case DragonXPackage.TEST_CASE__PROCEDURE:
         return procedure != null;
     }

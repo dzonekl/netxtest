@@ -3,8 +3,8 @@
 package com.netxforge.netxtest.dragonX.impl;
 
 import com.netxforge.netxtest.dragonX.DragonXPackage;
-import com.netxforge.netxtest.dragonX.Parameter;
-import com.netxforge.netxtest.dragonX.ParameterSet;
+import com.netxforge.netxtest.dragonX.ParameterAnswer;
+import com.netxforge.netxtest.dragonX.ParameterSetAnswer;
 
 import java.util.Collection;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Parameter Set</b></em>'.
+ * An implementation of the model object '<em><b>Parameter Set Answer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterSetImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterSetAnswerImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ParameterSetImpl extends MinimalEObjectImpl.Container implements ParameterSet
+public class ParameterSetAnswerImpl extends MinimalEObjectImpl.Container implements ParameterSetAnswer
 {
   /**
    * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
@@ -43,14 +43,14 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
    * @generated
    * @ordered
    */
-  protected EList<Parameter> parameters;
+  protected EList<ParameterAnswer> parameters;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ParameterSetImpl()
+  protected ParameterSetAnswerImpl()
   {
     super();
   }
@@ -63,7 +63,7 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
   @Override
   protected EClass eStaticClass()
   {
-    return DragonXPackage.Literals.PARAMETER_SET;
+    return DragonXPackage.Literals.PARAMETER_SET_ANSWER;
   }
 
   /**
@@ -71,11 +71,11 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Parameter> getParameters()
+  public EList<ParameterAnswer> getParameters()
   {
     if (parameters == null)
     {
-      parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, DragonXPackage.PARAMETER_SET__PARAMETERS);
+      parameters = new EObjectContainmentEList<ParameterAnswer>(ParameterAnswer.class, this, DragonXPackage.PARAMETER_SET_ANSWER__PARAMETERS);
     }
     return parameters;
   }
@@ -90,7 +90,7 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER_SET__PARAMETERS:
+      case DragonXPackage.PARAMETER_SET_ANSWER__PARAMETERS:
         return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -106,7 +106,7 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER_SET__PARAMETERS:
+      case DragonXPackage.PARAMETER_SET_ANSWER__PARAMETERS:
         return getParameters();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -123,9 +123,9 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER_SET__PARAMETERS:
+      case DragonXPackage.PARAMETER_SET_ANSWER__PARAMETERS:
         getParameters().clear();
-        getParameters().addAll((Collection<? extends Parameter>)newValue);
+        getParameters().addAll((Collection<? extends ParameterAnswer>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,7 +141,7 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER_SET__PARAMETERS:
+      case DragonXPackage.PARAMETER_SET_ANSWER__PARAMETERS:
         getParameters().clear();
         return;
     }
@@ -158,10 +158,10 @@ public class ParameterSetImpl extends MinimalEObjectImpl.Container implements Pa
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER_SET__PARAMETERS:
+      case DragonXPackage.PARAMETER_SET_ANSWER__PARAMETERS:
         return parameters != null && !parameters.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ParameterSetImpl
+} //ParameterSetAnswerImpl

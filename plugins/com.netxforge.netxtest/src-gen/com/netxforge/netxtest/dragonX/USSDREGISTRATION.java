@@ -10,97 +10,97 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>UEPARAMS</b></em>',
+ * A representation of the literals of the enumeration '<em><b>USSDREGISTRATION</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.netxforge.netxtest.dragonX.DragonXPackage#getUEPARAMS()
+ * @see com.netxforge.netxtest.dragonX.DragonXPackage#getUSSDREGISTRATION()
  * @model
  * @generated
  */
-public enum UEPARAMS implements Enumerator
+public enum USSDREGISTRATION implements Enumerator
 {
   /**
-   * The '<em><b>Imei</b></em>' literal object.
+   * The '<em><b>Activate</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #IMEI_VALUE
+   * @see #ACTIVATE_VALUE
    * @generated
    * @ordered
    */
-  IMEI(0, "imei", "IMEI"),
+  ACTIVATE(0, "activate", "Activate"),
 
   /**
-   * The '<em><b>Msisdn</b></em>' literal object.
+   * The '<em><b>Deactivate</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #MSISDN_VALUE
+   * @see #DEACTIVATE_VALUE
    * @generated
    * @ordered
    */
-  MSISDN(1, "msisdn", "MSISDN");
+  DEACTIVATE(1, "deactivate", "Deactivate");
 
   /**
-   * The '<em><b>Imei</b></em>' literal value.
+   * The '<em><b>Activate</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Imei</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Activate</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #IMEI
-   * @model name="imei" literal="IMEI"
+   * @see #ACTIVATE
+   * @model name="activate" literal="Activate"
    * @generated
    * @ordered
    */
-  public static final int IMEI_VALUE = 0;
+  public static final int ACTIVATE_VALUE = 0;
 
   /**
-   * The '<em><b>Msisdn</b></em>' literal value.
+   * The '<em><b>Deactivate</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Msisdn</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Deactivate</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #MSISDN
-   * @model name="msisdn" literal="MSISDN"
+   * @see #DEACTIVATE
+   * @model name="deactivate" literal="Deactivate"
    * @generated
    * @ordered
    */
-  public static final int MSISDN_VALUE = 1;
+  public static final int DEACTIVATE_VALUE = 1;
 
   /**
-   * An array of all the '<em><b>UEPARAMS</b></em>' enumerators.
+   * An array of all the '<em><b>USSDREGISTRATION</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final UEPARAMS[] VALUES_ARRAY =
-    new UEPARAMS[]
+  private static final USSDREGISTRATION[] VALUES_ARRAY =
+    new USSDREGISTRATION[]
     {
-      IMEI,
-      MSISDN,
+      ACTIVATE,
+      DEACTIVATE,
     };
 
   /**
-   * A public read-only list of all the '<em><b>UEPARAMS</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>USSDREGISTRATION</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<UEPARAMS> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<USSDREGISTRATION> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>UEPARAMS</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>USSDREGISTRATION</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static UEPARAMS get(String literal)
+  public static USSDREGISTRATION get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      UEPARAMS result = VALUES_ARRAY[i];
+      USSDREGISTRATION result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -110,16 +110,16 @@ public enum UEPARAMS implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>UEPARAMS</b></em>' literal with the specified name.
+   * Returns the '<em><b>USSDREGISTRATION</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static UEPARAMS getByName(String name)
+  public static USSDREGISTRATION getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      UEPARAMS result = VALUES_ARRAY[i];
+      USSDREGISTRATION result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -129,17 +129,17 @@ public enum UEPARAMS implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>UEPARAMS</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>USSDREGISTRATION</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static UEPARAMS get(int value)
+  public static USSDREGISTRATION get(int value)
   {
     switch (value)
     {
-      case IMEI_VALUE: return IMEI;
-      case MSISDN_VALUE: return MSISDN;
+      case ACTIVATE_VALUE: return ACTIVATE;
+      case DEACTIVATE_VALUE: return DEACTIVATE;
     }
     return null;
   }
@@ -171,7 +171,7 @@ public enum UEPARAMS implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private UEPARAMS(int value, String name, String literal)
+  private USSDREGISTRATION(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -220,4 +220,4 @@ public enum UEPARAMS implements Enumerator
     return literal;
   }
   
-} //UEPARAMS
+} //USSDREGISTRATION

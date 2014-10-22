@@ -2,55 +2,54 @@
  */
 package com.netxforge.netxtest.dragonX.impl;
 
-import com.netxforge.netxtest.dragonX.ACTIONPARAMS;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
-import com.netxforge.netxtest.dragonX.Parameter;
-import com.netxforge.netxtest.dragonX.UE;
+import com.netxforge.netxtest.dragonX.MIXER;
+import com.netxforge.netxtest.dragonX.MIXEROPTIONS;
+import com.netxforge.netxtest.dragonX.ParameterMixer;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Parameter</b></em>'.
+ * An implementation of the model object '<em><b>Parameter Mixer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl#getName <em>Name</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl#getValue <em>Value</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl#getUeRef <em>Ue Ref</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl#getMixer <em>Mixer</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl#getOption <em>Option</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ParameterImpl extends MinimalEObjectImpl.Container implements Parameter
+public class ParameterMixerImpl extends MinimalEObjectImpl.Container implements ParameterMixer
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getMixer() <em>Mixer</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getMixer()
    * @generated
    * @ordered
    */
-  protected static final ACTIONPARAMS NAME_EDEFAULT = ACTIONPARAMS.UE;
+  protected static final MIXER MIXER_EDEFAULT = MIXER.P1;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getMixer() <em>Mixer</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getMixer()
    * @generated
    * @ordered
    */
-  protected ACTIONPARAMS name = NAME_EDEFAULT;
+  protected MIXER mixer = MIXER_EDEFAULT;
 
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -60,7 +59,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final int VALUE_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -70,24 +69,34 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected int value = VALUE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getUeRef() <em>Ue Ref</em>}' reference.
+   * The default value of the '{@link #getOption() <em>Option</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getUeRef()
+   * @see #getOption()
    * @generated
    * @ordered
    */
-  protected UE ueRef;
+  protected static final MIXEROPTIONS OPTION_EDEFAULT = MIXEROPTIONS.RESET;
+
+  /**
+   * The cached value of the '{@link #getOption() <em>Option</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOption()
+   * @generated
+   * @ordered
+   */
+  protected MIXEROPTIONS option = OPTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ParameterImpl()
+  protected ParameterMixerImpl()
   {
     super();
   }
@@ -100,7 +109,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   @Override
   protected EClass eStaticClass()
   {
-    return DragonXPackage.Literals.PARAMETER;
+    return DragonXPackage.Literals.PARAMETER_MIXER;
   }
 
   /**
@@ -108,9 +117,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public ACTIONPARAMS getName()
+  public MIXER getMixer()
   {
-    return name;
+    return mixer;
   }
 
   /**
@@ -118,12 +127,12 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(ACTIONPARAMS newName)
+  public void setMixer(MIXER newMixer)
   {
-    ACTIONPARAMS oldName = name;
-    name = newName == null ? NAME_EDEFAULT : newName;
+    MIXER oldMixer = mixer;
+    mixer = newMixer == null ? MIXER_EDEFAULT : newMixer;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER_MIXER__MIXER, oldMixer, mixer));
   }
 
   /**
@@ -131,7 +140,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public int getValue()
   {
     return value;
   }
@@ -141,12 +150,12 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setValue(int newValue)
   {
-    String oldValue = value;
+    int oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER_MIXER__VALUE, oldValue, value));
   }
 
   /**
@@ -154,19 +163,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public UE getUeRef()
+  public MIXEROPTIONS getOption()
   {
-    if (ueRef != null && ueRef.eIsProxy())
-    {
-      InternalEObject oldUeRef = (InternalEObject)ueRef;
-      ueRef = (UE)eResolveProxy(oldUeRef);
-      if (ueRef != oldUeRef)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DragonXPackage.PARAMETER__UE_REF, oldUeRef, ueRef));
-      }
-    }
-    return ueRef;
+    return option;
   }
 
   /**
@@ -174,22 +173,12 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public UE basicGetUeRef()
+  public void setOption(MIXEROPTIONS newOption)
   {
-    return ueRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setUeRef(UE newUeRef)
-  {
-    UE oldUeRef = ueRef;
-    ueRef = newUeRef;
+    MIXEROPTIONS oldOption = option;
+    option = newOption == null ? OPTION_EDEFAULT : newOption;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER__UE_REF, oldUeRef, ueRef));
+      eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.PARAMETER_MIXER__OPTION, oldOption, option));
   }
 
   /**
@@ -202,13 +191,12 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER__NAME:
-        return getName();
-      case DragonXPackage.PARAMETER__VALUE:
+      case DragonXPackage.PARAMETER_MIXER__MIXER:
+        return getMixer();
+      case DragonXPackage.PARAMETER_MIXER__VALUE:
         return getValue();
-      case DragonXPackage.PARAMETER__UE_REF:
-        if (resolve) return getUeRef();
-        return basicGetUeRef();
+      case DragonXPackage.PARAMETER_MIXER__OPTION:
+        return getOption();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -223,14 +211,14 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER__NAME:
-        setName((ACTIONPARAMS)newValue);
+      case DragonXPackage.PARAMETER_MIXER__MIXER:
+        setMixer((MIXER)newValue);
         return;
-      case DragonXPackage.PARAMETER__VALUE:
-        setValue((String)newValue);
+      case DragonXPackage.PARAMETER_MIXER__VALUE:
+        setValue((Integer)newValue);
         return;
-      case DragonXPackage.PARAMETER__UE_REF:
-        setUeRef((UE)newValue);
+      case DragonXPackage.PARAMETER_MIXER__OPTION:
+        setOption((MIXEROPTIONS)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -246,14 +234,14 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER__NAME:
-        setName(NAME_EDEFAULT);
+      case DragonXPackage.PARAMETER_MIXER__MIXER:
+        setMixer(MIXER_EDEFAULT);
         return;
-      case DragonXPackage.PARAMETER__VALUE:
+      case DragonXPackage.PARAMETER_MIXER__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case DragonXPackage.PARAMETER__UE_REF:
-        setUeRef((UE)null);
+      case DragonXPackage.PARAMETER_MIXER__OPTION:
+        setOption(OPTION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -269,12 +257,12 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DragonXPackage.PARAMETER__NAME:
-        return name != NAME_EDEFAULT;
-      case DragonXPackage.PARAMETER__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case DragonXPackage.PARAMETER__UE_REF:
-        return ueRef != null;
+      case DragonXPackage.PARAMETER_MIXER__MIXER:
+        return mixer != MIXER_EDEFAULT;
+      case DragonXPackage.PARAMETER_MIXER__VALUE:
+        return value != VALUE_EDEFAULT;
+      case DragonXPackage.PARAMETER_MIXER__OPTION:
+        return option != OPTION_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -290,12 +278,14 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (mixer: ");
+    result.append(mixer);
     result.append(", value: ");
     result.append(value);
+    result.append(", option: ");
+    result.append(option);
     result.append(')');
     return result.toString();
   }
 
-} //ParameterImpl
+} //ParameterMixerImpl

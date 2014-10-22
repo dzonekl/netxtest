@@ -25,7 +25,6 @@ public interface Action extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * The literals are from the enumeration {@link com.netxforge.netxtest.dragonX.ACTIONS}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -33,24 +32,22 @@ public interface Action extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
-   * @see com.netxforge.netxtest.dragonX.ACTIONS
-   * @see #setName(ACTIONS)
+   * @see #setName(String)
    * @see com.netxforge.netxtest.dragonX.DragonXPackage#getAction_Name()
    * @model
    * @generated
    */
-  ACTIONS getName();
+  String getName();
 
   /**
    * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Action#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
-   * @see com.netxforge.netxtest.dragonX.ACTIONS
    * @see #getName()
    * @generated
    */
-  void setName(ACTIONS value);
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Parameter Set</b></em>' containment reference.
@@ -61,12 +58,12 @@ public interface Action extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Parameter Set</em>' containment reference.
-   * @see #setParameterSet(ParameterSet)
+   * @see #setParameterSet(EObject)
    * @see com.netxforge.netxtest.dragonX.DragonXPackage#getAction_ParameterSet()
    * @model containment="true"
    * @generated
    */
-  ParameterSet getParameterSet();
+  EObject getParameterSet();
 
   /**
    * Sets the value of the '{@link com.netxforge.netxtest.dragonX.Action#getParameterSet <em>Parameter Set</em>}' containment reference.
@@ -76,6 +73,6 @@ public interface Action extends EObject
    * @see #getParameterSet()
    * @generated
    */
-  void setParameterSet(ParameterSet value);
+  void setParameterSet(EObject value);
 
 } // Action

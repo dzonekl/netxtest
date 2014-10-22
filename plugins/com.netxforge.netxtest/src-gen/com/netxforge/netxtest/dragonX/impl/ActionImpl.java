@@ -2,15 +2,14 @@
  */
 package com.netxforge.netxtest.dragonX.impl;
 
-import com.netxforge.netxtest.dragonX.ACTIONS;
 import com.netxforge.netxtest.dragonX.Action;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
-import com.netxforge.netxtest.dragonX.ParameterSet;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -40,7 +39,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * @generated
    * @ordered
    */
-  protected static final ACTIONS NAME_EDEFAULT = ACTIONS.CALL;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -50,7 +49,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * @generated
    * @ordered
    */
-  protected ACTIONS name = NAME_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getParameterSet() <em>Parameter Set</em>}' containment reference.
@@ -60,7 +59,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * @generated
    * @ordered
    */
-  protected ParameterSet parameterSet;
+  protected EObject parameterSet;
 
   /**
    * <!-- begin-user-doc -->
@@ -88,7 +87,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * <!-- end-user-doc -->
    * @generated
    */
-  public ACTIONS getName()
+  public String getName()
   {
     return name;
   }
@@ -98,10 +97,10 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(ACTIONS newName)
+  public void setName(String newName)
   {
-    ACTIONS oldName = name;
-    name = newName == null ? NAME_EDEFAULT : newName;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DragonXPackage.ACTION__NAME, oldName, name));
   }
@@ -111,7 +110,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParameterSet getParameterSet()
+  public EObject getParameterSet()
   {
     return parameterSet;
   }
@@ -121,9 +120,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetParameterSet(ParameterSet newParameterSet, NotificationChain msgs)
+  public NotificationChain basicSetParameterSet(EObject newParameterSet, NotificationChain msgs)
   {
-    ParameterSet oldParameterSet = parameterSet;
+    EObject oldParameterSet = parameterSet;
     parameterSet = newParameterSet;
     if (eNotificationRequired())
     {
@@ -138,7 +137,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setParameterSet(ParameterSet newParameterSet)
+  public void setParameterSet(EObject newParameterSet)
   {
     if (newParameterSet != parameterSet)
     {
@@ -199,10 +198,10 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
     switch (featureID)
     {
       case DragonXPackage.ACTION__NAME:
-        setName((ACTIONS)newValue);
+        setName((String)newValue);
         return;
       case DragonXPackage.ACTION__PARAMETER_SET:
-        setParameterSet((ParameterSet)newValue);
+        setParameterSet((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -222,7 +221,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
         setName(NAME_EDEFAULT);
         return;
       case DragonXPackage.ACTION__PARAMETER_SET:
-        setParameterSet((ParameterSet)null);
+        setParameterSet((EObject)null);
         return;
     }
     super.eUnset(featureID);
@@ -239,7 +238,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action
     switch (featureID)
     {
       case DragonXPackage.ACTION__NAME:
-        return name != NAME_EDEFAULT;
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DragonXPackage.ACTION__PARAMETER_SET:
         return parameterSet != null;
     }

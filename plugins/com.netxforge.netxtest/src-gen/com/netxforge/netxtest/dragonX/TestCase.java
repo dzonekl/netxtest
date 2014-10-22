@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getName <em>Name</em>}</li>
- *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getMeta <em>Meta</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getDescription <em>Description</em>}</li>
  *   <li>{@link com.netxforge.netxtest.dragonX.TestCase#getProcedure <em>Procedure</em>}</li>
  * </ul>
  * </p>
@@ -51,30 +51,30 @@ public interface TestCase extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Meta</b></em>' containment reference.
+   * Returns the value of the '<em><b>Description</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Meta</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Description</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Meta</em>' containment reference.
-   * @see #setMeta(TestMeta)
-   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTestCase_Meta()
+   * @return the value of the '<em>Description</em>' containment reference.
+   * @see #setDescription(DescriptionObject)
+   * @see com.netxforge.netxtest.dragonX.DragonXPackage#getTestCase_Description()
    * @model containment="true"
    * @generated
    */
-  TestMeta getMeta();
+  DescriptionObject getDescription();
 
   /**
-   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.TestCase#getMeta <em>Meta</em>}' containment reference.
+   * Sets the value of the '{@link com.netxforge.netxtest.dragonX.TestCase#getDescription <em>Description</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Meta</em>' containment reference.
-   * @see #getMeta()
+   * @param value the new value of the '<em>Description</em>' containment reference.
+   * @see #getDescription()
    * @generated
    */
-  void setMeta(TestMeta value);
+  void setDescription(DescriptionObject value);
 
   /**
    * Returns the value of the '<em><b>Procedure</b></em>' containment reference.

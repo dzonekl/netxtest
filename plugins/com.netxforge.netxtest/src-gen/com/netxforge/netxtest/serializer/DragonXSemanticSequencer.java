@@ -3,14 +3,23 @@ package com.netxforge.netxtest.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.netxforge.netxtest.dragonX.Action;
+import com.netxforge.netxtest.dragonX.DescriptionObject;
 import com.netxforge.netxtest.dragonX.DragonX;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
-import com.netxforge.netxtest.dragonX.Parameter;
-import com.netxforge.netxtest.dragonX.ParameterSet;
+import com.netxforge.netxtest.dragonX.ParameterAnswer;
+import com.netxforge.netxtest.dragonX.ParameterCall;
+import com.netxforge.netxtest.dragonX.ParameterData;
+import com.netxforge.netxtest.dragonX.ParameterMixer;
+import com.netxforge.netxtest.dragonX.ParameterSetAnswer;
+import com.netxforge.netxtest.dragonX.ParameterSetCall;
+import com.netxforge.netxtest.dragonX.ParameterSetData;
+import com.netxforge.netxtest.dragonX.ParameterSetMixer;
+import com.netxforge.netxtest.dragonX.ParameterSetSms;
+import com.netxforge.netxtest.dragonX.ParameterSetUssd;
+import com.netxforge.netxtest.dragonX.ParameterSms;
+import com.netxforge.netxtest.dragonX.ParameterUssd;
 import com.netxforge.netxtest.dragonX.Procedure;
 import com.netxforge.netxtest.dragonX.TestCase;
-import com.netxforge.netxtest.dragonX.TestMeta;
-import com.netxforge.netxtest.dragonX.TestMetaObject;
 import com.netxforge.netxtest.dragonX.UE;
 import com.netxforge.netxtest.dragonX.UEMetaObject;
 import com.netxforge.netxtest.services.DragonXGrammarAccess;
@@ -40,21 +49,88 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 					return; 
 				}
 				else break;
+			case DragonXPackage.DESCRIPTION_OBJECT:
+				if(context == grammarAccess.getDescriptionObjectRule() ||
+				   context == grammarAccess.getUEMetaObjectRule()) {
+					sequence_DescriptionObject(context, (DescriptionObject) semanticObject); 
+					return; 
+				}
+				else break;
 			case DragonXPackage.DRAGON_X:
 				if(context == grammarAccess.getDragonXRule()) {
 					sequence_DragonX(context, (DragonX) semanticObject); 
 					return; 
 				}
 				else break;
-			case DragonXPackage.PARAMETER:
-				if(context == grammarAccess.getParameterRule()) {
-					sequence_Parameter(context, (Parameter) semanticObject); 
+			case DragonXPackage.PARAMETER_ANSWER:
+				if(context == grammarAccess.getParameterAnswerRule()) {
+					sequence_ParameterAnswer(context, (ParameterAnswer) semanticObject); 
 					return; 
 				}
 				else break;
-			case DragonXPackage.PARAMETER_SET:
-				if(context == grammarAccess.getParameterSetRule()) {
-					sequence_ParameterSet(context, (ParameterSet) semanticObject); 
+			case DragonXPackage.PARAMETER_CALL:
+				if(context == grammarAccess.getParameterCallRule()) {
+					sequence_ParameterCall(context, (ParameterCall) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_DATA:
+				if(context == grammarAccess.getParameterDataRule()) {
+					sequence_ParameterData(context, (ParameterData) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_MIXER:
+				if(context == grammarAccess.getParameterMixerRule()) {
+					sequence_ParameterMixer(context, (ParameterMixer) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SET_ANSWER:
+				if(context == grammarAccess.getParameterSetAnswerRule()) {
+					sequence_ParameterSetAnswer(context, (ParameterSetAnswer) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SET_CALL:
+				if(context == grammarAccess.getParameterSetCallRule()) {
+					sequence_ParameterSetCall(context, (ParameterSetCall) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SET_DATA:
+				if(context == grammarAccess.getParameterSetDataRule()) {
+					sequence_ParameterSetData(context, (ParameterSetData) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SET_MIXER:
+				if(context == grammarAccess.getParameterSetMixerRule()) {
+					sequence_ParameterSetMixer(context, (ParameterSetMixer) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SET_SMS:
+				if(context == grammarAccess.getParameterSetSmsRule()) {
+					sequence_ParameterSetSms(context, (ParameterSetSms) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SET_USSD:
+				if(context == grammarAccess.getParameterSetUssdRule()) {
+					sequence_ParameterSetUssd(context, (ParameterSetUssd) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_SMS:
+				if(context == grammarAccess.getParameterSmsRule()) {
+					sequence_ParameterSms(context, (ParameterSms) semanticObject); 
+					return; 
+				}
+				else break;
+			case DragonXPackage.PARAMETER_USSD:
+				if(context == grammarAccess.getParameterUssdRule()) {
+					sequence_ParameterUssd(context, (ParameterUssd) semanticObject); 
 					return; 
 				}
 				else break;
@@ -67,18 +143,6 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case DragonXPackage.TEST_CASE:
 				if(context == grammarAccess.getTestCaseRule()) {
 					sequence_TestCase(context, (TestCase) semanticObject); 
-					return; 
-				}
-				else break;
-			case DragonXPackage.TEST_META:
-				if(context == grammarAccess.getTestMetaRule()) {
-					sequence_TestMeta(context, (TestMeta) semanticObject); 
-					return; 
-				}
-				else break;
-			case DragonXPackage.TEST_META_OBJECT:
-				if(context == grammarAccess.getTestMetaObjectRule()) {
-					sequence_TestMetaObject(context, (TestMetaObject) semanticObject); 
 					return; 
 				}
 				else break;
@@ -100,20 +164,26 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (name=ACTIONS parameterSet=ParameterSet)
+	 *     (
+	 *         (name='CALL' parameterSet=ParameterSetCall) | 
+	 *         (name='ANSWER' parameterSet=ParameterSetAnswer) | 
+	 *         (name='USSD' parameterSet=ParameterSetUssd) | 
+	 *         (name='SMS' parameterSet=ParameterSetSms) | 
+	 *         (name='DATA' parameterSet=ParameterSetData) | 
+	 *         (name='MIXER' parameterSet=ParameterSetMixer)
+	 *     )
 	 */
 	protected void sequence_Action(EObject context, Action semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.ACTION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.ACTION__NAME));
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.ACTION__PARAMETER_SET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.ACTION__PARAMETER_SET));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getActionAccess().getNameACTIONSEnumRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getActionAccess().getParameterSetParameterSetParserRuleCall_1_0(), semanticObject.getParameterSet());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     description=STRING
+	 */
+	protected void sequence_DescriptionObject(EObject context, DescriptionObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -128,25 +198,132 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     parameters+=Parameter+
+	 *     (from=[UE|ID] listeningTime=INT answerTime=INT? response=ANSWERRESPONSE?)
 	 */
-	protected void sequence_ParameterSet(EObject context, ParameterSet semanticObject) {
+	protected void sequence_ParameterAnswer(EObject context, ParameterAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ACTIONPARAMS (value=ParameterValue | ueRef=[UE|ID]))
+	 *     (from=[UE|ID] to=[UE|ID] callingTime=INT? ofhookResponse=CALLRESPONSE responseTime=INT?)
 	 */
-	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
+	protected void sequence_ParameterCall(EObject context, ParameterCall semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     actions+=Action
+	 *     (from=[UE|ID] url=STRING? (to=[UE|ID] data=STRING)?)
+	 */
+	protected void sequence_ParameterData(EObject context, ParameterData semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((mixer=MIXER value=INT) | option=MIXEROPTIONS)
+	 */
+	protected void sequence_ParameterMixer(EObject context, ParameterMixer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     parameters+=ParameterAnswer
+	 */
+	protected void sequence_ParameterSetAnswer(EObject context, ParameterSetAnswer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     parameters+=ParameterCall
+	 */
+	protected void sequence_ParameterSetCall(EObject context, ParameterSetCall semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     parameters+=ParameterData
+	 */
+	protected void sequence_ParameterSetData(EObject context, ParameterSetData semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     parameters+=ParameterMixer+
+	 */
+	protected void sequence_ParameterSetMixer(EObject context, ParameterSetMixer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     parameters+=ParameterSms
+	 */
+	protected void sequence_ParameterSetSms(EObject context, ParameterSetSms semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     parameters+=ParameterUssd
+	 */
+	protected void sequence_ParameterSetUssd(EObject context, ParameterSetUssd semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (from=[UE|ID] to=[UE|ID] message=STRING)
+	 */
+	protected void sequence_ParameterSms(EObject context, ParameterSms semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.PARAMETER_SMS__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.PARAMETER_SMS__FROM));
+			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.PARAMETER_SMS__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.PARAMETER_SMS__TO));
+			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.PARAMETER_SMS__MESSAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.PARAMETER_SMS__MESSAGE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getParameterSmsAccess().getFromUEIDTerminalRuleCall_0_2_0_1(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getParameterSmsAccess().getToUEIDTerminalRuleCall_1_2_0_1(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getParameterSmsAccess().getMessageSTRINGTerminalRuleCall_2_0(), semanticObject.getMessage());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         from=[UE|ID] 
+	 *         ((cfCode=CALLFORWARDING destination=[UE|ID]? serviceDelay=INT?) | (barringCode=BARRING code=INT?) | liCode=LINEIDENTIFICATION) 
+	 *         ussdregistration=USSDREGISTRATION?
+	 *     )
+	 */
+	protected void sequence_ParameterUssd(EObject context, ParameterUssd semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     actions+=Action+
 	 */
 	protected void sequence_Procedure(EObject context, Procedure semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -155,50 +332,9 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (name=ID meta=TestMeta procedure=Procedure)
+	 *     (name=ID description=DescriptionObject? procedure=Procedure)
 	 */
 	protected void sequence_TestCase(EObject context, TestCase semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.TEST_CASE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.TEST_CASE__NAME));
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.TEST_CASE__META) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.TEST_CASE__META));
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.TEST_CASE__PROCEDURE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.TEST_CASE__PROCEDURE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTestCaseAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getTestCaseAccess().getMetaTestMetaParserRuleCall_3_0(), semanticObject.getMeta());
-		feeder.accept(grammarAccess.getTestCaseAccess().getProcedureProcedureParserRuleCall_4_0(), semanticObject.getProcedure());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (metatype=METATYPE metaValue=MetaValue)
-	 */
-	protected void sequence_TestMetaObject(EObject context, TestMetaObject semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.TEST_META_OBJECT__METATYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.TEST_META_OBJECT__METATYPE));
-			if(transientValues.isValueTransient(semanticObject, DragonXPackage.Literals.TEST_META_OBJECT__META_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DragonXPackage.Literals.TEST_META_OBJECT__META_VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTestMetaObjectAccess().getMetatypeMETATYPEEnumRuleCall_0_0(), semanticObject.getMetatype());
-		feeder.accept(grammarAccess.getTestMetaObjectAccess().getMetaValueMetaValueParserRuleCall_2_0(), semanticObject.getMetaValue());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     meta+=TestMetaObject+
-	 */
-	protected void sequence_TestMeta(EObject context, TestMeta semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -216,8 +352,8 @@ public class DragonXSemanticSequencer extends AbstractDelegatingSemanticSequence
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getUEMetaObjectAccess().getParamsUEPARAMSEnumRuleCall_0_0(), semanticObject.getParams());
-		feeder.accept(grammarAccess.getUEMetaObjectAccess().getParamValueUEValueParserRuleCall_2_0(), semanticObject.getParamValue());
+		feeder.accept(grammarAccess.getUEMetaObjectAccess().getParamsUEPARAMSEnumRuleCall_0_0_0(), semanticObject.getParams());
+		feeder.accept(grammarAccess.getUEMetaObjectAccess().getParamValueUEValueParserRuleCall_0_2_0(), semanticObject.getParamValue());
 		feeder.finish();
 	}
 	

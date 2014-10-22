@@ -3,8 +3,8 @@
 package com.netxforge.netxtest.dragonX.impl;
 
 import com.netxforge.netxtest.dragonX.DragonXPackage;
-import com.netxforge.netxtest.dragonX.TestMeta;
-import com.netxforge.netxtest.dragonX.TestMetaObject;
+import com.netxforge.netxtest.dragonX.ParameterSetSms;
+import com.netxforge.netxtest.dragonX.ParameterSms;
 
 import java.util.Collection;
 
@@ -22,35 +22,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Test Meta</b></em>'.
+ * An implementation of the model object '<em><b>Parameter Set Sms</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.netxforge.netxtest.dragonX.impl.TestMetaImpl#getMeta <em>Meta</em>}</li>
+ *   <li>{@link com.netxforge.netxtest.dragonX.impl.ParameterSetSmsImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMeta
+public class ParameterSetSmsImpl extends MinimalEObjectImpl.Container implements ParameterSetSms
 {
   /**
-   * The cached value of the '{@link #getMeta() <em>Meta</em>}' containment reference list.
+   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMeta()
+   * @see #getParameters()
    * @generated
    * @ordered
    */
-  protected EList<TestMetaObject> meta;
+  protected EList<ParameterSms> parameters;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TestMetaImpl()
+  protected ParameterSetSmsImpl()
   {
     super();
   }
@@ -63,7 +63,7 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
   @Override
   protected EClass eStaticClass()
   {
-    return DragonXPackage.Literals.TEST_META;
+    return DragonXPackage.Literals.PARAMETER_SET_SMS;
   }
 
   /**
@@ -71,13 +71,13 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TestMetaObject> getMeta()
+  public EList<ParameterSms> getParameters()
   {
-    if (meta == null)
+    if (parameters == null)
     {
-      meta = new EObjectContainmentEList<TestMetaObject>(TestMetaObject.class, this, DragonXPackage.TEST_META__META);
+      parameters = new EObjectContainmentEList<ParameterSms>(ParameterSms.class, this, DragonXPackage.PARAMETER_SET_SMS__PARAMETERS);
     }
-    return meta;
+    return parameters;
   }
 
   /**
@@ -90,8 +90,8 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
   {
     switch (featureID)
     {
-      case DragonXPackage.TEST_META__META:
-        return ((InternalEList<?>)getMeta()).basicRemove(otherEnd, msgs);
+      case DragonXPackage.PARAMETER_SET_SMS__PARAMETERS:
+        return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -106,8 +106,8 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
   {
     switch (featureID)
     {
-      case DragonXPackage.TEST_META__META:
-        return getMeta();
+      case DragonXPackage.PARAMETER_SET_SMS__PARAMETERS:
+        return getParameters();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -123,9 +123,9 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
   {
     switch (featureID)
     {
-      case DragonXPackage.TEST_META__META:
-        getMeta().clear();
-        getMeta().addAll((Collection<? extends TestMetaObject>)newValue);
+      case DragonXPackage.PARAMETER_SET_SMS__PARAMETERS:
+        getParameters().clear();
+        getParameters().addAll((Collection<? extends ParameterSms>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +141,8 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
   {
     switch (featureID)
     {
-      case DragonXPackage.TEST_META__META:
-        getMeta().clear();
+      case DragonXPackage.PARAMETER_SET_SMS__PARAMETERS:
+        getParameters().clear();
         return;
     }
     super.eUnset(featureID);
@@ -158,10 +158,10 @@ public class TestMetaImpl extends MinimalEObjectImpl.Container implements TestMe
   {
     switch (featureID)
     {
-      case DragonXPackage.TEST_META__META:
-        return meta != null && !meta.isEmpty();
+      case DragonXPackage.PARAMETER_SET_SMS__PARAMETERS:
+        return parameters != null && !parameters.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //TestMetaImpl
+} //ParameterSetSmsImpl

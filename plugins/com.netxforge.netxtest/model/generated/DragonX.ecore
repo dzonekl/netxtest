@@ -18,53 +18,131 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TestCase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="meta" eType="#//TestMeta"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="#//DescriptionObject"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedure" eType="#//Procedure"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TestMeta">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="meta" upperBound="-1" eType="#//TestMetaObject"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TestMetaObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metatype" eType="#//METATYPE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metaValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DescriptionObject" eSuperTypes="#//UEMetaObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Procedure">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
         eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//ACTIONS"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterSet" eType="#//ParameterSet"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterSet" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSet">
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetCall">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//Parameter" containment="true"/>
+        eType="#//ParameterCall" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//ACTIONPARAMS"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ueRef" eType="#//UE"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetAnswer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ParameterAnswer" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ACTIONPARAMS">
-    <eLiterals name="ue" literal="UE"/>
-    <eLiterals name="answerTime" value="1" literal="AnswerTime"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetUssd">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ParameterUssd" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetSms">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ParameterSms" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetData">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ParameterData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetMixer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//ParameterMixer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterCall">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="callingTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ofhookResponse" eType="#//CALLRESPONSE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterAnswer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listeningTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="response" eType="#//ANSWERRESPONSE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterUssd">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cfCode" eType="#//CALLFORWARDING"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceDelay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="barringCode" eType="#//BARRING"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="liCode" eType="#//LINEIDENTIFICATION"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ussdregistration" eType="#//USSDREGISTRATION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSms">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterData">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterMixer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixer" eType="#//MIXER"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="option" eType="#//MIXEROPTIONS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MIXEROPTIONS">
+    <eLiterals name="reset" literal="Reset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MIXER">
+    <eLiterals name="p1" literal="P1"/>
+    <eLiterals name="p2" value="1" literal="P2"/>
+    <eLiterals name="p3" value="2" literal="p3"/>
+    <eLiterals name="p4" value="3" literal="p4"/>
+    <eLiterals name="p5" value="4" literal="p5"/>
+    <eLiterals name="p6" value="5" literal="p6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="USSDREGISTRATION">
+    <eLiterals name="activate" literal="Activate"/>
+    <eLiterals name="deactivate" value="1" literal="Deactivate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CALLFORWARDING">
+    <eLiterals name="cfu" literal="CFU"/>
+    <eLiterals name="cfb" value="1" literal="CFB"/>
+    <eLiterals name="cfna" value="2" literal="CFNA"/>
+    <eLiterals name="cfnr" value="3" literal="CFNR"/>
+    <eLiterals name="acd" value="4" literal="ACD"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BARRING">
+    <eLiterals name="allOutgoingCalls" literal="AllOutgoingCalls"/>
+    <eLiterals name="allIncommingCalls" value="1" literal="AllIncomingCalls"/>
+    <eLiterals name="allOutgoingCallsExHome" value="2" literal="AllOutgoingCallsExHome"/>
+    <eLiterals name="allIncommingCallsRoaming" value="3" literal="AllIncommingCallsRoaming"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LINEIDENTIFICATION">
+    <eLiterals name="clip" literal="CLIP"/>
+    <eLiterals name="clir" value="1" literal="CLIR"/>
+    <eLiterals name="colp" value="2" literal="COLP"/>
+    <eLiterals name="colr" value="3" literal="COLR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ANSWERRESPONSE">
+    <eLiterals name="listening" literal="Listening"/>
+    <eLiterals name="offhook" value="1" literal="OffHook"/>
+    <eLiterals name="hangup" value="2" literal="HangUp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CALLRESPONSE">
+    <eLiterals name="listening" literal="Listening"/>
+    <eLiterals name="hangup" value="1" literal="HangUp"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="UEPARAMS">
     <eLiterals name="imei" literal="IMEI"/>
-    <eLiterals name="msidn" value="1" literal="MSISDN"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="METATYPE">
-    <eLiterals name="description" literal="Description"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ACTIONS">
-    <eLiterals name="call" literal="CALL"/>
-    <eLiterals name="answer" value="1" literal="ANSWER"/>
-    <eLiterals name="ussd" value="2" literal="USSD"/>
-    <eLiterals name="sms" value="3" literal="SMS"/>
-    <eLiterals name="data" value="4" literal="DATA"/>
+    <eLiterals name="msisdn" value="1" literal="MSISDN"/>
   </eClassifiers>
 </ecore:EPackage>

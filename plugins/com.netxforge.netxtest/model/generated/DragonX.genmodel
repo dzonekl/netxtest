@@ -7,23 +7,52 @@
     editorPluginID="com.netxforge.netxtest.editor" runtimeVersion="2.10">
   <genPackages prefix="DragonX" basePackage="com.netxforge.netxtest" disposableProviderFactory="true"
       fileExtensions="dragonx" ecorePackage="DragonX.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//ACTIONPARAMS">
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONPARAMS/ue"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONPARAMS/answerTime"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//MIXEROPTIONS">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXEROPTIONS/reset"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//MIXER">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXER/p1"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXER/p2"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXER/p3"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXER/p4"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXER/p5"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//MIXER/p6"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//USSDREGISTRATION">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//USSDREGISTRATION/activate"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//USSDREGISTRATION/deactivate"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//CALLFORWARDING">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLFORWARDING/cfu"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLFORWARDING/cfb"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLFORWARDING/cfna"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLFORWARDING/cfnr"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLFORWARDING/acd"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//BARRING">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//BARRING/allOutgoingCalls"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//BARRING/allIncommingCalls"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//BARRING/allOutgoingCallsExHome"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//BARRING/allIncommingCallsRoaming"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//LINEIDENTIFICATION">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//LINEIDENTIFICATION/clip"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//LINEIDENTIFICATION/clir"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//LINEIDENTIFICATION/colp"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//LINEIDENTIFICATION/colr"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//ANSWERRESPONSE">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ANSWERRESPONSE/listening"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ANSWERRESPONSE/offhook"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ANSWERRESPONSE/hangup"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//CALLRESPONSE">
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLRESPONSE/listening"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//CALLRESPONSE/hangup"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//UEPARAMS">
       <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/imei"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/msidn"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//METATYPE">
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//METATYPE/description"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DragonX.ecore#//ACTIONS">
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/call"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/answer"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/ussd"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/sms"/>
-      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//ACTIONS/data"/>
+      <genEnumLiterals ecoreEnumLiteral="DragonX.ecore#//UEPARAMS/msisdn"/>
     </genEnums>
     <genClasses ecoreClass="DragonX.ecore#//DragonX">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//DragonX/ues"/>
@@ -39,15 +68,11 @@
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//TestCase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//TestCase/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestCase/meta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestCase/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestCase/procedure"/>
     </genClasses>
-    <genClasses ecoreClass="DragonX.ecore#//TestMeta">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//TestMeta/meta"/>
-    </genClasses>
-    <genClasses ecoreClass="DragonX.ecore#//TestMetaObject">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//TestMetaObject/metatype"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//TestMetaObject/metaValue"/>
+    <genClasses ecoreClass="DragonX.ecore#//DescriptionObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//DescriptionObject/description"/>
     </genClasses>
     <genClasses ecoreClass="DragonX.ecore#//Procedure">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Procedure/actions"/>
@@ -56,13 +81,62 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Action/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//Action/parameterSet"/>
     </genClasses>
-    <genClasses ecoreClass="DragonX.ecore#//ParameterSet">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSet/parameters"/>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSetCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSetCall/parameters"/>
     </genClasses>
-    <genClasses ecoreClass="DragonX.ecore#//Parameter">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Parameter/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//Parameter/value"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//Parameter/ueRef"/>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSetAnswer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSetAnswer/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSetUssd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSetUssd/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSetSms">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSetSms/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSetData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSetData/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSetMixer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSetMixer/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterCall/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterCall/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterCall/callingTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterCall/ofhookResponse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterCall/responseTime"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterAnswer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterAnswer/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterAnswer/listeningTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterAnswer/answerTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterAnswer/response"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterUssd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterUssd/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterUssd/cfCode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterUssd/destination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterUssd/serviceDelay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterUssd/barringCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterUssd/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterUssd/liCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterUssd/ussdregistration"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterSms">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSms/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterSms/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterSms/message"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterData">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterData/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterData/url"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DragonX.ecore#//ParameterData/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterData/data"/>
+    </genClasses>
+    <genClasses ecoreClass="DragonX.ecore#//ParameterMixer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterMixer/mixer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterMixer/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DragonX.ecore#//ParameterMixer/option"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

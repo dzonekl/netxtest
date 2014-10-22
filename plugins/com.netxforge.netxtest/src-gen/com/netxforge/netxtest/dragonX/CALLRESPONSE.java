@@ -10,71 +10,97 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>METATYPE</b></em>',
+ * A representation of the literals of the enumeration '<em><b>CALLRESPONSE</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.netxforge.netxtest.dragonX.DragonXPackage#getMETATYPE()
+ * @see com.netxforge.netxtest.dragonX.DragonXPackage#getCALLRESPONSE()
  * @model
  * @generated
  */
-public enum METATYPE implements Enumerator
+public enum CALLRESPONSE implements Enumerator
 {
   /**
-   * The '<em><b>Description</b></em>' literal object.
+   * The '<em><b>Listening</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DESCRIPTION_VALUE
+   * @see #LISTENING_VALUE
    * @generated
    * @ordered
    */
-  DESCRIPTION(0, "description", "Description");
+  LISTENING(0, "listening", "Listening"),
 
   /**
-   * The '<em><b>Description</b></em>' literal value.
+   * The '<em><b>Hangup</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #HANGUP_VALUE
+   * @generated
+   * @ordered
+   */
+  HANGUP(1, "hangup", "HangUp");
+
+  /**
+   * The '<em><b>Listening</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Description</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Listening</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DESCRIPTION
-   * @model name="description" literal="Description"
+   * @see #LISTENING
+   * @model name="listening" literal="Listening"
    * @generated
    * @ordered
    */
-  public static final int DESCRIPTION_VALUE = 0;
+  public static final int LISTENING_VALUE = 0;
 
   /**
-   * An array of all the '<em><b>METATYPE</b></em>' enumerators.
+   * The '<em><b>Hangup</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Hangup</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #HANGUP
+   * @model name="hangup" literal="HangUp"
+   * @generated
+   * @ordered
+   */
+  public static final int HANGUP_VALUE = 1;
+
+  /**
+   * An array of all the '<em><b>CALLRESPONSE</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final METATYPE[] VALUES_ARRAY =
-    new METATYPE[]
+  private static final CALLRESPONSE[] VALUES_ARRAY =
+    new CALLRESPONSE[]
     {
-      DESCRIPTION,
+      LISTENING,
+      HANGUP,
     };
 
   /**
-   * A public read-only list of all the '<em><b>METATYPE</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>CALLRESPONSE</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<METATYPE> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<CALLRESPONSE> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>METATYPE</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>CALLRESPONSE</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static METATYPE get(String literal)
+  public static CALLRESPONSE get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      METATYPE result = VALUES_ARRAY[i];
+      CALLRESPONSE result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -84,16 +110,16 @@ public enum METATYPE implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>METATYPE</b></em>' literal with the specified name.
+   * Returns the '<em><b>CALLRESPONSE</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static METATYPE getByName(String name)
+  public static CALLRESPONSE getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      METATYPE result = VALUES_ARRAY[i];
+      CALLRESPONSE result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -103,16 +129,17 @@ public enum METATYPE implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>METATYPE</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>CALLRESPONSE</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static METATYPE get(int value)
+  public static CALLRESPONSE get(int value)
   {
     switch (value)
     {
-      case DESCRIPTION_VALUE: return DESCRIPTION;
+      case LISTENING_VALUE: return LISTENING;
+      case HANGUP_VALUE: return HANGUP;
     }
     return null;
   }
@@ -144,7 +171,7 @@ public enum METATYPE implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private METATYPE(int value, String name, String literal)
+  private CALLRESPONSE(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -193,4 +220,4 @@ public enum METATYPE implements Enumerator
     return literal;
   }
   
-} //METATYPE
+} //CALLRESPONSE
