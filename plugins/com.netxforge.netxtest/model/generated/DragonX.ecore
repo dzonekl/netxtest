@@ -31,118 +31,66 @@
         eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterSet" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionCode" eType="#//ACTIONCODE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterSet" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//PARAM_NAME"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ParamType"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetCall">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//ParameterCall" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetAnswer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//ParameterAnswer" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetUssd">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//ParameterUssd" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetSms">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//ParameterSms" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetData">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//ParameterData" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSetMixer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//ParameterMixer" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterCall">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="callingTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ofhookResponse" eType="#//CALLRESPONSE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterAnswer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listeningTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="response" eType="#//ANSWERRESPONSE"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterUssd">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cfCode" eType="#//CALLFORWARDING"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceDelay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="barringCode" eType="#//BARRING"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="liCode" eType="#//LINEIDENTIFICATION"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ussdregistration" eType="#//USSDREGISTRATION"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterSms">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterData">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//UE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ParameterMixer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixer" eType="#//MIXER"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParamType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ueRef" eType="#//UE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="option" eType="#//MIXEROPTIONS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="response" eType="#//ParamResponseType"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="MIXEROPTIONS">
-    <eLiterals name="reset" literal="Reset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParamResponseType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paramResponse" unique="false"
+        upperBound="-1" eType="#//PARAM_RESPONSE"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="MIXER">
-    <eLiterals name="p1" literal="P1"/>
-    <eLiterals name="p2" value="1" literal="P2"/>
-    <eLiterals name="p3" value="2" literal="p3"/>
-    <eLiterals name="p4" value="3" literal="p4"/>
-    <eLiterals name="p5" value="4" literal="p5"/>
-    <eLiterals name="p6" value="5" literal="p6"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="PARAM_NAME">
+    <eLiterals name="from" literal="From"/>
+    <eLiterals name="to" value="1" literal="To"/>
+    <eLiterals name="callDuration" value="2" literal="CallingTime"/>
+    <eLiterals name="responseTime" value="3" literal="ResponseTime"/>
+    <eLiterals name="listeningTime" value="4" literal="ListeningTime"/>
+    <eLiterals name="data" value="5" literal="Data"/>
+    <eLiterals name="message" value="6" literal="SMS"/>
+    <eLiterals name="ussdCode" value="7" literal="UssdCode"/>
+    <eLiterals name="serviceDelay" value="8" literal="ServiceDelay"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="USSDREGISTRATION">
-    <eLiterals name="activate" literal="Activate"/>
-    <eLiterals name="deactivate" value="1" literal="Deactivate"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="PARAM_RESPONSE">
+    <eLiterals name="listining" literal="Listening"/>
+    <eLiterals name="offhook" value="1" literal="OffHook"/>
+    <eLiterals name="hangup" value="2" literal="HangUp"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="CALLFORWARDING">
+  <eClassifiers xsi:type="ecore:EEnum" name="ACTIONCODE">
+    <eLiterals name="call" literal="CALL"/>
+    <eLiterals name="answer" value="1" literal="ANSWER"/>
+    <eLiterals name="ussd" value="2" literal="USSD"/>
+    <eLiterals name="sms" value="3" literal="SMS"/>
+    <eLiterals name="data" value="4" literal="DATA"/>
+    <eLiterals name="mixer" value="5" literal="MIXER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UEPARAMS">
+    <eLiterals name="imei" literal="IMEI"/>
+    <eLiterals name="msisdn" value="1" literal="MSISDN"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="USSDCODES">
     <eLiterals name="cfu" literal="CFU"/>
     <eLiterals name="cfb" value="1" literal="CFB"/>
     <eLiterals name="cfna" value="2" literal="CFNA"/>
     <eLiterals name="cfnr" value="3" literal="CFNR"/>
     <eLiterals name="acd" value="4" literal="ACD"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="BARRING">
-    <eLiterals name="allOutgoingCalls" literal="AllOutgoingCalls"/>
-    <eLiterals name="allIncommingCalls" value="1" literal="AllIncomingCalls"/>
-    <eLiterals name="allOutgoingCallsExHome" value="2" literal="AllOutgoingCallsExHome"/>
-    <eLiterals name="allIncommingCallsRoaming" value="3" literal="AllIncommingCallsRoaming"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="LINEIDENTIFICATION">
-    <eLiterals name="clip" literal="CLIP"/>
-    <eLiterals name="clir" value="1" literal="CLIR"/>
-    <eLiterals name="colp" value="2" literal="COLP"/>
-    <eLiterals name="colr" value="3" literal="COLR"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ANSWERRESPONSE">
-    <eLiterals name="listening" literal="Listening"/>
-    <eLiterals name="offhook" value="1" literal="OffHook"/>
-    <eLiterals name="hangup" value="2" literal="HangUp"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="CALLRESPONSE">
-    <eLiterals name="listening" literal="Listening"/>
-    <eLiterals name="hangup" value="1" literal="HangUp"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="UEPARAMS">
-    <eLiterals name="imei" literal="IMEI"/>
-    <eLiterals name="msisdn" value="1" literal="MSISDN"/>
+    <eLiterals name="allOutgoingCalls" value="5" literal="AllOutgoingCalls"/>
+    <eLiterals name="allIncommingCalls" value="6" literal="AllIncomingCalls"/>
+    <eLiterals name="allOutgoingCallsExHome" value="7" literal="AllOutgoingCallsExHome"/>
+    <eLiterals name="allIncommingCallsRoaming" value="8" literal="AllIncommingCallsRoaming"/>
+    <eLiterals name="clip" value="9" literal="CLIP"/>
+    <eLiterals name="clir" value="10" literal="CLIR"/>
+    <eLiterals name="colp" value="11" literal="COLP"/>
+    <eLiterals name="colr" value="12" literal="COLR"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -10,24 +10,34 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>CALLRESPONSE</b></em>',
+ * A representation of the literals of the enumeration '<em><b>PARAM RESPONSE</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.netxforge.netxtest.dragonX.DragonXPackage#getCALLRESPONSE()
+ * @see com.netxforge.netxtest.dragonX.DragonXPackage#getPARAM_RESPONSE()
  * @model
  * @generated
  */
-public enum CALLRESPONSE implements Enumerator
+public enum PARAM_RESPONSE implements Enumerator
 {
   /**
-   * The '<em><b>Listening</b></em>' literal object.
+   * The '<em><b>Listining</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #LISTENING_VALUE
+   * @see #LISTINING_VALUE
    * @generated
    * @ordered
    */
-  LISTENING(0, "listening", "Listening"),
+  LISTINING(0, "listining", "Listening"),
+
+  /**
+   * The '<em><b>Offhook</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #OFFHOOK_VALUE
+   * @generated
+   * @ordered
+   */
+  OFFHOOK(1, "offhook", "OffHook"),
 
   /**
    * The '<em><b>Hangup</b></em>' literal object.
@@ -37,22 +47,37 @@ public enum CALLRESPONSE implements Enumerator
    * @generated
    * @ordered
    */
-  HANGUP(1, "hangup", "HangUp");
+  HANGUP(2, "hangup", "HangUp");
 
   /**
-   * The '<em><b>Listening</b></em>' literal value.
+   * The '<em><b>Listining</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Listening</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Listining</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #LISTENING
-   * @model name="listening" literal="Listening"
+   * @see #LISTINING
+   * @model name="listining" literal="Listening"
    * @generated
    * @ordered
    */
-  public static final int LISTENING_VALUE = 0;
+  public static final int LISTINING_VALUE = 0;
+
+  /**
+   * The '<em><b>Offhook</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Offhook</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #OFFHOOK
+   * @model name="offhook" literal="OffHook"
+   * @generated
+   * @ordered
+   */
+  public static final int OFFHOOK_VALUE = 1;
 
   /**
    * The '<em><b>Hangup</b></em>' literal value.
@@ -67,40 +92,41 @@ public enum CALLRESPONSE implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int HANGUP_VALUE = 1;
+  public static final int HANGUP_VALUE = 2;
 
   /**
-   * An array of all the '<em><b>CALLRESPONSE</b></em>' enumerators.
+   * An array of all the '<em><b>PARAM RESPONSE</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final CALLRESPONSE[] VALUES_ARRAY =
-    new CALLRESPONSE[]
+  private static final PARAM_RESPONSE[] VALUES_ARRAY =
+    new PARAM_RESPONSE[]
     {
-      LISTENING,
+      LISTINING,
+      OFFHOOK,
       HANGUP,
     };
 
   /**
-   * A public read-only list of all the '<em><b>CALLRESPONSE</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>PARAM RESPONSE</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<CALLRESPONSE> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<PARAM_RESPONSE> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>CALLRESPONSE</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>PARAM RESPONSE</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static CALLRESPONSE get(String literal)
+  public static PARAM_RESPONSE get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      CALLRESPONSE result = VALUES_ARRAY[i];
+      PARAM_RESPONSE result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -110,16 +136,16 @@ public enum CALLRESPONSE implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>CALLRESPONSE</b></em>' literal with the specified name.
+   * Returns the '<em><b>PARAM RESPONSE</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static CALLRESPONSE getByName(String name)
+  public static PARAM_RESPONSE getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      CALLRESPONSE result = VALUES_ARRAY[i];
+      PARAM_RESPONSE result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -129,16 +155,17 @@ public enum CALLRESPONSE implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>CALLRESPONSE</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>PARAM RESPONSE</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static CALLRESPONSE get(int value)
+  public static PARAM_RESPONSE get(int value)
   {
     switch (value)
     {
-      case LISTENING_VALUE: return LISTENING;
+      case LISTINING_VALUE: return LISTINING;
+      case OFFHOOK_VALUE: return OFFHOOK;
       case HANGUP_VALUE: return HANGUP;
     }
     return null;
@@ -171,7 +198,7 @@ public enum CALLRESPONSE implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private CALLRESPONSE(int value, String name, String literal)
+  private PARAM_RESPONSE(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -220,4 +247,4 @@ public enum CALLRESPONSE implements Enumerator
     return literal;
   }
   
-} //CALLRESPONSE
+} //PARAM_RESPONSE

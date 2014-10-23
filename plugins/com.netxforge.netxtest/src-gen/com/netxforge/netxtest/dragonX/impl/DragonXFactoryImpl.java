@@ -72,18 +72,9 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
       case DragonXPackage.DESCRIPTION_OBJECT: return createDescriptionObject();
       case DragonXPackage.PROCEDURE: return createProcedure();
       case DragonXPackage.ACTION: return createAction();
-      case DragonXPackage.PARAMETER_SET_CALL: return createParameterSetCall();
-      case DragonXPackage.PARAMETER_SET_ANSWER: return createParameterSetAnswer();
-      case DragonXPackage.PARAMETER_SET_USSD: return createParameterSetUssd();
-      case DragonXPackage.PARAMETER_SET_SMS: return createParameterSetSms();
-      case DragonXPackage.PARAMETER_SET_DATA: return createParameterSetData();
-      case DragonXPackage.PARAMETER_SET_MIXER: return createParameterSetMixer();
-      case DragonXPackage.PARAMETER_CALL: return createParameterCall();
-      case DragonXPackage.PARAMETER_ANSWER: return createParameterAnswer();
-      case DragonXPackage.PARAMETER_USSD: return createParameterUssd();
-      case DragonXPackage.PARAMETER_SMS: return createParameterSms();
-      case DragonXPackage.PARAMETER_DATA: return createParameterData();
-      case DragonXPackage.PARAMETER_MIXER: return createParameterMixer();
+      case DragonXPackage.PARAMETER: return createParameter();
+      case DragonXPackage.PARAM_TYPE: return createParamType();
+      case DragonXPackage.PARAM_RESPONSE_TYPE: return createParamResponseType();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -99,24 +90,16 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case DragonXPackage.MIXEROPTIONS:
-        return createMIXEROPTIONSFromString(eDataType, initialValue);
-      case DragonXPackage.MIXER:
-        return createMIXERFromString(eDataType, initialValue);
-      case DragonXPackage.USSDREGISTRATION:
-        return createUSSDREGISTRATIONFromString(eDataType, initialValue);
-      case DragonXPackage.CALLFORWARDING:
-        return createCALLFORWARDINGFromString(eDataType, initialValue);
-      case DragonXPackage.BARRING:
-        return createBARRINGFromString(eDataType, initialValue);
-      case DragonXPackage.LINEIDENTIFICATION:
-        return createLINEIDENTIFICATIONFromString(eDataType, initialValue);
-      case DragonXPackage.ANSWERRESPONSE:
-        return createANSWERRESPONSEFromString(eDataType, initialValue);
-      case DragonXPackage.CALLRESPONSE:
-        return createCALLRESPONSEFromString(eDataType, initialValue);
+      case DragonXPackage.PARAM_NAME:
+        return createPARAM_NAMEFromString(eDataType, initialValue);
+      case DragonXPackage.PARAM_RESPONSE:
+        return createPARAM_RESPONSEFromString(eDataType, initialValue);
+      case DragonXPackage.ACTIONCODE:
+        return createACTIONCODEFromString(eDataType, initialValue);
       case DragonXPackage.UEPARAMS:
         return createUEPARAMSFromString(eDataType, initialValue);
+      case DragonXPackage.USSDCODES:
+        return createUSSDCODESFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -132,24 +115,16 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case DragonXPackage.MIXEROPTIONS:
-        return convertMIXEROPTIONSToString(eDataType, instanceValue);
-      case DragonXPackage.MIXER:
-        return convertMIXERToString(eDataType, instanceValue);
-      case DragonXPackage.USSDREGISTRATION:
-        return convertUSSDREGISTRATIONToString(eDataType, instanceValue);
-      case DragonXPackage.CALLFORWARDING:
-        return convertCALLFORWARDINGToString(eDataType, instanceValue);
-      case DragonXPackage.BARRING:
-        return convertBARRINGToString(eDataType, instanceValue);
-      case DragonXPackage.LINEIDENTIFICATION:
-        return convertLINEIDENTIFICATIONToString(eDataType, instanceValue);
-      case DragonXPackage.ANSWERRESPONSE:
-        return convertANSWERRESPONSEToString(eDataType, instanceValue);
-      case DragonXPackage.CALLRESPONSE:
-        return convertCALLRESPONSEToString(eDataType, instanceValue);
+      case DragonXPackage.PARAM_NAME:
+        return convertPARAM_NAMEToString(eDataType, instanceValue);
+      case DragonXPackage.PARAM_RESPONSE:
+        return convertPARAM_RESPONSEToString(eDataType, instanceValue);
+      case DragonXPackage.ACTIONCODE:
+        return convertACTIONCODEToString(eDataType, instanceValue);
       case DragonXPackage.UEPARAMS:
         return convertUEPARAMSToString(eDataType, instanceValue);
+      case DragonXPackage.USSDCODES:
+        return convertUSSDCODESToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -237,10 +212,10 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParameterSetCall createParameterSetCall()
+  public Parameter createParameter()
   {
-    ParameterSetCallImpl parameterSetCall = new ParameterSetCallImpl();
-    return parameterSetCall;
+    ParameterImpl parameter = new ParameterImpl();
+    return parameter;
   }
 
   /**
@@ -248,10 +223,10 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParameterSetAnswer createParameterSetAnswer()
+  public ParamType createParamType()
   {
-    ParameterSetAnswerImpl parameterSetAnswer = new ParameterSetAnswerImpl();
-    return parameterSetAnswer;
+    ParamTypeImpl paramType = new ParamTypeImpl();
+    return paramType;
   }
 
   /**
@@ -259,10 +234,10 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParameterSetUssd createParameterSetUssd()
+  public ParamResponseType createParamResponseType()
   {
-    ParameterSetUssdImpl parameterSetUssd = new ParameterSetUssdImpl();
-    return parameterSetUssd;
+    ParamResponseTypeImpl paramResponseType = new ParamResponseTypeImpl();
+    return paramResponseType;
   }
 
   /**
@@ -270,108 +245,9 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParameterSetSms createParameterSetSms()
+  public PARAM_NAME createPARAM_NAMEFromString(EDataType eDataType, String initialValue)
   {
-    ParameterSetSmsImpl parameterSetSms = new ParameterSetSmsImpl();
-    return parameterSetSms;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterSetData createParameterSetData()
-  {
-    ParameterSetDataImpl parameterSetData = new ParameterSetDataImpl();
-    return parameterSetData;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterSetMixer createParameterSetMixer()
-  {
-    ParameterSetMixerImpl parameterSetMixer = new ParameterSetMixerImpl();
-    return parameterSetMixer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterCall createParameterCall()
-  {
-    ParameterCallImpl parameterCall = new ParameterCallImpl();
-    return parameterCall;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterAnswer createParameterAnswer()
-  {
-    ParameterAnswerImpl parameterAnswer = new ParameterAnswerImpl();
-    return parameterAnswer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterUssd createParameterUssd()
-  {
-    ParameterUssdImpl parameterUssd = new ParameterUssdImpl();
-    return parameterUssd;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterSms createParameterSms()
-  {
-    ParameterSmsImpl parameterSms = new ParameterSmsImpl();
-    return parameterSms;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterData createParameterData()
-  {
-    ParameterDataImpl parameterData = new ParameterDataImpl();
-    return parameterData;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterMixer createParameterMixer()
-  {
-    ParameterMixerImpl parameterMixer = new ParameterMixerImpl();
-    return parameterMixer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MIXEROPTIONS createMIXEROPTIONSFromString(EDataType eDataType, String initialValue)
-  {
-    MIXEROPTIONS result = MIXEROPTIONS.get(initialValue);
+    PARAM_NAME result = PARAM_NAME.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -381,7 +257,7 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertMIXEROPTIONSToString(EDataType eDataType, Object instanceValue)
+  public String convertPARAM_NAMEToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
@@ -391,9 +267,9 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public MIXER createMIXERFromString(EDataType eDataType, String initialValue)
+  public PARAM_RESPONSE createPARAM_RESPONSEFromString(EDataType eDataType, String initialValue)
   {
-    MIXER result = MIXER.get(initialValue);
+    PARAM_RESPONSE result = PARAM_RESPONSE.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -403,7 +279,7 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertMIXERToString(EDataType eDataType, Object instanceValue)
+  public String convertPARAM_RESPONSEToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
@@ -413,9 +289,9 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public USSDREGISTRATION createUSSDREGISTRATIONFromString(EDataType eDataType, String initialValue)
+  public ACTIONCODE createACTIONCODEFromString(EDataType eDataType, String initialValue)
   {
-    USSDREGISTRATION result = USSDREGISTRATION.get(initialValue);
+    ACTIONCODE result = ACTIONCODE.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -425,117 +301,7 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUSSDREGISTRATIONToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CALLFORWARDING createCALLFORWARDINGFromString(EDataType eDataType, String initialValue)
-  {
-    CALLFORWARDING result = CALLFORWARDING.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertCALLFORWARDINGToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BARRING createBARRINGFromString(EDataType eDataType, String initialValue)
-  {
-    BARRING result = BARRING.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertBARRINGToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LINEIDENTIFICATION createLINEIDENTIFICATIONFromString(EDataType eDataType, String initialValue)
-  {
-    LINEIDENTIFICATION result = LINEIDENTIFICATION.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertLINEIDENTIFICATIONToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ANSWERRESPONSE createANSWERRESPONSEFromString(EDataType eDataType, String initialValue)
-  {
-    ANSWERRESPONSE result = ANSWERRESPONSE.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertANSWERRESPONSEToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CALLRESPONSE createCALLRESPONSEFromString(EDataType eDataType, String initialValue)
-  {
-    CALLRESPONSE result = CALLRESPONSE.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertCALLRESPONSEToString(EDataType eDataType, Object instanceValue)
+  public String convertACTIONCODEToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
@@ -558,6 +324,28 @@ public class DragonXFactoryImpl extends EFactoryImpl implements DragonXFactory
    * @generated
    */
   public String convertUEPARAMSToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public USSDCODES createUSSDCODESFromString(EDataType eDataType, String initialValue)
+  {
+    USSDCODES result = USSDCODES.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertUSSDCODESToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

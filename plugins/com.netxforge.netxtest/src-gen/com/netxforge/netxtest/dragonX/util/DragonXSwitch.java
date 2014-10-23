@@ -122,87 +122,24 @@ public class DragonXSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DragonXPackage.PARAMETER_SET_CALL:
+      case DragonXPackage.PARAMETER:
       {
-        ParameterSetCall parameterSetCall = (ParameterSetCall)theEObject;
-        T result = caseParameterSetCall(parameterSetCall);
+        Parameter parameter = (Parameter)theEObject;
+        T result = caseParameter(parameter);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DragonXPackage.PARAMETER_SET_ANSWER:
+      case DragonXPackage.PARAM_TYPE:
       {
-        ParameterSetAnswer parameterSetAnswer = (ParameterSetAnswer)theEObject;
-        T result = caseParameterSetAnswer(parameterSetAnswer);
+        ParamType paramType = (ParamType)theEObject;
+        T result = caseParamType(paramType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DragonXPackage.PARAMETER_SET_USSD:
+      case DragonXPackage.PARAM_RESPONSE_TYPE:
       {
-        ParameterSetUssd parameterSetUssd = (ParameterSetUssd)theEObject;
-        T result = caseParameterSetUssd(parameterSetUssd);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_SET_SMS:
-      {
-        ParameterSetSms parameterSetSms = (ParameterSetSms)theEObject;
-        T result = caseParameterSetSms(parameterSetSms);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_SET_DATA:
-      {
-        ParameterSetData parameterSetData = (ParameterSetData)theEObject;
-        T result = caseParameterSetData(parameterSetData);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_SET_MIXER:
-      {
-        ParameterSetMixer parameterSetMixer = (ParameterSetMixer)theEObject;
-        T result = caseParameterSetMixer(parameterSetMixer);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_CALL:
-      {
-        ParameterCall parameterCall = (ParameterCall)theEObject;
-        T result = caseParameterCall(parameterCall);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_ANSWER:
-      {
-        ParameterAnswer parameterAnswer = (ParameterAnswer)theEObject;
-        T result = caseParameterAnswer(parameterAnswer);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_USSD:
-      {
-        ParameterUssd parameterUssd = (ParameterUssd)theEObject;
-        T result = caseParameterUssd(parameterUssd);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_SMS:
-      {
-        ParameterSms parameterSms = (ParameterSms)theEObject;
-        T result = caseParameterSms(parameterSms);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_DATA:
-      {
-        ParameterData parameterData = (ParameterData)theEObject;
-        T result = caseParameterData(parameterData);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DragonXPackage.PARAMETER_MIXER:
-      {
-        ParameterMixer parameterMixer = (ParameterMixer)theEObject;
-        T result = caseParameterMixer(parameterMixer);
+        ParamResponseType paramResponseType = (ParamResponseType)theEObject;
+        T result = caseParamResponseType(paramResponseType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -323,193 +260,49 @@ public class DragonXSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Set Call</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Set Call</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParameterSetCall(ParameterSetCall object)
+  public T caseParameter(Parameter object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Set Answer</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Param Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Set Answer</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Param Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParameterSetAnswer(ParameterSetAnswer object)
+  public T caseParamType(ParamType object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Set Ussd</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Param Response Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Set Ussd</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Param Response Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParameterSetUssd(ParameterSetUssd object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Set Sms</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Set Sms</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterSetSms(ParameterSetSms object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Set Data</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Set Data</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterSetData(ParameterSetData object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Set Mixer</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Set Mixer</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterSetMixer(ParameterSetMixer object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Call</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Call</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterCall(ParameterCall object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Answer</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Answer</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterAnswer(ParameterAnswer object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Ussd</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Ussd</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterUssd(ParameterUssd object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Sms</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Sms</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterSms(ParameterSms object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Data</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Data</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterData(ParameterData object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter Mixer</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter Mixer</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterMixer(ParameterMixer object)
+  public T caseParamResponseType(ParamResponseType object)
   {
     return null;
   }

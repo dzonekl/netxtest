@@ -86,112 +86,31 @@ public interface DragonXFactory extends EFactory
   Action createAction();
 
   /**
-   * Returns a new object of class '<em>Parameter Set Call</em>'.
+   * Returns a new object of class '<em>Parameter</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Set Call</em>'.
+   * @return a new object of class '<em>Parameter</em>'.
    * @generated
    */
-  ParameterSetCall createParameterSetCall();
+  Parameter createParameter();
 
   /**
-   * Returns a new object of class '<em>Parameter Set Answer</em>'.
+   * Returns a new object of class '<em>Param Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Set Answer</em>'.
+   * @return a new object of class '<em>Param Type</em>'.
    * @generated
    */
-  ParameterSetAnswer createParameterSetAnswer();
+  ParamType createParamType();
 
   /**
-   * Returns a new object of class '<em>Parameter Set Ussd</em>'.
+   * Returns a new object of class '<em>Param Response Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Set Ussd</em>'.
+   * @return a new object of class '<em>Param Response Type</em>'.
    * @generated
    */
-  ParameterSetUssd createParameterSetUssd();
-
-  /**
-   * Returns a new object of class '<em>Parameter Set Sms</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Set Sms</em>'.
-   * @generated
-   */
-  ParameterSetSms createParameterSetSms();
-
-  /**
-   * Returns a new object of class '<em>Parameter Set Data</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Set Data</em>'.
-   * @generated
-   */
-  ParameterSetData createParameterSetData();
-
-  /**
-   * Returns a new object of class '<em>Parameter Set Mixer</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Set Mixer</em>'.
-   * @generated
-   */
-  ParameterSetMixer createParameterSetMixer();
-
-  /**
-   * Returns a new object of class '<em>Parameter Call</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Call</em>'.
-   * @generated
-   */
-  ParameterCall createParameterCall();
-
-  /**
-   * Returns a new object of class '<em>Parameter Answer</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Answer</em>'.
-   * @generated
-   */
-  ParameterAnswer createParameterAnswer();
-
-  /**
-   * Returns a new object of class '<em>Parameter Ussd</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Ussd</em>'.
-   * @generated
-   */
-  ParameterUssd createParameterUssd();
-
-  /**
-   * Returns a new object of class '<em>Parameter Sms</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Sms</em>'.
-   * @generated
-   */
-  ParameterSms createParameterSms();
-
-  /**
-   * Returns a new object of class '<em>Parameter Data</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Data</em>'.
-   * @generated
-   */
-  ParameterData createParameterData();
-
-  /**
-   * Returns a new object of class '<em>Parameter Mixer</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter Mixer</em>'.
-   * @generated
-   */
-  ParameterMixer createParameterMixer();
+  ParamResponseType createParamResponseType();
 
   /**
    * Returns the package supported by this factory.

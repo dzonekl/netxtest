@@ -13,8 +13,7 @@ DragonX:
 	ues+=UE+
 	tests+=TestCase+;
 
-
-// UE block
+	// UE block
 UE:
 	'UE' name=ID '{' meta+=UEMetaObject+ '}';
 
@@ -24,90 +23,97 @@ UEMetaObject:
 UEValue:
 	STRING | ID | INT;
 
-
-// TestCase block	
+	// TestCase block	
 TestCase:
-	'TestCase' name=ID '{' (description = DescriptionObject)? procedure=Procedure '}';
+	'TestCase' name=ID '{' (description=DescriptionObject)? procedure=Procedure '}';
 
-	
 DescriptionObject:
-	'Description' ':' description = STRING;
+	'Description' ':' description=STRING;
 
 Procedure:
 	'Test' '{' actions+=Action+ '}';
 
 Action:
-	((name='CALL' '{' parameterSet=ParameterSetCall) | (name='ANSWER'  '{' parameterSet=ParameterSetAnswer ) |
-	 (name= 'USSD'  '{' parameterSet=ParameterSetUssd) | (name='SMS' '{' parameterSet=ParameterSetSms) |
-	 (name='DATA' '{' parameterSet=ParameterSetData) | (name='MIXER' '{' parameterSet=ParameterSetMixer)) '}';
+	actionCode=ACTIONCODE |
+	'{' parameterSet+=Parameter '}';
 
-ParameterSetCall:
-	parameters+=ParameterCall;
+	// Superclass ParameterSet
+//ParameterSet:
+//	parameters+=(ParameterSetCall | ParameterSetAnswer | ParameterSetUssd | ParameterSetSms | ParameterSetData |
+//	ParameterSetMixer);
+//
+//ParameterSetCall:
+//	parameters+=ParameterCall+;
+//
+//ParameterSetAnswer:
+//	parameters+=ParameterAnswer+;
+//
+//ParameterSetUssd:
+//	parameters+=ParameterUssd+;
+//
+//ParameterSetSms:
+//	parameters+=ParameterSms+;
+//
+//ParameterSetData:
+//	parameters+=ParameterData+;
+//
+//ParameterSetMixer:
+//	parameters+=ParameterMixer+;
 
-ParameterSetAnswer:
-	parameters+= ParameterAnswer;
+// Superclass Parameter
+//Parameter:
+//	ParameterCall | ParameterAnswer | ParameterUssd | ParameterSms | ParameterData | ParameterMixer;
+Parameter:
+	name=PARAM_NAME
+	type=ParamType;
 
-ParameterSetUssd:
-	parameters+=ParameterUssd;
+ParamType:
+	ueRef=[UE] | value=INT | response=ParamResponseType;
 
-ParameterSetSms:
-	parameters+= ParameterSms;
+ParamResponseType:
+	paramResponse+=PARAM_RESPONSE+;
 
-ParameterSetData:
-	parameters+=ParameterData;
+enum PARAM_NAME:
+	from='From' | to='To' | callDuration='CallingTime' | responseTime='ResponseTime' | listeningTime='ListeningTime' |
+	data='Data' | message='SMS' | ussdCode='UssdCode' | serviceDelay='ServiceDelay';
 
-ParameterSetMixer:
-	(parameters += ParameterMixer+);
-
-ParameterCall:
-	 ('From' ':' from=[UE]) ('To' ':' to=[UE]) ('CallingTime' ':' callingTime=INT)? 
-	('OffHookResponse' ':' ofhookResponse=CALLRESPONSE ('ResponseTime' ':' responseTime=INT)?  );
-	
-ParameterAnswer:
-	('From' ':' from=[UE]) ('ListeningTime' ':' listeningTime=INT) ('AnswerTime' ':' answerTime=INT)? ('Response' ':' response= ANSWERRESPONSE)?;
-	
-ParameterUssd:
-	('From' ':' from=[UE]) (
-	(('USSDCode' ':' cfCode=CALLFORWARDING ('Destination' ':' destination= [UE])? ('ServiceDelay' ':' serviceDelay=INT)?)) |
-	 ('USSDCode' ':' barringCode = BARRING ('Code' ':' code= INT)? ) |
-     ('USSDCode' ':' liCode = LINEIDENTIFICATION )) (ussdregistration= USSDREGISTRATION)?;
-
-ParameterSms:
-	('From' ':' from=[UE]) ('To' ':' to=[UE]) (message=STRING);
-
-ParameterData:
-	('From' ':' from=[UE]) ('url' ':' url=STRING)? ('To' ':' to=[UE] 'data' ':' data= STRING)?;
-
-ParameterMixer:
-	(mixer= MIXER ':' value = INT)	| (option= MIXEROPTIONS);
-
-enum MIXEROPTIONS:
-	reset = 'Reset';
-		
-enum MIXER:
-	p1='P1' | p2='P2' | p3='p3' | p4='p4' | p5='p5' | p6='p6';
-
-enum USSDREGISTRATION:
-	activate='Activate' | deactivate='Deactivate';
-	
-enum CALLFORWARDING:
-	cfu='CFU' | cfb='CFB' |cfna='CFNA' |cfnr='CFNR' | acd='ACD';
-
-enum BARRING:
-	allOutgoingCalls = 'AllOutgoingCalls' | allIncommingCalls = 'AllIncomingCalls' |
-	 allOutgoingCallsExHome = 'AllOutgoingCallsExHome' |allIncommingCallsRoaming = 'AllIncommingCallsRoaming';
-
-enum LINEIDENTIFICATION:
-	clip = 'CLIP' | clir = 'CLIR' | colp = 'COLP' | colr = 'COLR';
-	
-enum ANSWERRESPONSE:
-	listening = 'Listening' | offhook='OffHook' | hangup='HangUp';
-
-enum CALLRESPONSE:
-	listening = 'Listening' | hangup='HangUp';
+enum PARAM_RESPONSE:
+	listining='Listening' | offhook='OffHook' | hangup='HangUp';
+	//
+//ParameterCall returns Parameter:
+//	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='CallingTime' ':' value=INT) | (name='Response' ':'
+//	response=('Listening' | 'HangUp')) | (name='ResponseTime' ':' value=INT);
+//
+//ParameterAnswer returns Parameter:
+//	(name='From' ':' ueRef=[UE]) | (name='ListeningTime' ':' value=INT) | (name='ResponseTime' ':' value=INT) |
+//	(name='Response' ':' response=('Listening' | 'OffHook' | 'HangUp'));
+//
+//ParameterUssd:
+//	(name='From' ':' ueRef=[UE]) | (name='UssdCode' ':' ussdCode=USSDCODES) | (name='Destination' ':' dest=[UE]) |
+//	(name='ServiceDelay' ':' serviceDelay=INT) | (name='Code' ':' code=INT) | (name='Registration' ':'
+//	registration=('Activate' | 'Deactivate'));
+//
+//ParameterSms:
+//	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='Message' ':' message=STRING);
+//
+//ParameterData:
+//	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='Url' ':' url=STRING) | (name='Data' ':'
+//	value=STRING);
+//
+//ParameterMixer:
+//	(name='P1' ':' value=INT) | (name='P2' ':' value=INT) | (name='P3' ':' value=INT) | (name='P4' ':' value=INT) |
+//	(name='P5' ':' value=INT) | (name='P6' ':' value=INT) | (name='Option' ':' option='Reset');
+enum ACTIONCODE:
+	call='CALL'
+	| answer='ANSWER' | ussd='USSD' | sms='SMS' | data='DATA' | mixer='MIXER';
 
 enum UEPARAMS:
 	imei='IMEI' | msisdn='MSISDN';
+
+enum USSDCODES:
+	cfu='CFU' | cfb='CFB' | cfna='CFNA' | cfnr='CFNR' | acd='ACD' | allOutgoingCalls='AllOutgoingCalls' |
+	allIncommingCalls='AllIncomingCalls' | allOutgoingCallsExHome='AllOutgoingCallsExHome' |
+	allIncommingCallsRoaming='AllIncommingCallsRoaming' | clip='CLIP' | clir='CLIR' | colp='COLP' | colr='COLR';
 
 QUALIFIED_ID:
 	ID (' . ' ID)*;

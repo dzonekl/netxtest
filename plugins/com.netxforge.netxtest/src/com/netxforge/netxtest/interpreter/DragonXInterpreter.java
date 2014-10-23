@@ -25,7 +25,6 @@ import com.netxforge.netxtest.dragonX.Action;
 import com.netxforge.netxtest.dragonX.DragonX;
 import com.netxforge.netxtest.dragonX.DragonXPackage;
 import com.netxforge.netxtest.dragonX.Parameter;
-import com.netxforge.netxtest.dragonX.ParameterSet;
 import com.netxforge.netxtest.dragonX.TestCase;
 import com.netxforge.netxtest.dragonX.UE;
 import com.netxforge.netxtest.dragonX.UEMetaObject;
@@ -93,10 +92,8 @@ public class DragonXInterpreter {
 			ImmutableMap<String, Object> values) {
 		extDispatcher.processAction(a);
 
-		ParameterSet parameterSet = a.getParameterSet();
-
 		// Put all the parameters in the RemoteMessage object
-		for (Parameter p : parameterSet.getParameters()) {
+		for (Parameter p : a.getParameterSet()) {
 
 			@SuppressWarnings("unused")
 			Object result = dispatcher.invoke(p, ImmutableMap.copyOf(values));
@@ -113,12 +110,14 @@ public class DragonXInterpreter {
 			ImmutableMap<String, Object> values) {
 
 		extDispatcher.processParameter(param);
-		if (param.eIsSet(DragonXPackage.Literals.PARAMETER__UE_REF)) {
-
-			@SuppressWarnings("unused")
-			Object result = dispatcher.invoke(param.getUeRef(),
-					ImmutableMap.copyOf(values));
-		}
+		
+		// Do not further process, leave it to the dispatcher. 
+		// if (param.eIsSet(DragonXPackage.Literals.pa)) {
+		//
+		// @SuppressWarnings("unused")
+		// Object result = dispatcher.invoke(param.getUeRef(),
+		// ImmutableMap.copyOf(values));
+		// }
 
 		return null;
 	}

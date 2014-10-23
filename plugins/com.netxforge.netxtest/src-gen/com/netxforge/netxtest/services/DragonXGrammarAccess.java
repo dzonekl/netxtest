@@ -263,873 +263,151 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Action");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Group cGroup_0_0 = (Group)cAlternatives_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_0_0 = (Assignment)cGroup_0_0.eContents().get(0);
-		private final Keyword cNameCALLKeyword_0_0_0_0 = (Keyword)cNameAssignment_0_0_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_0_1 = (Keyword)cGroup_0_0.eContents().get(1);
-		private final Assignment cParameterSetAssignment_0_0_2 = (Assignment)cGroup_0_0.eContents().get(2);
-		private final RuleCall cParameterSetParameterSetCallParserRuleCall_0_0_2_0 = (RuleCall)cParameterSetAssignment_0_0_2.eContents().get(0);
-		private final Group cGroup_0_1 = (Group)cAlternatives_0.eContents().get(1);
-		private final Assignment cNameAssignment_0_1_0 = (Assignment)cGroup_0_1.eContents().get(0);
-		private final Keyword cNameANSWERKeyword_0_1_0_0 = (Keyword)cNameAssignment_0_1_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_1_1 = (Keyword)cGroup_0_1.eContents().get(1);
-		private final Assignment cParameterSetAssignment_0_1_2 = (Assignment)cGroup_0_1.eContents().get(2);
-		private final RuleCall cParameterSetParameterSetAnswerParserRuleCall_0_1_2_0 = (RuleCall)cParameterSetAssignment_0_1_2.eContents().get(0);
-		private final Group cGroup_0_2 = (Group)cAlternatives_0.eContents().get(2);
-		private final Assignment cNameAssignment_0_2_0 = (Assignment)cGroup_0_2.eContents().get(0);
-		private final Keyword cNameUSSDKeyword_0_2_0_0 = (Keyword)cNameAssignment_0_2_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_2_1 = (Keyword)cGroup_0_2.eContents().get(1);
-		private final Assignment cParameterSetAssignment_0_2_2 = (Assignment)cGroup_0_2.eContents().get(2);
-		private final RuleCall cParameterSetParameterSetUssdParserRuleCall_0_2_2_0 = (RuleCall)cParameterSetAssignment_0_2_2.eContents().get(0);
-		private final Group cGroup_0_3 = (Group)cAlternatives_0.eContents().get(3);
-		private final Assignment cNameAssignment_0_3_0 = (Assignment)cGroup_0_3.eContents().get(0);
-		private final Keyword cNameSMSKeyword_0_3_0_0 = (Keyword)cNameAssignment_0_3_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_3_1 = (Keyword)cGroup_0_3.eContents().get(1);
-		private final Assignment cParameterSetAssignment_0_3_2 = (Assignment)cGroup_0_3.eContents().get(2);
-		private final RuleCall cParameterSetParameterSetSmsParserRuleCall_0_3_2_0 = (RuleCall)cParameterSetAssignment_0_3_2.eContents().get(0);
-		private final Group cGroup_0_4 = (Group)cAlternatives_0.eContents().get(4);
-		private final Assignment cNameAssignment_0_4_0 = (Assignment)cGroup_0_4.eContents().get(0);
-		private final Keyword cNameDATAKeyword_0_4_0_0 = (Keyword)cNameAssignment_0_4_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_4_1 = (Keyword)cGroup_0_4.eContents().get(1);
-		private final Assignment cParameterSetAssignment_0_4_2 = (Assignment)cGroup_0_4.eContents().get(2);
-		private final RuleCall cParameterSetParameterSetDataParserRuleCall_0_4_2_0 = (RuleCall)cParameterSetAssignment_0_4_2.eContents().get(0);
-		private final Group cGroup_0_5 = (Group)cAlternatives_0.eContents().get(5);
-		private final Assignment cNameAssignment_0_5_0 = (Assignment)cGroup_0_5.eContents().get(0);
-		private final Keyword cNameMIXERKeyword_0_5_0_0 = (Keyword)cNameAssignment_0_5_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_5_1 = (Keyword)cGroup_0_5.eContents().get(1);
-		private final Assignment cParameterSetAssignment_0_5_2 = (Assignment)cGroup_0_5.eContents().get(2);
-		private final RuleCall cParameterSetParameterSetMixerParserRuleCall_0_5_2_0 = (RuleCall)cParameterSetAssignment_0_5_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cActionCodeAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cActionCodeACTIONCODEEnumRuleCall_0_0 = (RuleCall)cActionCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cParameterSetAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cParameterSetParameterParserRuleCall_1_1_0 = (RuleCall)cParameterSetAssignment_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//Action:
-		//	(name="CALL" "{" parameterSet=ParameterSetCall | name="ANSWER" "{" parameterSet=ParameterSetAnswer | name="USSD" "{"
-		//	parameterSet=ParameterSetUssd | name="SMS" "{" parameterSet=ParameterSetSms | name="DATA" "{"
-		//	parameterSet=ParameterSetData | name="MIXER" "{" parameterSet=ParameterSetMixer) "}";
+		//	actionCode=ACTIONCODE | "{" parameterSet+=Parameter "}";
 		public ParserRule getRule() { return rule; }
 
-		//(name="CALL" "{" parameterSet=ParameterSetCall | name="ANSWER" "{" parameterSet=ParameterSetAnswer | name="USSD" "{"
-		//parameterSet=ParameterSetUssd | name="SMS" "{" parameterSet=ParameterSetSms | name="DATA" "{"
-		//parameterSet=ParameterSetData | name="MIXER" "{" parameterSet=ParameterSetMixer) "}"
-		public Group getGroup() { return cGroup; }
-
-		//name="CALL" "{" parameterSet=ParameterSetCall | name="ANSWER" "{" parameterSet=ParameterSetAnswer | name="USSD" "{"
-		//parameterSet=ParameterSetUssd | name="SMS" "{" parameterSet=ParameterSetSms | name="DATA" "{"
-		//parameterSet=ParameterSetData | name="MIXER" "{" parameterSet=ParameterSetMixer
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
-
-		//name="CALL" "{" parameterSet=ParameterSetCall
-		public Group getGroup_0_0() { return cGroup_0_0; }
-
-		//name="CALL"
-		public Assignment getNameAssignment_0_0_0() { return cNameAssignment_0_0_0; }
-
-		//"CALL"
-		public Keyword getNameCALLKeyword_0_0_0_0() { return cNameCALLKeyword_0_0_0_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_0_1() { return cLeftCurlyBracketKeyword_0_0_1; }
-
-		//parameterSet=ParameterSetCall
-		public Assignment getParameterSetAssignment_0_0_2() { return cParameterSetAssignment_0_0_2; }
-
-		//ParameterSetCall
-		public RuleCall getParameterSetParameterSetCallParserRuleCall_0_0_2_0() { return cParameterSetParameterSetCallParserRuleCall_0_0_2_0; }
-
-		//name="ANSWER" "{" parameterSet=ParameterSetAnswer
-		public Group getGroup_0_1() { return cGroup_0_1; }
-
-		//name="ANSWER"
-		public Assignment getNameAssignment_0_1_0() { return cNameAssignment_0_1_0; }
-
-		//"ANSWER"
-		public Keyword getNameANSWERKeyword_0_1_0_0() { return cNameANSWERKeyword_0_1_0_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_1_1() { return cLeftCurlyBracketKeyword_0_1_1; }
-
-		//parameterSet=ParameterSetAnswer
-		public Assignment getParameterSetAssignment_0_1_2() { return cParameterSetAssignment_0_1_2; }
-
-		//ParameterSetAnswer
-		public RuleCall getParameterSetParameterSetAnswerParserRuleCall_0_1_2_0() { return cParameterSetParameterSetAnswerParserRuleCall_0_1_2_0; }
-
-		//name="USSD" "{" parameterSet=ParameterSetUssd
-		public Group getGroup_0_2() { return cGroup_0_2; }
-
-		//name="USSD"
-		public Assignment getNameAssignment_0_2_0() { return cNameAssignment_0_2_0; }
-
-		//"USSD"
-		public Keyword getNameUSSDKeyword_0_2_0_0() { return cNameUSSDKeyword_0_2_0_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_2_1() { return cLeftCurlyBracketKeyword_0_2_1; }
-
-		//parameterSet=ParameterSetUssd
-		public Assignment getParameterSetAssignment_0_2_2() { return cParameterSetAssignment_0_2_2; }
-
-		//ParameterSetUssd
-		public RuleCall getParameterSetParameterSetUssdParserRuleCall_0_2_2_0() { return cParameterSetParameterSetUssdParserRuleCall_0_2_2_0; }
-
-		//name="SMS" "{" parameterSet=ParameterSetSms
-		public Group getGroup_0_3() { return cGroup_0_3; }
-
-		//name="SMS"
-		public Assignment getNameAssignment_0_3_0() { return cNameAssignment_0_3_0; }
-
-		//"SMS"
-		public Keyword getNameSMSKeyword_0_3_0_0() { return cNameSMSKeyword_0_3_0_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_3_1() { return cLeftCurlyBracketKeyword_0_3_1; }
-
-		//parameterSet=ParameterSetSms
-		public Assignment getParameterSetAssignment_0_3_2() { return cParameterSetAssignment_0_3_2; }
-
-		//ParameterSetSms
-		public RuleCall getParameterSetParameterSetSmsParserRuleCall_0_3_2_0() { return cParameterSetParameterSetSmsParserRuleCall_0_3_2_0; }
-
-		//name="DATA" "{" parameterSet=ParameterSetData
-		public Group getGroup_0_4() { return cGroup_0_4; }
-
-		//name="DATA"
-		public Assignment getNameAssignment_0_4_0() { return cNameAssignment_0_4_0; }
-
-		//"DATA"
-		public Keyword getNameDATAKeyword_0_4_0_0() { return cNameDATAKeyword_0_4_0_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_4_1() { return cLeftCurlyBracketKeyword_0_4_1; }
-
-		//parameterSet=ParameterSetData
-		public Assignment getParameterSetAssignment_0_4_2() { return cParameterSetAssignment_0_4_2; }
-
-		//ParameterSetData
-		public RuleCall getParameterSetParameterSetDataParserRuleCall_0_4_2_0() { return cParameterSetParameterSetDataParserRuleCall_0_4_2_0; }
-
-		//name="MIXER" "{" parameterSet=ParameterSetMixer
-		public Group getGroup_0_5() { return cGroup_0_5; }
-
-		//name="MIXER"
-		public Assignment getNameAssignment_0_5_0() { return cNameAssignment_0_5_0; }
-
-		//"MIXER"
-		public Keyword getNameMIXERKeyword_0_5_0_0() { return cNameMIXERKeyword_0_5_0_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_5_1() { return cLeftCurlyBracketKeyword_0_5_1; }
-
-		//parameterSet=ParameterSetMixer
-		public Assignment getParameterSetAssignment_0_5_2() { return cParameterSetAssignment_0_5_2; }
-
-		//ParameterSetMixer
-		public RuleCall getParameterSetParameterSetMixerParserRuleCall_0_5_2_0() { return cParameterSetParameterSetMixerParserRuleCall_0_5_2_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_1() { return cRightCurlyBracketKeyword_1; }
-	}
-
-	public class ParameterSetCallElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSetCall");
-		private final Assignment cParametersAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cParametersParameterCallParserRuleCall_0 = (RuleCall)cParametersAssignment.eContents().get(0);
-		
-		//ParameterSetCall:
-		//	parameters+=ParameterCall;
-		public ParserRule getRule() { return rule; }
-
-		//parameters+=ParameterCall
-		public Assignment getParametersAssignment() { return cParametersAssignment; }
-
-		//ParameterCall
-		public RuleCall getParametersParameterCallParserRuleCall_0() { return cParametersParameterCallParserRuleCall_0; }
-	}
-
-	public class ParameterSetAnswerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSetAnswer");
-		private final Assignment cParametersAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cParametersParameterAnswerParserRuleCall_0 = (RuleCall)cParametersAssignment.eContents().get(0);
-		
-		//ParameterSetAnswer:
-		//	parameters+=ParameterAnswer;
-		public ParserRule getRule() { return rule; }
-
-		//parameters+=ParameterAnswer
-		public Assignment getParametersAssignment() { return cParametersAssignment; }
-
-		//ParameterAnswer
-		public RuleCall getParametersParameterAnswerParserRuleCall_0() { return cParametersParameterAnswerParserRuleCall_0; }
-	}
-
-	public class ParameterSetUssdElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSetUssd");
-		private final Assignment cParametersAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cParametersParameterUssdParserRuleCall_0 = (RuleCall)cParametersAssignment.eContents().get(0);
-		
-		//ParameterSetUssd:
-		//	parameters+=ParameterUssd;
-		public ParserRule getRule() { return rule; }
-
-		//parameters+=ParameterUssd
-		public Assignment getParametersAssignment() { return cParametersAssignment; }
-
-		//ParameterUssd
-		public RuleCall getParametersParameterUssdParserRuleCall_0() { return cParametersParameterUssdParserRuleCall_0; }
-	}
-
-	public class ParameterSetSmsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSetSms");
-		private final Assignment cParametersAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cParametersParameterSmsParserRuleCall_0 = (RuleCall)cParametersAssignment.eContents().get(0);
-		
-		//ParameterSetSms:
-		//	parameters+=ParameterSms;
-		public ParserRule getRule() { return rule; }
-
-		//parameters+=ParameterSms
-		public Assignment getParametersAssignment() { return cParametersAssignment; }
-
-		//ParameterSms
-		public RuleCall getParametersParameterSmsParserRuleCall_0() { return cParametersParameterSmsParserRuleCall_0; }
-	}
-
-	public class ParameterSetDataElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSetData");
-		private final Assignment cParametersAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cParametersParameterDataParserRuleCall_0 = (RuleCall)cParametersAssignment.eContents().get(0);
-		
-		//ParameterSetData:
-		//	parameters+=ParameterData;
-		public ParserRule getRule() { return rule; }
-
-		//parameters+=ParameterData
-		public Assignment getParametersAssignment() { return cParametersAssignment; }
-
-		//ParameterData
-		public RuleCall getParametersParameterDataParserRuleCall_0() { return cParametersParameterDataParserRuleCall_0; }
-	}
-
-	public class ParameterSetMixerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSetMixer");
-		private final Assignment cParametersAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cParametersParameterMixerParserRuleCall_0 = (RuleCall)cParametersAssignment.eContents().get(0);
-		
-		//ParameterSetMixer:
-		//	parameters+=ParameterMixer+;
-		public ParserRule getRule() { return rule; }
-
-		//parameters+=ParameterMixer+
-		public Assignment getParametersAssignment() { return cParametersAssignment; }
-
-		//ParameterMixer
-		public RuleCall getParametersParameterMixerParserRuleCall_0() { return cParametersParameterMixerParserRuleCall_0; }
-	}
-
-	public class ParameterCallElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterCall");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cFromKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cFromAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final CrossReference cFromUECrossReference_0_2_0 = (CrossReference)cFromAssignment_0_2.eContents().get(0);
-		private final RuleCall cFromUEIDTerminalRuleCall_0_2_0_1 = (RuleCall)cFromUECrossReference_0_2_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cToKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Keyword cColonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cToAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final CrossReference cToUECrossReference_1_2_0 = (CrossReference)cToAssignment_1_2.eContents().get(0);
-		private final RuleCall cToUEIDTerminalRuleCall_1_2_0_1 = (RuleCall)cToUECrossReference_1_2_0.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCallingTimeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cColonKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cCallingTimeAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cCallingTimeINTTerminalRuleCall_2_2_0 = (RuleCall)cCallingTimeAssignment_2_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cOffHookResponseKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Keyword cColonKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cOfhookResponseAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cOfhookResponseCALLRESPONSEEnumRuleCall_3_2_0 = (RuleCall)cOfhookResponseAssignment_3_2.eContents().get(0);
-		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
-		private final Keyword cResponseTimeKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
-		private final Keyword cColonKeyword_3_3_1 = (Keyword)cGroup_3_3.eContents().get(1);
-		private final Assignment cResponseTimeAssignment_3_3_2 = (Assignment)cGroup_3_3.eContents().get(2);
-		private final RuleCall cResponseTimeINTTerminalRuleCall_3_3_2_0 = (RuleCall)cResponseTimeAssignment_3_3_2.eContents().get(0);
-		
-		//ParameterCall:
-		//	("From" ":" from=[UE]) ("To" ":" to=[UE]) ("CallingTime" ":" callingTime=INT)? ("OffHookResponse" ":"
-		//	ofhookResponse=CALLRESPONSE ("ResponseTime" ":" responseTime=INT)?);
-		public ParserRule getRule() { return rule; }
-
-		//("From" ":" from=[UE]) ("To" ":" to=[UE]) ("CallingTime" ":" callingTime=INT)? ("OffHookResponse" ":"
-		//ofhookResponse=CALLRESPONSE ("ResponseTime" ":" responseTime=INT)?)
-		public Group getGroup() { return cGroup; }
-
-		//"From" ":" from=[UE]
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"From"
-		public Keyword getFromKeyword_0_0() { return cFromKeyword_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
-
-		//from=[UE]
-		public Assignment getFromAssignment_0_2() { return cFromAssignment_0_2; }
-
-		//[UE]
-		public CrossReference getFromUECrossReference_0_2_0() { return cFromUECrossReference_0_2_0; }
-
-		//ID
-		public RuleCall getFromUEIDTerminalRuleCall_0_2_0_1() { return cFromUEIDTerminalRuleCall_0_2_0_1; }
-
-		//"To" ":" to=[UE]
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"To"
-		public Keyword getToKeyword_1_0() { return cToKeyword_1_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_1() { return cColonKeyword_1_1; }
-
-		//to=[UE]
-		public Assignment getToAssignment_1_2() { return cToAssignment_1_2; }
-
-		//[UE]
-		public CrossReference getToUECrossReference_1_2_0() { return cToUECrossReference_1_2_0; }
-
-		//ID
-		public RuleCall getToUEIDTerminalRuleCall_1_2_0_1() { return cToUEIDTerminalRuleCall_1_2_0_1; }
-
-		//("CallingTime" ":" callingTime=INT)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"CallingTime"
-		public Keyword getCallingTimeKeyword_2_0() { return cCallingTimeKeyword_2_0; }
-
-		//":"
-		public Keyword getColonKeyword_2_1() { return cColonKeyword_2_1; }
-
-		//callingTime=INT
-		public Assignment getCallingTimeAssignment_2_2() { return cCallingTimeAssignment_2_2; }
-
-		//INT
-		public RuleCall getCallingTimeINTTerminalRuleCall_2_2_0() { return cCallingTimeINTTerminalRuleCall_2_2_0; }
-
-		//"OffHookResponse" ":" ofhookResponse=CALLRESPONSE ("ResponseTime" ":" responseTime=INT)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"OffHookResponse"
-		public Keyword getOffHookResponseKeyword_3_0() { return cOffHookResponseKeyword_3_0; }
-
-		//":"
-		public Keyword getColonKeyword_3_1() { return cColonKeyword_3_1; }
-
-		//ofhookResponse=CALLRESPONSE
-		public Assignment getOfhookResponseAssignment_3_2() { return cOfhookResponseAssignment_3_2; }
-
-		//CALLRESPONSE
-		public RuleCall getOfhookResponseCALLRESPONSEEnumRuleCall_3_2_0() { return cOfhookResponseCALLRESPONSEEnumRuleCall_3_2_0; }
-
-		//("ResponseTime" ":" responseTime=INT)?
-		public Group getGroup_3_3() { return cGroup_3_3; }
-
-		//"ResponseTime"
-		public Keyword getResponseTimeKeyword_3_3_0() { return cResponseTimeKeyword_3_3_0; }
-
-		//":"
-		public Keyword getColonKeyword_3_3_1() { return cColonKeyword_3_3_1; }
-
-		//responseTime=INT
-		public Assignment getResponseTimeAssignment_3_3_2() { return cResponseTimeAssignment_3_3_2; }
-
-		//INT
-		public RuleCall getResponseTimeINTTerminalRuleCall_3_3_2_0() { return cResponseTimeINTTerminalRuleCall_3_3_2_0; }
-	}
-
-	public class ParameterAnswerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterAnswer");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cFromKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cFromAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final CrossReference cFromUECrossReference_0_2_0 = (CrossReference)cFromAssignment_0_2.eContents().get(0);
-		private final RuleCall cFromUEIDTerminalRuleCall_0_2_0_1 = (RuleCall)cFromUECrossReference_0_2_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cListeningTimeKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Keyword cColonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cListeningTimeAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cListeningTimeINTTerminalRuleCall_1_2_0 = (RuleCall)cListeningTimeAssignment_1_2.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cAnswerTimeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cColonKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cAnswerTimeAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cAnswerTimeINTTerminalRuleCall_2_2_0 = (RuleCall)cAnswerTimeAssignment_2_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cResponseKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Keyword cColonKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cResponseAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cResponseANSWERRESPONSEEnumRuleCall_3_2_0 = (RuleCall)cResponseAssignment_3_2.eContents().get(0);
-		
-		//ParameterAnswer:
-		//	("From" ":" from=[UE]) ("ListeningTime" ":" listeningTime=INT) ("AnswerTime" ":" answerTime=INT)? ("Response" ":"
-		//	response=ANSWERRESPONSE)?;
-		public ParserRule getRule() { return rule; }
-
-		//("From" ":" from=[UE]) ("ListeningTime" ":" listeningTime=INT) ("AnswerTime" ":" answerTime=INT)? ("Response" ":"
-		//response=ANSWERRESPONSE)?
-		public Group getGroup() { return cGroup; }
-
-		//"From" ":" from=[UE]
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"From"
-		public Keyword getFromKeyword_0_0() { return cFromKeyword_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
-
-		//from=[UE]
-		public Assignment getFromAssignment_0_2() { return cFromAssignment_0_2; }
-
-		//[UE]
-		public CrossReference getFromUECrossReference_0_2_0() { return cFromUECrossReference_0_2_0; }
-
-		//ID
-		public RuleCall getFromUEIDTerminalRuleCall_0_2_0_1() { return cFromUEIDTerminalRuleCall_0_2_0_1; }
-
-		//"ListeningTime" ":" listeningTime=INT
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"ListeningTime"
-		public Keyword getListeningTimeKeyword_1_0() { return cListeningTimeKeyword_1_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_1() { return cColonKeyword_1_1; }
-
-		//listeningTime=INT
-		public Assignment getListeningTimeAssignment_1_2() { return cListeningTimeAssignment_1_2; }
-
-		//INT
-		public RuleCall getListeningTimeINTTerminalRuleCall_1_2_0() { return cListeningTimeINTTerminalRuleCall_1_2_0; }
-
-		//("AnswerTime" ":" answerTime=INT)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"AnswerTime"
-		public Keyword getAnswerTimeKeyword_2_0() { return cAnswerTimeKeyword_2_0; }
-
-		//":"
-		public Keyword getColonKeyword_2_1() { return cColonKeyword_2_1; }
-
-		//answerTime=INT
-		public Assignment getAnswerTimeAssignment_2_2() { return cAnswerTimeAssignment_2_2; }
-
-		//INT
-		public RuleCall getAnswerTimeINTTerminalRuleCall_2_2_0() { return cAnswerTimeINTTerminalRuleCall_2_2_0; }
-
-		//("Response" ":" response=ANSWERRESPONSE)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"Response"
-		public Keyword getResponseKeyword_3_0() { return cResponseKeyword_3_0; }
-
-		//":"
-		public Keyword getColonKeyword_3_1() { return cColonKeyword_3_1; }
-
-		//response=ANSWERRESPONSE
-		public Assignment getResponseAssignment_3_2() { return cResponseAssignment_3_2; }
-
-		//ANSWERRESPONSE
-		public RuleCall getResponseANSWERRESPONSEEnumRuleCall_3_2_0() { return cResponseANSWERRESPONSEEnumRuleCall_3_2_0; }
-	}
-
-	public class ParameterUssdElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterUssd");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cFromKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cFromAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final CrossReference cFromUECrossReference_0_2_0 = (CrossReference)cFromAssignment_0_2.eContents().get(0);
-		private final RuleCall cFromUEIDTerminalRuleCall_0_2_0_1 = (RuleCall)cFromUECrossReference_0_2_0.eContents().get(1);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
-		private final Keyword cUSSDCodeKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
-		private final Keyword cColonKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
-		private final Assignment cCfCodeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
-		private final RuleCall cCfCodeCALLFORWARDINGEnumRuleCall_1_0_2_0 = (RuleCall)cCfCodeAssignment_1_0_2.eContents().get(0);
-		private final Group cGroup_1_0_3 = (Group)cGroup_1_0.eContents().get(3);
-		private final Keyword cDestinationKeyword_1_0_3_0 = (Keyword)cGroup_1_0_3.eContents().get(0);
-		private final Keyword cColonKeyword_1_0_3_1 = (Keyword)cGroup_1_0_3.eContents().get(1);
-		private final Assignment cDestinationAssignment_1_0_3_2 = (Assignment)cGroup_1_0_3.eContents().get(2);
-		private final CrossReference cDestinationUECrossReference_1_0_3_2_0 = (CrossReference)cDestinationAssignment_1_0_3_2.eContents().get(0);
-		private final RuleCall cDestinationUEIDTerminalRuleCall_1_0_3_2_0_1 = (RuleCall)cDestinationUECrossReference_1_0_3_2_0.eContents().get(1);
-		private final Group cGroup_1_0_4 = (Group)cGroup_1_0.eContents().get(4);
-		private final Keyword cServiceDelayKeyword_1_0_4_0 = (Keyword)cGroup_1_0_4.eContents().get(0);
-		private final Keyword cColonKeyword_1_0_4_1 = (Keyword)cGroup_1_0_4.eContents().get(1);
-		private final Assignment cServiceDelayAssignment_1_0_4_2 = (Assignment)cGroup_1_0_4.eContents().get(2);
-		private final RuleCall cServiceDelayINTTerminalRuleCall_1_0_4_2_0 = (RuleCall)cServiceDelayAssignment_1_0_4_2.eContents().get(0);
-		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
-		private final Keyword cUSSDCodeKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Keyword cColonKeyword_1_1_1 = (Keyword)cGroup_1_1.eContents().get(1);
-		private final Assignment cBarringCodeAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
-		private final RuleCall cBarringCodeBARRINGEnumRuleCall_1_1_2_0 = (RuleCall)cBarringCodeAssignment_1_1_2.eContents().get(0);
-		private final Group cGroup_1_1_3 = (Group)cGroup_1_1.eContents().get(3);
-		private final Keyword cCodeKeyword_1_1_3_0 = (Keyword)cGroup_1_1_3.eContents().get(0);
-		private final Keyword cColonKeyword_1_1_3_1 = (Keyword)cGroup_1_1_3.eContents().get(1);
-		private final Assignment cCodeAssignment_1_1_3_2 = (Assignment)cGroup_1_1_3.eContents().get(2);
-		private final RuleCall cCodeINTTerminalRuleCall_1_1_3_2_0 = (RuleCall)cCodeAssignment_1_1_3_2.eContents().get(0);
-		private final Group cGroup_1_2 = (Group)cAlternatives_1.eContents().get(2);
-		private final Keyword cUSSDCodeKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Keyword cColonKeyword_1_2_1 = (Keyword)cGroup_1_2.eContents().get(1);
-		private final Assignment cLiCodeAssignment_1_2_2 = (Assignment)cGroup_1_2.eContents().get(2);
-		private final RuleCall cLiCodeLINEIDENTIFICATIONEnumRuleCall_1_2_2_0 = (RuleCall)cLiCodeAssignment_1_2_2.eContents().get(0);
-		private final Assignment cUssdregistrationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cUssdregistrationUSSDREGISTRATIONEnumRuleCall_2_0 = (RuleCall)cUssdregistrationAssignment_2.eContents().get(0);
-		
-		//ParameterUssd:
-		//	("From" ":" from=[UE]) ("USSDCode" ":" cfCode=CALLFORWARDING ("Destination" ":" destination=[UE])? ("ServiceDelay" ":"
-		//	serviceDelay=INT)? | "USSDCode" ":" barringCode=BARRING ("Code" ":" code=INT)? | "USSDCode" ":"
-		//	liCode=LINEIDENTIFICATION) ussdregistration=USSDREGISTRATION?;
-		public ParserRule getRule() { return rule; }
-
-		//("From" ":" from=[UE]) ("USSDCode" ":" cfCode=CALLFORWARDING ("Destination" ":" destination=[UE])? ("ServiceDelay" ":"
-		//serviceDelay=INT)? | "USSDCode" ":" barringCode=BARRING ("Code" ":" code=INT)? | "USSDCode" ":"
-		//liCode=LINEIDENTIFICATION) ussdregistration=USSDREGISTRATION?
-		public Group getGroup() { return cGroup; }
-
-		//"From" ":" from=[UE]
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"From"
-		public Keyword getFromKeyword_0_0() { return cFromKeyword_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
-
-		//from=[UE]
-		public Assignment getFromAssignment_0_2() { return cFromAssignment_0_2; }
-
-		//[UE]
-		public CrossReference getFromUECrossReference_0_2_0() { return cFromUECrossReference_0_2_0; }
-
-		//ID
-		public RuleCall getFromUEIDTerminalRuleCall_0_2_0_1() { return cFromUEIDTerminalRuleCall_0_2_0_1; }
-
-		//"USSDCode" ":" cfCode=CALLFORWARDING ("Destination" ":" destination=[UE])? ("ServiceDelay" ":" serviceDelay=INT)? |
-		//"USSDCode" ":" barringCode=BARRING ("Code" ":" code=INT)? | "USSDCode" ":" liCode=LINEIDENTIFICATION
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-
-		//"USSDCode" ":" cfCode=CALLFORWARDING ("Destination" ":" destination=[UE])? ("ServiceDelay" ":" serviceDelay=INT)?
-		public Group getGroup_1_0() { return cGroup_1_0; }
-
-		//"USSDCode"
-		public Keyword getUSSDCodeKeyword_1_0_0() { return cUSSDCodeKeyword_1_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_0_1() { return cColonKeyword_1_0_1; }
-
-		//cfCode=CALLFORWARDING
-		public Assignment getCfCodeAssignment_1_0_2() { return cCfCodeAssignment_1_0_2; }
-
-		//CALLFORWARDING
-		public RuleCall getCfCodeCALLFORWARDINGEnumRuleCall_1_0_2_0() { return cCfCodeCALLFORWARDINGEnumRuleCall_1_0_2_0; }
-
-		//("Destination" ":" destination=[UE])?
-		public Group getGroup_1_0_3() { return cGroup_1_0_3; }
-
-		//"Destination"
-		public Keyword getDestinationKeyword_1_0_3_0() { return cDestinationKeyword_1_0_3_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_0_3_1() { return cColonKeyword_1_0_3_1; }
-
-		//destination=[UE]
-		public Assignment getDestinationAssignment_1_0_3_2() { return cDestinationAssignment_1_0_3_2; }
-
-		//[UE]
-		public CrossReference getDestinationUECrossReference_1_0_3_2_0() { return cDestinationUECrossReference_1_0_3_2_0; }
-
-		//ID
-		public RuleCall getDestinationUEIDTerminalRuleCall_1_0_3_2_0_1() { return cDestinationUEIDTerminalRuleCall_1_0_3_2_0_1; }
-
-		//("ServiceDelay" ":" serviceDelay=INT)?
-		public Group getGroup_1_0_4() { return cGroup_1_0_4; }
-
-		//"ServiceDelay"
-		public Keyword getServiceDelayKeyword_1_0_4_0() { return cServiceDelayKeyword_1_0_4_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_0_4_1() { return cColonKeyword_1_0_4_1; }
-
-		//serviceDelay=INT
-		public Assignment getServiceDelayAssignment_1_0_4_2() { return cServiceDelayAssignment_1_0_4_2; }
-
-		//INT
-		public RuleCall getServiceDelayINTTerminalRuleCall_1_0_4_2_0() { return cServiceDelayINTTerminalRuleCall_1_0_4_2_0; }
-
-		//"USSDCode" ":" barringCode=BARRING ("Code" ":" code=INT)?
-		public Group getGroup_1_1() { return cGroup_1_1; }
-
-		//"USSDCode"
-		public Keyword getUSSDCodeKeyword_1_1_0() { return cUSSDCodeKeyword_1_1_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_1_1() { return cColonKeyword_1_1_1; }
-
-		//barringCode=BARRING
-		public Assignment getBarringCodeAssignment_1_1_2() { return cBarringCodeAssignment_1_1_2; }
-
-		//BARRING
-		public RuleCall getBarringCodeBARRINGEnumRuleCall_1_1_2_0() { return cBarringCodeBARRINGEnumRuleCall_1_1_2_0; }
-
-		//("Code" ":" code=INT)?
-		public Group getGroup_1_1_3() { return cGroup_1_1_3; }
-
-		//"Code"
-		public Keyword getCodeKeyword_1_1_3_0() { return cCodeKeyword_1_1_3_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_1_3_1() { return cColonKeyword_1_1_3_1; }
-
-		//code=INT
-		public Assignment getCodeAssignment_1_1_3_2() { return cCodeAssignment_1_1_3_2; }
-
-		//INT
-		public RuleCall getCodeINTTerminalRuleCall_1_1_3_2_0() { return cCodeINTTerminalRuleCall_1_1_3_2_0; }
-
-		//"USSDCode" ":" liCode=LINEIDENTIFICATION
-		public Group getGroup_1_2() { return cGroup_1_2; }
-
-		//"USSDCode"
-		public Keyword getUSSDCodeKeyword_1_2_0() { return cUSSDCodeKeyword_1_2_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_2_1() { return cColonKeyword_1_2_1; }
-
-		//liCode=LINEIDENTIFICATION
-		public Assignment getLiCodeAssignment_1_2_2() { return cLiCodeAssignment_1_2_2; }
-
-		//LINEIDENTIFICATION
-		public RuleCall getLiCodeLINEIDENTIFICATIONEnumRuleCall_1_2_2_0() { return cLiCodeLINEIDENTIFICATIONEnumRuleCall_1_2_2_0; }
-
-		//ussdregistration=USSDREGISTRATION?
-		public Assignment getUssdregistrationAssignment_2() { return cUssdregistrationAssignment_2; }
-
-		//USSDREGISTRATION
-		public RuleCall getUssdregistrationUSSDREGISTRATIONEnumRuleCall_2_0() { return cUssdregistrationUSSDREGISTRATIONEnumRuleCall_2_0; }
-	}
-
-	public class ParameterSmsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterSms");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cFromKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cFromAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final CrossReference cFromUECrossReference_0_2_0 = (CrossReference)cFromAssignment_0_2.eContents().get(0);
-		private final RuleCall cFromUEIDTerminalRuleCall_0_2_0_1 = (RuleCall)cFromUECrossReference_0_2_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cToKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Keyword cColonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cToAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final CrossReference cToUECrossReference_1_2_0 = (CrossReference)cToAssignment_1_2.eContents().get(0);
-		private final RuleCall cToUEIDTerminalRuleCall_1_2_0_1 = (RuleCall)cToUECrossReference_1_2_0.eContents().get(1);
-		private final Assignment cMessageAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMessageSTRINGTerminalRuleCall_2_0 = (RuleCall)cMessageAssignment_2.eContents().get(0);
-		
-		//ParameterSms:
-		//	("From" ":" from=[UE]) ("To" ":" to=[UE]) message=STRING;
-		public ParserRule getRule() { return rule; }
-
-		//("From" ":" from=[UE]) ("To" ":" to=[UE]) message=STRING
-		public Group getGroup() { return cGroup; }
-
-		//"From" ":" from=[UE]
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"From"
-		public Keyword getFromKeyword_0_0() { return cFromKeyword_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
-
-		//from=[UE]
-		public Assignment getFromAssignment_0_2() { return cFromAssignment_0_2; }
-
-		//[UE]
-		public CrossReference getFromUECrossReference_0_2_0() { return cFromUECrossReference_0_2_0; }
-
-		//ID
-		public RuleCall getFromUEIDTerminalRuleCall_0_2_0_1() { return cFromUEIDTerminalRuleCall_0_2_0_1; }
-
-		//"To" ":" to=[UE]
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"To"
-		public Keyword getToKeyword_1_0() { return cToKeyword_1_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_1() { return cColonKeyword_1_1; }
-
-		//to=[UE]
-		public Assignment getToAssignment_1_2() { return cToAssignment_1_2; }
-
-		//[UE]
-		public CrossReference getToUECrossReference_1_2_0() { return cToUECrossReference_1_2_0; }
-
-		//ID
-		public RuleCall getToUEIDTerminalRuleCall_1_2_0_1() { return cToUEIDTerminalRuleCall_1_2_0_1; }
-
-		//message=STRING
-		public Assignment getMessageAssignment_2() { return cMessageAssignment_2; }
-
-		//STRING
-		public RuleCall getMessageSTRINGTerminalRuleCall_2_0() { return cMessageSTRINGTerminalRuleCall_2_0; }
-	}
-
-	public class ParameterDataElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterData");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cFromKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cFromAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final CrossReference cFromUECrossReference_0_2_0 = (CrossReference)cFromAssignment_0_2.eContents().get(0);
-		private final RuleCall cFromUEIDTerminalRuleCall_0_2_0_1 = (RuleCall)cFromUECrossReference_0_2_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cUrlKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Keyword cColonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cUrlAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cUrlSTRINGTerminalRuleCall_1_2_0 = (RuleCall)cUrlAssignment_1_2.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cToKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cColonKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cToAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final CrossReference cToUECrossReference_2_2_0 = (CrossReference)cToAssignment_2_2.eContents().get(0);
-		private final RuleCall cToUEIDTerminalRuleCall_2_2_0_1 = (RuleCall)cToUECrossReference_2_2_0.eContents().get(1);
-		private final Keyword cDataKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Keyword cColonKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
-		private final Assignment cDataAssignment_2_5 = (Assignment)cGroup_2.eContents().get(5);
-		private final RuleCall cDataSTRINGTerminalRuleCall_2_5_0 = (RuleCall)cDataAssignment_2_5.eContents().get(0);
-		
-		//ParameterData:
-		//	("From" ":" from=[UE]) ("url" ":" url=STRING)? ("To" ":" to=[UE] "data" ":" data=STRING)?;
-		public ParserRule getRule() { return rule; }
-
-		//("From" ":" from=[UE]) ("url" ":" url=STRING)? ("To" ":" to=[UE] "data" ":" data=STRING)?
-		public Group getGroup() { return cGroup; }
-
-		//"From" ":" from=[UE]
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"From"
-		public Keyword getFromKeyword_0_0() { return cFromKeyword_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
-
-		//from=[UE]
-		public Assignment getFromAssignment_0_2() { return cFromAssignment_0_2; }
-
-		//[UE]
-		public CrossReference getFromUECrossReference_0_2_0() { return cFromUECrossReference_0_2_0; }
-
-		//ID
-		public RuleCall getFromUEIDTerminalRuleCall_0_2_0_1() { return cFromUEIDTerminalRuleCall_0_2_0_1; }
-
-		//("url" ":" url=STRING)?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"url"
-		public Keyword getUrlKeyword_1_0() { return cUrlKeyword_1_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_1() { return cColonKeyword_1_1; }
-
-		//url=STRING
-		public Assignment getUrlAssignment_1_2() { return cUrlAssignment_1_2; }
-
-		//STRING
-		public RuleCall getUrlSTRINGTerminalRuleCall_1_2_0() { return cUrlSTRINGTerminalRuleCall_1_2_0; }
-
-		//("To" ":" to=[UE] "data" ":" data=STRING)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"To"
-		public Keyword getToKeyword_2_0() { return cToKeyword_2_0; }
-
-		//":"
-		public Keyword getColonKeyword_2_1() { return cColonKeyword_2_1; }
-
-		//to=[UE]
-		public Assignment getToAssignment_2_2() { return cToAssignment_2_2; }
-
-		//[UE]
-		public CrossReference getToUECrossReference_2_2_0() { return cToUECrossReference_2_2_0; }
-
-		//ID
-		public RuleCall getToUEIDTerminalRuleCall_2_2_0_1() { return cToUEIDTerminalRuleCall_2_2_0_1; }
-
-		//"data"
-		public Keyword getDataKeyword_2_3() { return cDataKeyword_2_3; }
-
-		//":"
-		public Keyword getColonKeyword_2_4() { return cColonKeyword_2_4; }
-
-		//data=STRING
-		public Assignment getDataAssignment_2_5() { return cDataAssignment_2_5; }
-
-		//STRING
-		public RuleCall getDataSTRINGTerminalRuleCall_2_5_0() { return cDataSTRINGTerminalRuleCall_2_5_0; }
-	}
-
-	public class ParameterMixerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParameterMixer");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Assignment cMixerAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cMixerMIXEREnumRuleCall_0_0_0 = (RuleCall)cMixerAssignment_0_0.eContents().get(0);
-		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cValueAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final RuleCall cValueINTTerminalRuleCall_0_2_0 = (RuleCall)cValueAssignment_0_2.eContents().get(0);
-		private final Assignment cOptionAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cOptionMIXEROPTIONSEnumRuleCall_1_0 = (RuleCall)cOptionAssignment_1.eContents().get(0);
-		
-		//ParameterMixer:
-		//	mixer=MIXER ":" value=INT | option=MIXEROPTIONS;
-		public ParserRule getRule() { return rule; }
-
-		//mixer=MIXER ":" value=INT | option=MIXEROPTIONS
+		//actionCode=ACTIONCODE | "{" parameterSet+=Parameter "}"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//mixer=MIXER ":" value=INT
-		public Group getGroup_0() { return cGroup_0; }
+		//actionCode=ACTIONCODE
+		public Assignment getActionCodeAssignment_0() { return cActionCodeAssignment_0; }
 
-		//mixer=MIXER
-		public Assignment getMixerAssignment_0_0() { return cMixerAssignment_0_0; }
+		//ACTIONCODE
+		public RuleCall getActionCodeACTIONCODEEnumRuleCall_0_0() { return cActionCodeACTIONCODEEnumRuleCall_0_0; }
 
-		//MIXER
-		public RuleCall getMixerMIXEREnumRuleCall_0_0_0() { return cMixerMIXEREnumRuleCall_0_0_0; }
+		//"{" parameterSet+=Parameter "}"
+		public Group getGroup_1() { return cGroup_1; }
 
-		//":"
-		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1_0() { return cLeftCurlyBracketKeyword_1_0; }
+
+		//parameterSet+=Parameter
+		public Assignment getParameterSetAssignment_1_1() { return cParameterSetAssignment_1_1; }
+
+		//Parameter
+		public RuleCall getParameterSetParameterParserRuleCall_1_1_0() { return cParameterSetParameterParserRuleCall_1_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
+	}
+
+	public class ParameterElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Parameter");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNamePARAM_NAMEEnumRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeParamTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
+		
+		//// Superclass ParameterSet
+		////ParameterSet:
+		////	parameters+=(ParameterSetCall | ParameterSetAnswer | ParameterSetUssd | ParameterSetSms | ParameterSetData |
+		////	ParameterSetMixer);
+		////
+		////ParameterSetCall:
+		////	parameters+=ParameterCall+;
+		////
+		////ParameterSetAnswer:
+		////	parameters+=ParameterAnswer+;
+		////
+		////ParameterSetUssd:
+		////	parameters+=ParameterUssd+;
+		////
+		////ParameterSetSms:
+		////	parameters+=ParameterSms+;
+		////
+		////ParameterSetData:
+		////	parameters+=ParameterData+;
+		////
+		////ParameterSetMixer:
+		////	parameters+=ParameterMixer+;
+		//// Superclass Parameter
+		////Parameter:
+		////	ParameterCall | ParameterAnswer | ParameterUssd | ParameterSms | ParameterData | ParameterMixer;
+		//Parameter:
+		//	name=PARAM_NAME type=ParamType;
+		public ParserRule getRule() { return rule; }
+
+		//name=PARAM_NAME type=ParamType
+		public Group getGroup() { return cGroup; }
+
+		//name=PARAM_NAME
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//PARAM_NAME
+		public RuleCall getNamePARAM_NAMEEnumRuleCall_0_0() { return cNamePARAM_NAMEEnumRuleCall_0_0; }
+
+		//type=ParamType
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+
+		//ParamType
+		public RuleCall getTypeParamTypeParserRuleCall_1_0() { return cTypeParamTypeParserRuleCall_1_0; }
+	}
+
+	public class ParamTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParamType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cUeRefAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final CrossReference cUeRefUECrossReference_0_0 = (CrossReference)cUeRefAssignment_0.eContents().get(0);
+		private final RuleCall cUeRefUEIDTerminalRuleCall_0_0_1 = (RuleCall)cUeRefUECrossReference_0_0.eContents().get(1);
+		private final Assignment cValueAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cValueINTTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Assignment cResponseAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cResponseParamResponseTypeParserRuleCall_2_0 = (RuleCall)cResponseAssignment_2.eContents().get(0);
+		
+		//ParamType:
+		//	ueRef=[UE] | value=INT | response=ParamResponseType;
+		public ParserRule getRule() { return rule; }
+
+		//ueRef=[UE] | value=INT | response=ParamResponseType
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ueRef=[UE]
+		public Assignment getUeRefAssignment_0() { return cUeRefAssignment_0; }
+
+		//[UE]
+		public CrossReference getUeRefUECrossReference_0_0() { return cUeRefUECrossReference_0_0; }
+
+		//ID
+		public RuleCall getUeRefUEIDTerminalRuleCall_0_0_1() { return cUeRefUEIDTerminalRuleCall_0_0_1; }
 
 		//value=INT
-		public Assignment getValueAssignment_0_2() { return cValueAssignment_0_2; }
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 
 		//INT
-		public RuleCall getValueINTTerminalRuleCall_0_2_0() { return cValueINTTerminalRuleCall_0_2_0; }
+		public RuleCall getValueINTTerminalRuleCall_1_0() { return cValueINTTerminalRuleCall_1_0; }
 
-		//option=MIXEROPTIONS
-		public Assignment getOptionAssignment_1() { return cOptionAssignment_1; }
+		//response=ParamResponseType
+		public Assignment getResponseAssignment_2() { return cResponseAssignment_2; }
 
-		//MIXEROPTIONS
-		public RuleCall getOptionMIXEROPTIONSEnumRuleCall_1_0() { return cOptionMIXEROPTIONSEnumRuleCall_1_0; }
+		//ParamResponseType
+		public RuleCall getResponseParamResponseTypeParserRuleCall_2_0() { return cResponseParamResponseTypeParserRuleCall_2_0; }
+	}
+
+	public class ParamResponseTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ParamResponseType");
+		private final Assignment cParamResponseAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cParamResponsePARAM_RESPONSEEnumRuleCall_0 = (RuleCall)cParamResponseAssignment.eContents().get(0);
+		
+		//ParamResponseType:
+		//	paramResponse+=PARAM_RESPONSE+;
+		public ParserRule getRule() { return rule; }
+
+		//paramResponse+=PARAM_RESPONSE+
+		public Assignment getParamResponseAssignment() { return cParamResponseAssignment; }
+
+		//PARAM_RESPONSE
+		public RuleCall getParamResponsePARAM_RESPONSEEnumRuleCall_0() { return cParamResponsePARAM_RESPONSEEnumRuleCall_0; }
 	}
 
 	public class QUALIFIED_IDElements extends AbstractParserRuleElementFinder {
@@ -1161,112 +439,242 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	public class MIXEROPTIONSElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "MIXEROPTIONS");
-		private final EnumLiteralDeclaration cResetEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword cResetResetKeyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
-		
-		//enum MIXEROPTIONS:
-		//	reset="Reset";
-		public EnumRule getRule() { return rule; }
-
-		//reset="Reset"
-		public EnumLiteralDeclaration getResetEnumLiteralDeclaration() { return cResetEnumLiteralDeclaration; }
-
-		//"Reset"
-		public Keyword getResetResetKeyword_0() { return cResetResetKeyword_0; }
-	}
-
-	public class MIXERElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "MIXER");
+	public class PARAM_NAMEElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PARAM_NAME");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cP1EnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cP1P1Keyword_0_0 = (Keyword)cP1EnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cP2EnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cP2P2Keyword_1_0 = (Keyword)cP2EnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cP3EnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cP3P3Keyword_2_0 = (Keyword)cP3EnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cP4EnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cP4P4Keyword_3_0 = (Keyword)cP4EnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cP5EnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cP5P5Keyword_4_0 = (Keyword)cP5EnumLiteralDeclaration_4.eContents().get(0);
-		private final EnumLiteralDeclaration cP6EnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cP6P6Keyword_5_0 = (Keyword)cP6EnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cFromEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cFromFromKeyword_0_0 = (Keyword)cFromEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cToEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cToToKeyword_1_0 = (Keyword)cToEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cCallDurationEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cCallDurationCallingTimeKeyword_2_0 = (Keyword)cCallDurationEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cResponseTimeEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cResponseTimeResponseTimeKeyword_3_0 = (Keyword)cResponseTimeEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cListeningTimeEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cListeningTimeListeningTimeKeyword_4_0 = (Keyword)cListeningTimeEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cDataEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cDataDataKeyword_5_0 = (Keyword)cDataEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cMessageEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cMessageSMSKeyword_6_0 = (Keyword)cMessageEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cUssdCodeEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cUssdCodeUssdCodeKeyword_7_0 = (Keyword)cUssdCodeEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cServiceDelayEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cServiceDelayServiceDelayKeyword_8_0 = (Keyword)cServiceDelayEnumLiteralDeclaration_8.eContents().get(0);
 		
-		//enum MIXER:
-		//	p1="P1" | p2="P2" | p3 | p4 | p5 | p6;
+		//enum PARAM_NAME:
+		//	from="From" | to="To" | callDuration="CallingTime" | responseTime="ResponseTime" | listeningTime="ListeningTime" |
+		//	data="Data" | message="SMS" | ussdCode="UssdCode" | serviceDelay="ServiceDelay";
 		public EnumRule getRule() { return rule; }
 
-		//p1="P1" | p2="P2" | p3 | p4 | p5 | p6
+		//from="From" | to="To" | callDuration="CallingTime" | responseTime="ResponseTime" | listeningTime="ListeningTime" |
+		//data="Data" | message="SMS" | ussdCode="UssdCode" | serviceDelay="ServiceDelay"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//p1="P1"
-		public EnumLiteralDeclaration getP1EnumLiteralDeclaration_0() { return cP1EnumLiteralDeclaration_0; }
+		//from="From"
+		public EnumLiteralDeclaration getFromEnumLiteralDeclaration_0() { return cFromEnumLiteralDeclaration_0; }
 
-		//"P1"
-		public Keyword getP1P1Keyword_0_0() { return cP1P1Keyword_0_0; }
+		//"From"
+		public Keyword getFromFromKeyword_0_0() { return cFromFromKeyword_0_0; }
 
-		//p2="P2"
-		public EnumLiteralDeclaration getP2EnumLiteralDeclaration_1() { return cP2EnumLiteralDeclaration_1; }
+		//to="To"
+		public EnumLiteralDeclaration getToEnumLiteralDeclaration_1() { return cToEnumLiteralDeclaration_1; }
 
-		//"P2"
-		public Keyword getP2P2Keyword_1_0() { return cP2P2Keyword_1_0; }
+		//"To"
+		public Keyword getToToKeyword_1_0() { return cToToKeyword_1_0; }
 
-		//p3
-		public EnumLiteralDeclaration getP3EnumLiteralDeclaration_2() { return cP3EnumLiteralDeclaration_2; }
+		//callDuration="CallingTime"
+		public EnumLiteralDeclaration getCallDurationEnumLiteralDeclaration_2() { return cCallDurationEnumLiteralDeclaration_2; }
 
-		//"p3"
-		public Keyword getP3P3Keyword_2_0() { return cP3P3Keyword_2_0; }
+		//"CallingTime"
+		public Keyword getCallDurationCallingTimeKeyword_2_0() { return cCallDurationCallingTimeKeyword_2_0; }
 
-		//p4
-		public EnumLiteralDeclaration getP4EnumLiteralDeclaration_3() { return cP4EnumLiteralDeclaration_3; }
+		//responseTime="ResponseTime"
+		public EnumLiteralDeclaration getResponseTimeEnumLiteralDeclaration_3() { return cResponseTimeEnumLiteralDeclaration_3; }
 
-		//"p4"
-		public Keyword getP4P4Keyword_3_0() { return cP4P4Keyword_3_0; }
+		//"ResponseTime"
+		public Keyword getResponseTimeResponseTimeKeyword_3_0() { return cResponseTimeResponseTimeKeyword_3_0; }
 
-		//p5
-		public EnumLiteralDeclaration getP5EnumLiteralDeclaration_4() { return cP5EnumLiteralDeclaration_4; }
+		//listeningTime="ListeningTime"
+		public EnumLiteralDeclaration getListeningTimeEnumLiteralDeclaration_4() { return cListeningTimeEnumLiteralDeclaration_4; }
 
-		//"p5"
-		public Keyword getP5P5Keyword_4_0() { return cP5P5Keyword_4_0; }
+		//"ListeningTime"
+		public Keyword getListeningTimeListeningTimeKeyword_4_0() { return cListeningTimeListeningTimeKeyword_4_0; }
 
-		//p6
-		public EnumLiteralDeclaration getP6EnumLiteralDeclaration_5() { return cP6EnumLiteralDeclaration_5; }
+		//data="Data"
+		public EnumLiteralDeclaration getDataEnumLiteralDeclaration_5() { return cDataEnumLiteralDeclaration_5; }
 
-		//"p6"
-		public Keyword getP6P6Keyword_5_0() { return cP6P6Keyword_5_0; }
+		//"Data"
+		public Keyword getDataDataKeyword_5_0() { return cDataDataKeyword_5_0; }
+
+		//message="SMS"
+		public EnumLiteralDeclaration getMessageEnumLiteralDeclaration_6() { return cMessageEnumLiteralDeclaration_6; }
+
+		//"SMS"
+		public Keyword getMessageSMSKeyword_6_0() { return cMessageSMSKeyword_6_0; }
+
+		//ussdCode="UssdCode"
+		public EnumLiteralDeclaration getUssdCodeEnumLiteralDeclaration_7() { return cUssdCodeEnumLiteralDeclaration_7; }
+
+		//"UssdCode"
+		public Keyword getUssdCodeUssdCodeKeyword_7_0() { return cUssdCodeUssdCodeKeyword_7_0; }
+
+		//serviceDelay="ServiceDelay"
+		public EnumLiteralDeclaration getServiceDelayEnumLiteralDeclaration_8() { return cServiceDelayEnumLiteralDeclaration_8; }
+
+		//"ServiceDelay"
+		public Keyword getServiceDelayServiceDelayKeyword_8_0() { return cServiceDelayServiceDelayKeyword_8_0; }
 	}
 
-	public class USSDREGISTRATIONElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "USSDREGISTRATION");
+	public class PARAM_RESPONSEElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PARAM_RESPONSE");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cActivateEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cActivateActivateKeyword_0_0 = (Keyword)cActivateEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cDeactivateEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cDeactivateDeactivateKeyword_1_0 = (Keyword)cDeactivateEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cListiningEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cListiningListeningKeyword_0_0 = (Keyword)cListiningEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOffhookEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cOffhookOffHookKeyword_1_0 = (Keyword)cOffhookEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cHangupEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cHangupHangUpKeyword_2_0 = (Keyword)cHangupEnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum USSDREGISTRATION:
-		//	activate="Activate" | deactivate="Deactivate";
+		//enum PARAM_RESPONSE:
+		//	listining="Listening" | offhook="OffHook" | hangup="HangUp";
 		public EnumRule getRule() { return rule; }
 
-		//activate="Activate" | deactivate="Deactivate"
+		//listining="Listening" | offhook="OffHook" | hangup="HangUp"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//activate="Activate"
-		public EnumLiteralDeclaration getActivateEnumLiteralDeclaration_0() { return cActivateEnumLiteralDeclaration_0; }
+		//listining="Listening"
+		public EnumLiteralDeclaration getListiningEnumLiteralDeclaration_0() { return cListiningEnumLiteralDeclaration_0; }
 
-		//"Activate"
-		public Keyword getActivateActivateKeyword_0_0() { return cActivateActivateKeyword_0_0; }
+		//"Listening"
+		public Keyword getListiningListeningKeyword_0_0() { return cListiningListeningKeyword_0_0; }
 
-		//deactivate="Deactivate"
-		public EnumLiteralDeclaration getDeactivateEnumLiteralDeclaration_1() { return cDeactivateEnumLiteralDeclaration_1; }
+		//offhook="OffHook"
+		public EnumLiteralDeclaration getOffhookEnumLiteralDeclaration_1() { return cOffhookEnumLiteralDeclaration_1; }
 
-		//"Deactivate"
-		public Keyword getDeactivateDeactivateKeyword_1_0() { return cDeactivateDeactivateKeyword_1_0; }
+		//"OffHook"
+		public Keyword getOffhookOffHookKeyword_1_0() { return cOffhookOffHookKeyword_1_0; }
+
+		//hangup="HangUp"
+		public EnumLiteralDeclaration getHangupEnumLiteralDeclaration_2() { return cHangupEnumLiteralDeclaration_2; }
+
+		//"HangUp"
+		public Keyword getHangupHangUpKeyword_2_0() { return cHangupHangUpKeyword_2_0; }
 	}
 
-	public class CALLFORWARDINGElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "CALLFORWARDING");
+	public class ACTIONCODEElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ACTIONCODE");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cCallEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cCallCALLKeyword_0_0 = (Keyword)cCallEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cAnswerEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cAnswerANSWERKeyword_1_0 = (Keyword)cAnswerEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cUssdEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cUssdUSSDKeyword_2_0 = (Keyword)cUssdEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cSmsEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cSmsSMSKeyword_3_0 = (Keyword)cSmsEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cDataEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cDataDATAKeyword_4_0 = (Keyword)cDataEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cMixerEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cMixerMIXERKeyword_5_0 = (Keyword)cMixerEnumLiteralDeclaration_5.eContents().get(0);
+		
+		////
+		////ParameterCall returns Parameter:
+		////	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='CallingTime' ':' value=INT) | (name='Response' ':'
+		////	response=('Listening' | 'HangUp')) | (name='ResponseTime' ':' value=INT);
+		////
+		////ParameterAnswer returns Parameter:
+		////	(name='From' ':' ueRef=[UE]) | (name='ListeningTime' ':' value=INT) | (name='ResponseTime' ':' value=INT) |
+		////	(name='Response' ':' response=('Listening' | 'OffHook' | 'HangUp'));
+		////
+		////ParameterUssd:
+		////	(name='From' ':' ueRef=[UE]) | (name='UssdCode' ':' ussdCode=USSDCODES) | (name='Destination' ':' dest=[UE]) |
+		////	(name='ServiceDelay' ':' serviceDelay=INT) | (name='Code' ':' code=INT) | (name='Registration' ':'
+		////	registration=('Activate' | 'Deactivate'));
+		////
+		////ParameterSms:
+		////	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='Message' ':' message=STRING);
+		////
+		////ParameterData:
+		////	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='Url' ':' url=STRING) | (name='Data' ':'
+		////	value=STRING);
+		////
+		////ParameterMixer:
+		////	(name='P1' ':' value=INT) | (name='P2' ':' value=INT) | (name='P3' ':' value=INT) | (name='P4' ':' value=INT) |
+		////	(name='P5' ':' value=INT) | (name='P6' ':' value=INT) | (name='Option' ':' option='Reset');
+		//enum ACTIONCODE:
+		//	call="CALL" | answer="ANSWER" | ussd="USSD" | sms="SMS" | data="DATA" | mixer="MIXER";
+		public EnumRule getRule() { return rule; }
+
+		//call="CALL" | answer="ANSWER" | ussd="USSD" | sms="SMS" | data="DATA" | mixer="MIXER"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//call="CALL"
+		public EnumLiteralDeclaration getCallEnumLiteralDeclaration_0() { return cCallEnumLiteralDeclaration_0; }
+
+		//"CALL"
+		public Keyword getCallCALLKeyword_0_0() { return cCallCALLKeyword_0_0; }
+
+		//answer="ANSWER"
+		public EnumLiteralDeclaration getAnswerEnumLiteralDeclaration_1() { return cAnswerEnumLiteralDeclaration_1; }
+
+		//"ANSWER"
+		public Keyword getAnswerANSWERKeyword_1_0() { return cAnswerANSWERKeyword_1_0; }
+
+		//ussd="USSD"
+		public EnumLiteralDeclaration getUssdEnumLiteralDeclaration_2() { return cUssdEnumLiteralDeclaration_2; }
+
+		//"USSD"
+		public Keyword getUssdUSSDKeyword_2_0() { return cUssdUSSDKeyword_2_0; }
+
+		//sms="SMS"
+		public EnumLiteralDeclaration getSmsEnumLiteralDeclaration_3() { return cSmsEnumLiteralDeclaration_3; }
+
+		//"SMS"
+		public Keyword getSmsSMSKeyword_3_0() { return cSmsSMSKeyword_3_0; }
+
+		//data="DATA"
+		public EnumLiteralDeclaration getDataEnumLiteralDeclaration_4() { return cDataEnumLiteralDeclaration_4; }
+
+		//"DATA"
+		public Keyword getDataDATAKeyword_4_0() { return cDataDATAKeyword_4_0; }
+
+		//mixer="MIXER"
+		public EnumLiteralDeclaration getMixerEnumLiteralDeclaration_5() { return cMixerEnumLiteralDeclaration_5; }
+
+		//"MIXER"
+		public Keyword getMixerMIXERKeyword_5_0() { return cMixerMIXERKeyword_5_0; }
+	}
+
+	public class UEPARAMSElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "UEPARAMS");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cImeiEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cImeiIMEIKeyword_0_0 = (Keyword)cImeiEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cMsisdnEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cMsisdnMSISDNKeyword_1_0 = (Keyword)cMsisdnEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum UEPARAMS:
+		//	imei="IMEI" | msisdn="MSISDN";
+		public EnumRule getRule() { return rule; }
+
+		//imei="IMEI" | msisdn="MSISDN"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//imei="IMEI"
+		public EnumLiteralDeclaration getImeiEnumLiteralDeclaration_0() { return cImeiEnumLiteralDeclaration_0; }
+
+		//"IMEI"
+		public Keyword getImeiIMEIKeyword_0_0() { return cImeiIMEIKeyword_0_0; }
+
+		//msisdn="MSISDN"
+		public EnumLiteralDeclaration getMsisdnEnumLiteralDeclaration_1() { return cMsisdnEnumLiteralDeclaration_1; }
+
+		//"MSISDN"
+		public Keyword getMsisdnMSISDNKeyword_1_0() { return cMsisdnMSISDNKeyword_1_0; }
+	}
+
+	public class USSDCODESElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "USSDCODES");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cCfuEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cCfuCFUKeyword_0_0 = (Keyword)cCfuEnumLiteralDeclaration_0.eContents().get(0);
@@ -1278,12 +686,32 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCfnrCFNRKeyword_3_0 = (Keyword)cCfnrEnumLiteralDeclaration_3.eContents().get(0);
 		private final EnumLiteralDeclaration cAcdEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
 		private final Keyword cAcdACDKeyword_4_0 = (Keyword)cAcdEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cAllOutgoingCallsEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cAllOutgoingCallsAllOutgoingCallsKeyword_5_0 = (Keyword)cAllOutgoingCallsEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cAllIncommingCallsEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cAllIncommingCallsAllIncomingCallsKeyword_6_0 = (Keyword)cAllIncommingCallsEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cAllOutgoingCallsExHomeEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cAllOutgoingCallsExHomeAllOutgoingCallsExHomeKeyword_7_0 = (Keyword)cAllOutgoingCallsExHomeEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cAllIncommingCallsRoamingEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cAllIncommingCallsRoamingAllIncommingCallsRoamingKeyword_8_0 = (Keyword)cAllIncommingCallsRoamingEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cClipEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cClipCLIPKeyword_9_0 = (Keyword)cClipEnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cClirEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cClirCLIRKeyword_10_0 = (Keyword)cClirEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cColpEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cColpCOLPKeyword_11_0 = (Keyword)cColpEnumLiteralDeclaration_11.eContents().get(0);
+		private final EnumLiteralDeclaration cColrEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
+		private final Keyword cColrCOLRKeyword_12_0 = (Keyword)cColrEnumLiteralDeclaration_12.eContents().get(0);
 		
-		//enum CALLFORWARDING:
-		//	cfu="CFU" | cfb="CFB" | cfna="CFNA" | cfnr="CFNR" | acd="ACD";
+		//enum USSDCODES:
+		//	cfu="CFU" | cfb="CFB" | cfna="CFNA" | cfnr="CFNR" | acd="ACD" | allOutgoingCalls="AllOutgoingCalls" |
+		//	allIncommingCalls="AllIncomingCalls" | allOutgoingCallsExHome="AllOutgoingCallsExHome" |
+		//	allIncommingCallsRoaming="AllIncommingCallsRoaming" | clip="CLIP" | clir="CLIR" | colp="COLP" | colr="COLR";
 		public EnumRule getRule() { return rule; }
 
-		//cfu="CFU" | cfb="CFB" | cfna="CFNA" | cfnr="CFNR" | acd="ACD"
+		//cfu="CFU" | cfb="CFB" | cfna="CFNA" | cfnr="CFNR" | acd="ACD" | allOutgoingCalls="AllOutgoingCalls" |
+		//allIncommingCalls="AllIncomingCalls" | allOutgoingCallsExHome="AllOutgoingCallsExHome" |
+		//allIncommingCallsRoaming="AllIncommingCallsRoaming" | clip="CLIP" | clir="CLIR" | colp="COLP" | colr="COLR"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//cfu="CFU"
@@ -1315,188 +743,54 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"ACD"
 		public Keyword getAcdACDKeyword_4_0() { return cAcdACDKeyword_4_0; }
-	}
-
-	public class BARRINGElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BARRING");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cAllOutgoingCallsEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cAllOutgoingCallsAllOutgoingCallsKeyword_0_0 = (Keyword)cAllOutgoingCallsEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cAllIncommingCallsEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cAllIncommingCallsAllIncomingCallsKeyword_1_0 = (Keyword)cAllIncommingCallsEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cAllOutgoingCallsExHomeEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cAllOutgoingCallsExHomeAllOutgoingCallsExHomeKeyword_2_0 = (Keyword)cAllOutgoingCallsExHomeEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cAllIncommingCallsRoamingEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cAllIncommingCallsRoamingAllIncommingCallsRoamingKeyword_3_0 = (Keyword)cAllIncommingCallsRoamingEnumLiteralDeclaration_3.eContents().get(0);
-		
-		//enum BARRING:
-		//	allOutgoingCalls="AllOutgoingCalls" | allIncommingCalls="AllIncomingCalls" |
-		//	allOutgoingCallsExHome="AllOutgoingCallsExHome" | allIncommingCallsRoaming="AllIncommingCallsRoaming";
-		public EnumRule getRule() { return rule; }
-
-		//allOutgoingCalls="AllOutgoingCalls" | allIncommingCalls="AllIncomingCalls" |
-		//allOutgoingCallsExHome="AllOutgoingCallsExHome" | allIncommingCallsRoaming="AllIncommingCallsRoaming"
-		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//allOutgoingCalls="AllOutgoingCalls"
-		public EnumLiteralDeclaration getAllOutgoingCallsEnumLiteralDeclaration_0() { return cAllOutgoingCallsEnumLiteralDeclaration_0; }
+		public EnumLiteralDeclaration getAllOutgoingCallsEnumLiteralDeclaration_5() { return cAllOutgoingCallsEnumLiteralDeclaration_5; }
 
 		//"AllOutgoingCalls"
-		public Keyword getAllOutgoingCallsAllOutgoingCallsKeyword_0_0() { return cAllOutgoingCallsAllOutgoingCallsKeyword_0_0; }
+		public Keyword getAllOutgoingCallsAllOutgoingCallsKeyword_5_0() { return cAllOutgoingCallsAllOutgoingCallsKeyword_5_0; }
 
 		//allIncommingCalls="AllIncomingCalls"
-		public EnumLiteralDeclaration getAllIncommingCallsEnumLiteralDeclaration_1() { return cAllIncommingCallsEnumLiteralDeclaration_1; }
+		public EnumLiteralDeclaration getAllIncommingCallsEnumLiteralDeclaration_6() { return cAllIncommingCallsEnumLiteralDeclaration_6; }
 
 		//"AllIncomingCalls"
-		public Keyword getAllIncommingCallsAllIncomingCallsKeyword_1_0() { return cAllIncommingCallsAllIncomingCallsKeyword_1_0; }
+		public Keyword getAllIncommingCallsAllIncomingCallsKeyword_6_0() { return cAllIncommingCallsAllIncomingCallsKeyword_6_0; }
 
 		//allOutgoingCallsExHome="AllOutgoingCallsExHome"
-		public EnumLiteralDeclaration getAllOutgoingCallsExHomeEnumLiteralDeclaration_2() { return cAllOutgoingCallsExHomeEnumLiteralDeclaration_2; }
+		public EnumLiteralDeclaration getAllOutgoingCallsExHomeEnumLiteralDeclaration_7() { return cAllOutgoingCallsExHomeEnumLiteralDeclaration_7; }
 
 		//"AllOutgoingCallsExHome"
-		public Keyword getAllOutgoingCallsExHomeAllOutgoingCallsExHomeKeyword_2_0() { return cAllOutgoingCallsExHomeAllOutgoingCallsExHomeKeyword_2_0; }
+		public Keyword getAllOutgoingCallsExHomeAllOutgoingCallsExHomeKeyword_7_0() { return cAllOutgoingCallsExHomeAllOutgoingCallsExHomeKeyword_7_0; }
 
 		//allIncommingCallsRoaming="AllIncommingCallsRoaming"
-		public EnumLiteralDeclaration getAllIncommingCallsRoamingEnumLiteralDeclaration_3() { return cAllIncommingCallsRoamingEnumLiteralDeclaration_3; }
+		public EnumLiteralDeclaration getAllIncommingCallsRoamingEnumLiteralDeclaration_8() { return cAllIncommingCallsRoamingEnumLiteralDeclaration_8; }
 
 		//"AllIncommingCallsRoaming"
-		public Keyword getAllIncommingCallsRoamingAllIncommingCallsRoamingKeyword_3_0() { return cAllIncommingCallsRoamingAllIncommingCallsRoamingKeyword_3_0; }
-	}
-
-	public class LINEIDENTIFICATIONElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "LINEIDENTIFICATION");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cClipEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cClipCLIPKeyword_0_0 = (Keyword)cClipEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cClirEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cClirCLIRKeyword_1_0 = (Keyword)cClirEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cColpEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cColpCOLPKeyword_2_0 = (Keyword)cColpEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cColrEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cColrCOLRKeyword_3_0 = (Keyword)cColrEnumLiteralDeclaration_3.eContents().get(0);
-		
-		//enum LINEIDENTIFICATION:
-		//	clip="CLIP" | clir="CLIR" | colp="COLP" | colr="COLR";
-		public EnumRule getRule() { return rule; }
-
-		//clip="CLIP" | clir="CLIR" | colp="COLP" | colr="COLR"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Keyword getAllIncommingCallsRoamingAllIncommingCallsRoamingKeyword_8_0() { return cAllIncommingCallsRoamingAllIncommingCallsRoamingKeyword_8_0; }
 
 		//clip="CLIP"
-		public EnumLiteralDeclaration getClipEnumLiteralDeclaration_0() { return cClipEnumLiteralDeclaration_0; }
+		public EnumLiteralDeclaration getClipEnumLiteralDeclaration_9() { return cClipEnumLiteralDeclaration_9; }
 
 		//"CLIP"
-		public Keyword getClipCLIPKeyword_0_0() { return cClipCLIPKeyword_0_0; }
+		public Keyword getClipCLIPKeyword_9_0() { return cClipCLIPKeyword_9_0; }
 
 		//clir="CLIR"
-		public EnumLiteralDeclaration getClirEnumLiteralDeclaration_1() { return cClirEnumLiteralDeclaration_1; }
+		public EnumLiteralDeclaration getClirEnumLiteralDeclaration_10() { return cClirEnumLiteralDeclaration_10; }
 
 		//"CLIR"
-		public Keyword getClirCLIRKeyword_1_0() { return cClirCLIRKeyword_1_0; }
+		public Keyword getClirCLIRKeyword_10_0() { return cClirCLIRKeyword_10_0; }
 
 		//colp="COLP"
-		public EnumLiteralDeclaration getColpEnumLiteralDeclaration_2() { return cColpEnumLiteralDeclaration_2; }
+		public EnumLiteralDeclaration getColpEnumLiteralDeclaration_11() { return cColpEnumLiteralDeclaration_11; }
 
 		//"COLP"
-		public Keyword getColpCOLPKeyword_2_0() { return cColpCOLPKeyword_2_0; }
+		public Keyword getColpCOLPKeyword_11_0() { return cColpCOLPKeyword_11_0; }
 
 		//colr="COLR"
-		public EnumLiteralDeclaration getColrEnumLiteralDeclaration_3() { return cColrEnumLiteralDeclaration_3; }
+		public EnumLiteralDeclaration getColrEnumLiteralDeclaration_12() { return cColrEnumLiteralDeclaration_12; }
 
 		//"COLR"
-		public Keyword getColrCOLRKeyword_3_0() { return cColrCOLRKeyword_3_0; }
-	}
-
-	public class ANSWERRESPONSEElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ANSWERRESPONSE");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cListeningEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cListeningListeningKeyword_0_0 = (Keyword)cListeningEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cOffhookEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cOffhookOffHookKeyword_1_0 = (Keyword)cOffhookEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cHangupEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cHangupHangUpKeyword_2_0 = (Keyword)cHangupEnumLiteralDeclaration_2.eContents().get(0);
-		
-		//enum ANSWERRESPONSE:
-		//	listening="Listening" | offhook="OffHook" | hangup="HangUp";
-		public EnumRule getRule() { return rule; }
-
-		//listening="Listening" | offhook="OffHook" | hangup="HangUp"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//listening="Listening"
-		public EnumLiteralDeclaration getListeningEnumLiteralDeclaration_0() { return cListeningEnumLiteralDeclaration_0; }
-
-		//"Listening"
-		public Keyword getListeningListeningKeyword_0_0() { return cListeningListeningKeyword_0_0; }
-
-		//offhook="OffHook"
-		public EnumLiteralDeclaration getOffhookEnumLiteralDeclaration_1() { return cOffhookEnumLiteralDeclaration_1; }
-
-		//"OffHook"
-		public Keyword getOffhookOffHookKeyword_1_0() { return cOffhookOffHookKeyword_1_0; }
-
-		//hangup="HangUp"
-		public EnumLiteralDeclaration getHangupEnumLiteralDeclaration_2() { return cHangupEnumLiteralDeclaration_2; }
-
-		//"HangUp"
-		public Keyword getHangupHangUpKeyword_2_0() { return cHangupHangUpKeyword_2_0; }
-	}
-
-	public class CALLRESPONSEElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "CALLRESPONSE");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cListeningEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cListeningListeningKeyword_0_0 = (Keyword)cListeningEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cHangupEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cHangupHangUpKeyword_1_0 = (Keyword)cHangupEnumLiteralDeclaration_1.eContents().get(0);
-		
-		//enum CALLRESPONSE:
-		//	listening="Listening" | hangup="HangUp";
-		public EnumRule getRule() { return rule; }
-
-		//listening="Listening" | hangup="HangUp"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//listening="Listening"
-		public EnumLiteralDeclaration getListeningEnumLiteralDeclaration_0() { return cListeningEnumLiteralDeclaration_0; }
-
-		//"Listening"
-		public Keyword getListeningListeningKeyword_0_0() { return cListeningListeningKeyword_0_0; }
-
-		//hangup="HangUp"
-		public EnumLiteralDeclaration getHangupEnumLiteralDeclaration_1() { return cHangupEnumLiteralDeclaration_1; }
-
-		//"HangUp"
-		public Keyword getHangupHangUpKeyword_1_0() { return cHangupHangUpKeyword_1_0; }
-	}
-
-	public class UEPARAMSElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "UEPARAMS");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cImeiEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cImeiIMEIKeyword_0_0 = (Keyword)cImeiEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cMsisdnEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cMsisdnMSISDNKeyword_1_0 = (Keyword)cMsisdnEnumLiteralDeclaration_1.eContents().get(0);
-		
-		//enum UEPARAMS:
-		//	imei="IMEI" | msisdn="MSISDN";
-		public EnumRule getRule() { return rule; }
-
-		//imei="IMEI" | msisdn="MSISDN"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//imei="IMEI"
-		public EnumLiteralDeclaration getImeiEnumLiteralDeclaration_0() { return cImeiEnumLiteralDeclaration_0; }
-
-		//"IMEI"
-		public Keyword getImeiIMEIKeyword_0_0() { return cImeiIMEIKeyword_0_0; }
-
-		//msisdn="MSISDN"
-		public EnumLiteralDeclaration getMsisdnEnumLiteralDeclaration_1() { return cMsisdnEnumLiteralDeclaration_1; }
-
-		//"MSISDN"
-		public Keyword getMsisdnMSISDNKeyword_1_0() { return cMsisdnMSISDNKeyword_1_0; }
+		public Keyword getColrCOLRKeyword_12_0() { return cColrCOLRKeyword_12_0; }
 	}
 	
 	private DragonXElements pDragonX;
@@ -1507,27 +801,14 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 	private DescriptionObjectElements pDescriptionObject;
 	private ProcedureElements pProcedure;
 	private ActionElements pAction;
-	private ParameterSetCallElements pParameterSetCall;
-	private ParameterSetAnswerElements pParameterSetAnswer;
-	private ParameterSetUssdElements pParameterSetUssd;
-	private ParameterSetSmsElements pParameterSetSms;
-	private ParameterSetDataElements pParameterSetData;
-	private ParameterSetMixerElements pParameterSetMixer;
-	private ParameterCallElements pParameterCall;
-	private ParameterAnswerElements pParameterAnswer;
-	private ParameterUssdElements pParameterUssd;
-	private ParameterSmsElements pParameterSms;
-	private ParameterDataElements pParameterData;
-	private ParameterMixerElements pParameterMixer;
-	private MIXEROPTIONSElements unknownRuleMIXEROPTIONS;
-	private MIXERElements unknownRuleMIXER;
-	private USSDREGISTRATIONElements unknownRuleUSSDREGISTRATION;
-	private CALLFORWARDINGElements unknownRuleCALLFORWARDING;
-	private BARRINGElements unknownRuleBARRING;
-	private LINEIDENTIFICATIONElements unknownRuleLINEIDENTIFICATION;
-	private ANSWERRESPONSEElements unknownRuleANSWERRESPONSE;
-	private CALLRESPONSEElements unknownRuleCALLRESPONSE;
+	private ParameterElements pParameter;
+	private ParamTypeElements pParamType;
+	private ParamResponseTypeElements pParamResponseType;
+	private PARAM_NAMEElements unknownRulePARAM_NAME;
+	private PARAM_RESPONSEElements unknownRulePARAM_RESPONSE;
+	private ACTIONCODEElements unknownRuleACTIONCODE;
 	private UEPARAMSElements unknownRuleUEPARAMS;
+	private USSDCODESElements unknownRuleUSSDCODES;
 	private QUALIFIED_IDElements pQUALIFIED_ID;
 	
 	private final Grammar grammar;
@@ -1642,9 +923,7 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Action:
-	//	(name="CALL" "{" parameterSet=ParameterSetCall | name="ANSWER" "{" parameterSet=ParameterSetAnswer | name="USSD" "{"
-	//	parameterSet=ParameterSetUssd | name="SMS" "{" parameterSet=ParameterSetSms | name="DATA" "{"
-	//	parameterSet=ParameterSetData | name="MIXER" "{" parameterSet=ParameterSetMixer) "}";
+	//	actionCode=ACTIONCODE | "{" parameterSet+=Parameter "}";
 	public ActionElements getActionAccess() {
 		return (pAction != null) ? pAction : (pAction = new ActionElements());
 	}
@@ -1653,209 +932,114 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 		return getActionAccess().getRule();
 	}
 
-	//ParameterSetCall:
-	//	parameters+=ParameterCall;
-	public ParameterSetCallElements getParameterSetCallAccess() {
-		return (pParameterSetCall != null) ? pParameterSetCall : (pParameterSetCall = new ParameterSetCallElements());
+	//// Superclass ParameterSet
+	////ParameterSet:
+	////	parameters+=(ParameterSetCall | ParameterSetAnswer | ParameterSetUssd | ParameterSetSms | ParameterSetData |
+	////	ParameterSetMixer);
+	////
+	////ParameterSetCall:
+	////	parameters+=ParameterCall+;
+	////
+	////ParameterSetAnswer:
+	////	parameters+=ParameterAnswer+;
+	////
+	////ParameterSetUssd:
+	////	parameters+=ParameterUssd+;
+	////
+	////ParameterSetSms:
+	////	parameters+=ParameterSms+;
+	////
+	////ParameterSetData:
+	////	parameters+=ParameterData+;
+	////
+	////ParameterSetMixer:
+	////	parameters+=ParameterMixer+;
+	//// Superclass Parameter
+	////Parameter:
+	////	ParameterCall | ParameterAnswer | ParameterUssd | ParameterSms | ParameterData | ParameterMixer;
+	//Parameter:
+	//	name=PARAM_NAME type=ParamType;
+	public ParameterElements getParameterAccess() {
+		return (pParameter != null) ? pParameter : (pParameter = new ParameterElements());
 	}
 	
-	public ParserRule getParameterSetCallRule() {
-		return getParameterSetCallAccess().getRule();
+	public ParserRule getParameterRule() {
+		return getParameterAccess().getRule();
 	}
 
-	//ParameterSetAnswer:
-	//	parameters+=ParameterAnswer;
-	public ParameterSetAnswerElements getParameterSetAnswerAccess() {
-		return (pParameterSetAnswer != null) ? pParameterSetAnswer : (pParameterSetAnswer = new ParameterSetAnswerElements());
+	//ParamType:
+	//	ueRef=[UE] | value=INT | response=ParamResponseType;
+	public ParamTypeElements getParamTypeAccess() {
+		return (pParamType != null) ? pParamType : (pParamType = new ParamTypeElements());
 	}
 	
-	public ParserRule getParameterSetAnswerRule() {
-		return getParameterSetAnswerAccess().getRule();
+	public ParserRule getParamTypeRule() {
+		return getParamTypeAccess().getRule();
 	}
 
-	//ParameterSetUssd:
-	//	parameters+=ParameterUssd;
-	public ParameterSetUssdElements getParameterSetUssdAccess() {
-		return (pParameterSetUssd != null) ? pParameterSetUssd : (pParameterSetUssd = new ParameterSetUssdElements());
+	//ParamResponseType:
+	//	paramResponse+=PARAM_RESPONSE+;
+	public ParamResponseTypeElements getParamResponseTypeAccess() {
+		return (pParamResponseType != null) ? pParamResponseType : (pParamResponseType = new ParamResponseTypeElements());
 	}
 	
-	public ParserRule getParameterSetUssdRule() {
-		return getParameterSetUssdAccess().getRule();
+	public ParserRule getParamResponseTypeRule() {
+		return getParamResponseTypeAccess().getRule();
 	}
 
-	//ParameterSetSms:
-	//	parameters+=ParameterSms;
-	public ParameterSetSmsElements getParameterSetSmsAccess() {
-		return (pParameterSetSms != null) ? pParameterSetSms : (pParameterSetSms = new ParameterSetSmsElements());
+	//enum PARAM_NAME:
+	//	from="From" | to="To" | callDuration="CallingTime" | responseTime="ResponseTime" | listeningTime="ListeningTime" |
+	//	data="Data" | message="SMS" | ussdCode="UssdCode" | serviceDelay="ServiceDelay";
+	public PARAM_NAMEElements getPARAM_NAMEAccess() {
+		return (unknownRulePARAM_NAME != null) ? unknownRulePARAM_NAME : (unknownRulePARAM_NAME = new PARAM_NAMEElements());
 	}
 	
-	public ParserRule getParameterSetSmsRule() {
-		return getParameterSetSmsAccess().getRule();
+	public EnumRule getPARAM_NAMERule() {
+		return getPARAM_NAMEAccess().getRule();
 	}
 
-	//ParameterSetData:
-	//	parameters+=ParameterData;
-	public ParameterSetDataElements getParameterSetDataAccess() {
-		return (pParameterSetData != null) ? pParameterSetData : (pParameterSetData = new ParameterSetDataElements());
+	//enum PARAM_RESPONSE:
+	//	listining="Listening" | offhook="OffHook" | hangup="HangUp";
+	public PARAM_RESPONSEElements getPARAM_RESPONSEAccess() {
+		return (unknownRulePARAM_RESPONSE != null) ? unknownRulePARAM_RESPONSE : (unknownRulePARAM_RESPONSE = new PARAM_RESPONSEElements());
 	}
 	
-	public ParserRule getParameterSetDataRule() {
-		return getParameterSetDataAccess().getRule();
+	public EnumRule getPARAM_RESPONSERule() {
+		return getPARAM_RESPONSEAccess().getRule();
 	}
 
-	//ParameterSetMixer:
-	//	parameters+=ParameterMixer+;
-	public ParameterSetMixerElements getParameterSetMixerAccess() {
-		return (pParameterSetMixer != null) ? pParameterSetMixer : (pParameterSetMixer = new ParameterSetMixerElements());
+	////
+	////ParameterCall returns Parameter:
+	////	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='CallingTime' ':' value=INT) | (name='Response' ':'
+	////	response=('Listening' | 'HangUp')) | (name='ResponseTime' ':' value=INT);
+	////
+	////ParameterAnswer returns Parameter:
+	////	(name='From' ':' ueRef=[UE]) | (name='ListeningTime' ':' value=INT) | (name='ResponseTime' ':' value=INT) |
+	////	(name='Response' ':' response=('Listening' | 'OffHook' | 'HangUp'));
+	////
+	////ParameterUssd:
+	////	(name='From' ':' ueRef=[UE]) | (name='UssdCode' ':' ussdCode=USSDCODES) | (name='Destination' ':' dest=[UE]) |
+	////	(name='ServiceDelay' ':' serviceDelay=INT) | (name='Code' ':' code=INT) | (name='Registration' ':'
+	////	registration=('Activate' | 'Deactivate'));
+	////
+	////ParameterSms:
+	////	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='Message' ':' message=STRING);
+	////
+	////ParameterData:
+	////	(name='From' ':' ueRef=[UE]) | (name='To' ':' ueRef=[UE]) | (name='Url' ':' url=STRING) | (name='Data' ':'
+	////	value=STRING);
+	////
+	////ParameterMixer:
+	////	(name='P1' ':' value=INT) | (name='P2' ':' value=INT) | (name='P3' ':' value=INT) | (name='P4' ':' value=INT) |
+	////	(name='P5' ':' value=INT) | (name='P6' ':' value=INT) | (name='Option' ':' option='Reset');
+	//enum ACTIONCODE:
+	//	call="CALL" | answer="ANSWER" | ussd="USSD" | sms="SMS" | data="DATA" | mixer="MIXER";
+	public ACTIONCODEElements getACTIONCODEAccess() {
+		return (unknownRuleACTIONCODE != null) ? unknownRuleACTIONCODE : (unknownRuleACTIONCODE = new ACTIONCODEElements());
 	}
 	
-	public ParserRule getParameterSetMixerRule() {
-		return getParameterSetMixerAccess().getRule();
-	}
-
-	//ParameterCall:
-	//	("From" ":" from=[UE]) ("To" ":" to=[UE]) ("CallingTime" ":" callingTime=INT)? ("OffHookResponse" ":"
-	//	ofhookResponse=CALLRESPONSE ("ResponseTime" ":" responseTime=INT)?);
-	public ParameterCallElements getParameterCallAccess() {
-		return (pParameterCall != null) ? pParameterCall : (pParameterCall = new ParameterCallElements());
-	}
-	
-	public ParserRule getParameterCallRule() {
-		return getParameterCallAccess().getRule();
-	}
-
-	//ParameterAnswer:
-	//	("From" ":" from=[UE]) ("ListeningTime" ":" listeningTime=INT) ("AnswerTime" ":" answerTime=INT)? ("Response" ":"
-	//	response=ANSWERRESPONSE)?;
-	public ParameterAnswerElements getParameterAnswerAccess() {
-		return (pParameterAnswer != null) ? pParameterAnswer : (pParameterAnswer = new ParameterAnswerElements());
-	}
-	
-	public ParserRule getParameterAnswerRule() {
-		return getParameterAnswerAccess().getRule();
-	}
-
-	//ParameterUssd:
-	//	("From" ":" from=[UE]) ("USSDCode" ":" cfCode=CALLFORWARDING ("Destination" ":" destination=[UE])? ("ServiceDelay" ":"
-	//	serviceDelay=INT)? | "USSDCode" ":" barringCode=BARRING ("Code" ":" code=INT)? | "USSDCode" ":"
-	//	liCode=LINEIDENTIFICATION) ussdregistration=USSDREGISTRATION?;
-	public ParameterUssdElements getParameterUssdAccess() {
-		return (pParameterUssd != null) ? pParameterUssd : (pParameterUssd = new ParameterUssdElements());
-	}
-	
-	public ParserRule getParameterUssdRule() {
-		return getParameterUssdAccess().getRule();
-	}
-
-	//ParameterSms:
-	//	("From" ":" from=[UE]) ("To" ":" to=[UE]) message=STRING;
-	public ParameterSmsElements getParameterSmsAccess() {
-		return (pParameterSms != null) ? pParameterSms : (pParameterSms = new ParameterSmsElements());
-	}
-	
-	public ParserRule getParameterSmsRule() {
-		return getParameterSmsAccess().getRule();
-	}
-
-	//ParameterData:
-	//	("From" ":" from=[UE]) ("url" ":" url=STRING)? ("To" ":" to=[UE] "data" ":" data=STRING)?;
-	public ParameterDataElements getParameterDataAccess() {
-		return (pParameterData != null) ? pParameterData : (pParameterData = new ParameterDataElements());
-	}
-	
-	public ParserRule getParameterDataRule() {
-		return getParameterDataAccess().getRule();
-	}
-
-	//ParameterMixer:
-	//	mixer=MIXER ":" value=INT | option=MIXEROPTIONS;
-	public ParameterMixerElements getParameterMixerAccess() {
-		return (pParameterMixer != null) ? pParameterMixer : (pParameterMixer = new ParameterMixerElements());
-	}
-	
-	public ParserRule getParameterMixerRule() {
-		return getParameterMixerAccess().getRule();
-	}
-
-	//enum MIXEROPTIONS:
-	//	reset="Reset";
-	public MIXEROPTIONSElements getMIXEROPTIONSAccess() {
-		return (unknownRuleMIXEROPTIONS != null) ? unknownRuleMIXEROPTIONS : (unknownRuleMIXEROPTIONS = new MIXEROPTIONSElements());
-	}
-	
-	public EnumRule getMIXEROPTIONSRule() {
-		return getMIXEROPTIONSAccess().getRule();
-	}
-
-	//enum MIXER:
-	//	p1="P1" | p2="P2" | p3 | p4 | p5 | p6;
-	public MIXERElements getMIXERAccess() {
-		return (unknownRuleMIXER != null) ? unknownRuleMIXER : (unknownRuleMIXER = new MIXERElements());
-	}
-	
-	public EnumRule getMIXERRule() {
-		return getMIXERAccess().getRule();
-	}
-
-	//enum USSDREGISTRATION:
-	//	activate="Activate" | deactivate="Deactivate";
-	public USSDREGISTRATIONElements getUSSDREGISTRATIONAccess() {
-		return (unknownRuleUSSDREGISTRATION != null) ? unknownRuleUSSDREGISTRATION : (unknownRuleUSSDREGISTRATION = new USSDREGISTRATIONElements());
-	}
-	
-	public EnumRule getUSSDREGISTRATIONRule() {
-		return getUSSDREGISTRATIONAccess().getRule();
-	}
-
-	//enum CALLFORWARDING:
-	//	cfu="CFU" | cfb="CFB" | cfna="CFNA" | cfnr="CFNR" | acd="ACD";
-	public CALLFORWARDINGElements getCALLFORWARDINGAccess() {
-		return (unknownRuleCALLFORWARDING != null) ? unknownRuleCALLFORWARDING : (unknownRuleCALLFORWARDING = new CALLFORWARDINGElements());
-	}
-	
-	public EnumRule getCALLFORWARDINGRule() {
-		return getCALLFORWARDINGAccess().getRule();
-	}
-
-	//enum BARRING:
-	//	allOutgoingCalls="AllOutgoingCalls" | allIncommingCalls="AllIncomingCalls" |
-	//	allOutgoingCallsExHome="AllOutgoingCallsExHome" | allIncommingCallsRoaming="AllIncommingCallsRoaming";
-	public BARRINGElements getBARRINGAccess() {
-		return (unknownRuleBARRING != null) ? unknownRuleBARRING : (unknownRuleBARRING = new BARRINGElements());
-	}
-	
-	public EnumRule getBARRINGRule() {
-		return getBARRINGAccess().getRule();
-	}
-
-	//enum LINEIDENTIFICATION:
-	//	clip="CLIP" | clir="CLIR" | colp="COLP" | colr="COLR";
-	public LINEIDENTIFICATIONElements getLINEIDENTIFICATIONAccess() {
-		return (unknownRuleLINEIDENTIFICATION != null) ? unknownRuleLINEIDENTIFICATION : (unknownRuleLINEIDENTIFICATION = new LINEIDENTIFICATIONElements());
-	}
-	
-	public EnumRule getLINEIDENTIFICATIONRule() {
-		return getLINEIDENTIFICATIONAccess().getRule();
-	}
-
-	//enum ANSWERRESPONSE:
-	//	listening="Listening" | offhook="OffHook" | hangup="HangUp";
-	public ANSWERRESPONSEElements getANSWERRESPONSEAccess() {
-		return (unknownRuleANSWERRESPONSE != null) ? unknownRuleANSWERRESPONSE : (unknownRuleANSWERRESPONSE = new ANSWERRESPONSEElements());
-	}
-	
-	public EnumRule getANSWERRESPONSERule() {
-		return getANSWERRESPONSEAccess().getRule();
-	}
-
-	//enum CALLRESPONSE:
-	//	listening="Listening" | hangup="HangUp";
-	public CALLRESPONSEElements getCALLRESPONSEAccess() {
-		return (unknownRuleCALLRESPONSE != null) ? unknownRuleCALLRESPONSE : (unknownRuleCALLRESPONSE = new CALLRESPONSEElements());
-	}
-	
-	public EnumRule getCALLRESPONSERule() {
-		return getCALLRESPONSEAccess().getRule();
+	public EnumRule getACTIONCODERule() {
+		return getACTIONCODEAccess().getRule();
 	}
 
 	//enum UEPARAMS:
@@ -1866,6 +1050,18 @@ public class DragonXGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getUEPARAMSRule() {
 		return getUEPARAMSAccess().getRule();
+	}
+
+	//enum USSDCODES:
+	//	cfu="CFU" | cfb="CFB" | cfna="CFNA" | cfnr="CFNR" | acd="ACD" | allOutgoingCalls="AllOutgoingCalls" |
+	//	allIncommingCalls="AllIncomingCalls" | allOutgoingCallsExHome="AllOutgoingCallsExHome" |
+	//	allIncommingCallsRoaming="AllIncommingCallsRoaming" | clip="CLIP" | clir="CLIR" | colp="COLP" | colr="COLR";
+	public USSDCODESElements getUSSDCODESAccess() {
+		return (unknownRuleUSSDCODES != null) ? unknownRuleUSSDCODES : (unknownRuleUSSDCODES = new USSDCODESElements());
+	}
+	
+	public EnumRule getUSSDCODESRule() {
+		return getUSSDCODESAccess().getRule();
 	}
 
 	//QUALIFIED_ID:

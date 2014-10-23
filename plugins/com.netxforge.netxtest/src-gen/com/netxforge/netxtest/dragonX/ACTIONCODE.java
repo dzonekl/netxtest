@@ -10,175 +10,201 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>CALLFORWARDING</b></em>',
+ * A representation of the literals of the enumeration '<em><b>ACTIONCODE</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.netxforge.netxtest.dragonX.DragonXPackage#getCALLFORWARDING()
+ * @see com.netxforge.netxtest.dragonX.DragonXPackage#getACTIONCODE()
  * @model
  * @generated
  */
-public enum CALLFORWARDING implements Enumerator
+public enum ACTIONCODE implements Enumerator
 {
   /**
-   * The '<em><b>Cfu</b></em>' literal object.
+   * The '<em><b>Call</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CFU_VALUE
+   * @see #CALL_VALUE
    * @generated
    * @ordered
    */
-  CFU(0, "cfu", "CFU"),
+  CALL(0, "call", "CALL"),
 
   /**
-   * The '<em><b>Cfb</b></em>' literal object.
+   * The '<em><b>Answer</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CFB_VALUE
+   * @see #ANSWER_VALUE
    * @generated
    * @ordered
    */
-  CFB(1, "cfb", "CFB"),
+  ANSWER(1, "answer", "ANSWER"),
 
   /**
-   * The '<em><b>Cfna</b></em>' literal object.
+   * The '<em><b>Ussd</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CFNA_VALUE
+   * @see #USSD_VALUE
    * @generated
    * @ordered
    */
-  CFNA(2, "cfna", "CFNA"),
+  USSD(2, "ussd", "USSD"),
 
   /**
-   * The '<em><b>Cfnr</b></em>' literal object.
+   * The '<em><b>Sms</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #CFNR_VALUE
+   * @see #SMS_VALUE
    * @generated
    * @ordered
    */
-  CFNR(3, "cfnr", "CFNR"),
+  SMS(3, "sms", "SMS"),
 
   /**
-   * The '<em><b>Acd</b></em>' literal object.
+   * The '<em><b>Data</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ACD_VALUE
+   * @see #DATA_VALUE
    * @generated
    * @ordered
    */
-  ACD(4, "acd", "ACD");
+  DATA(4, "data", "DATA"),
 
   /**
-   * The '<em><b>Cfu</b></em>' literal value.
+   * The '<em><b>Mixer</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #MIXER_VALUE
+   * @generated
+   * @ordered
+   */
+  MIXER(5, "mixer", "MIXER");
+
+  /**
+   * The '<em><b>Call</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Cfu</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Call</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CFU
-   * @model name="cfu" literal="CFU"
+   * @see #CALL
+   * @model name="call" literal="CALL"
    * @generated
    * @ordered
    */
-  public static final int CFU_VALUE = 0;
+  public static final int CALL_VALUE = 0;
 
   /**
-   * The '<em><b>Cfb</b></em>' literal value.
+   * The '<em><b>Answer</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Cfb</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Answer</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CFB
-   * @model name="cfb" literal="CFB"
+   * @see #ANSWER
+   * @model name="answer" literal="ANSWER"
    * @generated
    * @ordered
    */
-  public static final int CFB_VALUE = 1;
+  public static final int ANSWER_VALUE = 1;
 
   /**
-   * The '<em><b>Cfna</b></em>' literal value.
+   * The '<em><b>Ussd</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Cfna</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Ussd</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CFNA
-   * @model name="cfna" literal="CFNA"
+   * @see #USSD
+   * @model name="ussd" literal="USSD"
    * @generated
    * @ordered
    */
-  public static final int CFNA_VALUE = 2;
+  public static final int USSD_VALUE = 2;
 
   /**
-   * The '<em><b>Cfnr</b></em>' literal value.
+   * The '<em><b>Sms</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Cfnr</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Sms</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #CFNR
-   * @model name="cfnr" literal="CFNR"
+   * @see #SMS
+   * @model name="sms" literal="SMS"
    * @generated
    * @ordered
    */
-  public static final int CFNR_VALUE = 3;
+  public static final int SMS_VALUE = 3;
 
   /**
-   * The '<em><b>Acd</b></em>' literal value.
+   * The '<em><b>Data</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Acd</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Data</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #ACD
-   * @model name="acd" literal="ACD"
+   * @see #DATA
+   * @model name="data" literal="DATA"
    * @generated
    * @ordered
    */
-  public static final int ACD_VALUE = 4;
+  public static final int DATA_VALUE = 4;
 
   /**
-   * An array of all the '<em><b>CALLFORWARDING</b></em>' enumerators.
+   * The '<em><b>Mixer</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Mixer</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #MIXER
+   * @model name="mixer" literal="MIXER"
+   * @generated
+   * @ordered
+   */
+  public static final int MIXER_VALUE = 5;
+
+  /**
+   * An array of all the '<em><b>ACTIONCODE</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final CALLFORWARDING[] VALUES_ARRAY =
-    new CALLFORWARDING[]
+  private static final ACTIONCODE[] VALUES_ARRAY =
+    new ACTIONCODE[]
     {
-      CFU,
-      CFB,
-      CFNA,
-      CFNR,
-      ACD,
+      CALL,
+      ANSWER,
+      USSD,
+      SMS,
+      DATA,
+      MIXER,
     };
 
   /**
-   * A public read-only list of all the '<em><b>CALLFORWARDING</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>ACTIONCODE</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<CALLFORWARDING> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<ACTIONCODE> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>CALLFORWARDING</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>ACTIONCODE</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static CALLFORWARDING get(String literal)
+  public static ACTIONCODE get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      CALLFORWARDING result = VALUES_ARRAY[i];
+      ACTIONCODE result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -188,16 +214,16 @@ public enum CALLFORWARDING implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>CALLFORWARDING</b></em>' literal with the specified name.
+   * Returns the '<em><b>ACTIONCODE</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static CALLFORWARDING getByName(String name)
+  public static ACTIONCODE getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      CALLFORWARDING result = VALUES_ARRAY[i];
+      ACTIONCODE result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -207,20 +233,21 @@ public enum CALLFORWARDING implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>CALLFORWARDING</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>ACTIONCODE</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static CALLFORWARDING get(int value)
+  public static ACTIONCODE get(int value)
   {
     switch (value)
     {
-      case CFU_VALUE: return CFU;
-      case CFB_VALUE: return CFB;
-      case CFNA_VALUE: return CFNA;
-      case CFNR_VALUE: return CFNR;
-      case ACD_VALUE: return ACD;
+      case CALL_VALUE: return CALL;
+      case ANSWER_VALUE: return ANSWER;
+      case USSD_VALUE: return USSD;
+      case SMS_VALUE: return SMS;
+      case DATA_VALUE: return DATA;
+      case MIXER_VALUE: return MIXER;
     }
     return null;
   }
@@ -252,7 +279,7 @@ public enum CALLFORWARDING implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private CALLFORWARDING(int value, String name, String literal)
+  private ACTIONCODE(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -301,4 +328,4 @@ public enum CALLFORWARDING implements Enumerator
     return literal;
   }
   
-} //CALLFORWARDING
+} //ACTIONCODE

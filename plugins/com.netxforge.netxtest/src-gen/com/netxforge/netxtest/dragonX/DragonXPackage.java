@@ -299,16 +299,16 @@ public interface DragonXPackage extends EPackage
   int ACTION = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Action Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION__NAME = 0;
+  int ACTION__ACTION_CODE = 0;
 
   /**
-   * The feature id for the '<em><b>Parameter Set</b></em>' containment reference.
+   * The feature id for the '<em><b>Parameter Set</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -326,502 +326,60 @@ public interface DragonXPackage extends EPackage
   int ACTION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetCallImpl <em>Parameter Set Call</em>}' class.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl <em>Parameter</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetCallImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetCall()
+   * @see com.netxforge.netxtest.dragonX.impl.ParameterImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER_SET_CALL = 7;
+  int PARAMETER = 7;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_SET_CALL__PARAMETERS = 0;
+  int PARAMETER__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Parameter Set Call</em>' class.
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_SET_CALL_FEATURE_COUNT = 1;
+  int PARAMETER__TYPE = 1;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetAnswerImpl <em>Parameter Set Answer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetAnswerImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetAnswer()
-   * @generated
-   */
-  int PARAMETER_SET_ANSWER = 8;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The number of structural features of the '<em>Parameter</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_SET_ANSWER__PARAMETERS = 0;
+  int PARAMETER_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>Parameter Set Answer</em>' class.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParamTypeImpl <em>Param Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.impl.ParamTypeImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParamType()
+   * @generated
+   */
+  int PARAM_TYPE = 8;
+
+  /**
+   * The feature id for the '<em><b>Ue Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_SET_ANSWER_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetUssdImpl <em>Parameter Set Ussd</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetUssdImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetUssd()
-   * @generated
-   */
-  int PARAMETER_SET_USSD = 9;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_USSD__PARAMETERS = 0;
-
-  /**
-   * The number of structural features of the '<em>Parameter Set Ussd</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_USSD_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetSmsImpl <em>Parameter Set Sms</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetSmsImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetSms()
-   * @generated
-   */
-  int PARAMETER_SET_SMS = 10;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_SMS__PARAMETERS = 0;
-
-  /**
-   * The number of structural features of the '<em>Parameter Set Sms</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_SMS_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetDataImpl <em>Parameter Set Data</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetDataImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetData()
-   * @generated
-   */
-  int PARAMETER_SET_DATA = 11;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_DATA__PARAMETERS = 0;
-
-  /**
-   * The number of structural features of the '<em>Parameter Set Data</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_DATA_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetMixerImpl <em>Parameter Set Mixer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSetMixerImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetMixer()
-   * @generated
-   */
-  int PARAMETER_SET_MIXER = 12;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_MIXER__PARAMETERS = 0;
-
-  /**
-   * The number of structural features of the '<em>Parameter Set Mixer</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SET_MIXER_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterCallImpl <em>Parameter Call</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterCallImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterCall()
-   * @generated
-   */
-  int PARAMETER_CALL = 13;
-
-  /**
-   * The feature id for the '<em><b>From</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_CALL__FROM = 0;
-
-  /**
-   * The feature id for the '<em><b>To</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_CALL__TO = 1;
-
-  /**
-   * The feature id for the '<em><b>Calling Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_CALL__CALLING_TIME = 2;
-
-  /**
-   * The feature id for the '<em><b>Ofhook Response</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_CALL__OFHOOK_RESPONSE = 3;
-
-  /**
-   * The feature id for the '<em><b>Response Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_CALL__RESPONSE_TIME = 4;
-
-  /**
-   * The number of structural features of the '<em>Parameter Call</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_CALL_FEATURE_COUNT = 5;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterAnswerImpl <em>Parameter Answer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterAnswerImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterAnswer()
-   * @generated
-   */
-  int PARAMETER_ANSWER = 14;
-
-  /**
-   * The feature id for the '<em><b>From</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_ANSWER__FROM = 0;
-
-  /**
-   * The feature id for the '<em><b>Listening Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_ANSWER__LISTENING_TIME = 1;
-
-  /**
-   * The feature id for the '<em><b>Answer Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_ANSWER__ANSWER_TIME = 2;
-
-  /**
-   * The feature id for the '<em><b>Response</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_ANSWER__RESPONSE = 3;
-
-  /**
-   * The number of structural features of the '<em>Parameter Answer</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_ANSWER_FEATURE_COUNT = 4;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterUssdImpl <em>Parameter Ussd</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterUssdImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterUssd()
-   * @generated
-   */
-  int PARAMETER_USSD = 15;
-
-  /**
-   * The feature id for the '<em><b>From</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__FROM = 0;
-
-  /**
-   * The feature id for the '<em><b>Cf Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__CF_CODE = 1;
-
-  /**
-   * The feature id for the '<em><b>Destination</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__DESTINATION = 2;
-
-  /**
-   * The feature id for the '<em><b>Service Delay</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__SERVICE_DELAY = 3;
-
-  /**
-   * The feature id for the '<em><b>Barring Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__BARRING_CODE = 4;
-
-  /**
-   * The feature id for the '<em><b>Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__CODE = 5;
-
-  /**
-   * The feature id for the '<em><b>Li Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__LI_CODE = 6;
-
-  /**
-   * The feature id for the '<em><b>Ussdregistration</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD__USSDREGISTRATION = 7;
-
-  /**
-   * The number of structural features of the '<em>Parameter Ussd</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_USSD_FEATURE_COUNT = 8;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSmsImpl <em>Parameter Sms</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterSmsImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSms()
-   * @generated
-   */
-  int PARAMETER_SMS = 16;
-
-  /**
-   * The feature id for the '<em><b>From</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SMS__FROM = 0;
-
-  /**
-   * The feature id for the '<em><b>To</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SMS__TO = 1;
-
-  /**
-   * The feature id for the '<em><b>Message</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SMS__MESSAGE = 2;
-
-  /**
-   * The number of structural features of the '<em>Parameter Sms</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_SMS_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterDataImpl <em>Parameter Data</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterDataImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterData()
-   * @generated
-   */
-  int PARAMETER_DATA = 17;
-
-  /**
-   * The feature id for the '<em><b>From</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_DATA__FROM = 0;
-
-  /**
-   * The feature id for the '<em><b>Url</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_DATA__URL = 1;
-
-  /**
-   * The feature id for the '<em><b>To</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_DATA__TO = 2;
-
-  /**
-   * The feature id for the '<em><b>Data</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_DATA__DATA = 3;
-
-  /**
-   * The number of structural features of the '<em>Parameter Data</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_DATA_FEATURE_COUNT = 4;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl <em>Parameter Mixer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterMixer()
-   * @generated
-   */
-  int PARAMETER_MIXER = 18;
-
-  /**
-   * The feature id for the '<em><b>Mixer</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_MIXER__MIXER = 0;
+  int PARAM_TYPE__UE_REF = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -830,105 +388,83 @@ public interface DragonXPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER_MIXER__VALUE = 1;
+  int PARAM_TYPE__VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Option</b></em>' attribute.
+   * The feature id for the '<em><b>Response</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_MIXER__OPTION = 2;
+  int PARAM_TYPE__RESPONSE = 2;
 
   /**
-   * The number of structural features of the '<em>Parameter Mixer</em>' class.
+   * The number of structural features of the '<em>Param Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_MIXER_FEATURE_COUNT = 3;
+  int PARAM_TYPE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.MIXEROPTIONS <em>MIXEROPTIONS</em>}' enum.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.impl.ParamResponseTypeImpl <em>Param Response Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.MIXEROPTIONS
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getMIXEROPTIONS()
+   * @see com.netxforge.netxtest.dragonX.impl.ParamResponseTypeImpl
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParamResponseType()
    * @generated
    */
-  int MIXEROPTIONS = 19;
+  int PARAM_RESPONSE_TYPE = 9;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.MIXER <em>MIXER</em>}' enum.
+   * The feature id for the '<em><b>Param Response</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.MIXER
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getMIXER()
    * @generated
+   * @ordered
    */
-  int MIXER = 20;
+  int PARAM_RESPONSE_TYPE__PARAM_RESPONSE = 0;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.USSDREGISTRATION <em>USSDREGISTRATION</em>}' enum.
+   * The number of structural features of the '<em>Param Response Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.USSDREGISTRATION
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUSSDREGISTRATION()
    * @generated
+   * @ordered
    */
-  int USSDREGISTRATION = 21;
+  int PARAM_RESPONSE_TYPE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.CALLFORWARDING <em>CALLFORWARDING</em>}' enum.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.PARAM_NAME <em>PARAM NAME</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.CALLFORWARDING
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getCALLFORWARDING()
+   * @see com.netxforge.netxtest.dragonX.PARAM_NAME
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getPARAM_NAME()
    * @generated
    */
-  int CALLFORWARDING = 22;
+  int PARAM_NAME = 10;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.BARRING <em>BARRING</em>}' enum.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.PARAM_RESPONSE <em>PARAM RESPONSE</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.BARRING
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getBARRING()
+   * @see com.netxforge.netxtest.dragonX.PARAM_RESPONSE
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getPARAM_RESPONSE()
    * @generated
    */
-  int BARRING = 23;
+  int PARAM_RESPONSE = 11;
 
   /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.LINEIDENTIFICATION <em>LINEIDENTIFICATION</em>}' enum.
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.ACTIONCODE <em>ACTIONCODE</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.LINEIDENTIFICATION
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getLINEIDENTIFICATION()
+   * @see com.netxforge.netxtest.dragonX.ACTIONCODE
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getACTIONCODE()
    * @generated
    */
-  int LINEIDENTIFICATION = 24;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.ANSWERRESPONSE <em>ANSWERRESPONSE</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.ANSWERRESPONSE
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getANSWERRESPONSE()
-   * @generated
-   */
-  int ANSWERRESPONSE = 25;
-
-  /**
-   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.CALLRESPONSE <em>CALLRESPONSE</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.netxforge.netxtest.dragonX.CALLRESPONSE
-   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getCALLRESPONSE()
-   * @generated
-   */
-  int CALLRESPONSE = 26;
+  int ACTIONCODE = 12;
 
   /**
    * The meta object id for the '{@link com.netxforge.netxtest.dragonX.UEPARAMS <em>UEPARAMS</em>}' enum.
@@ -938,7 +474,17 @@ public interface DragonXPackage extends EPackage
    * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUEPARAMS()
    * @generated
    */
-  int UEPARAMS = 27;
+  int UEPARAMS = 13;
+
+  /**
+   * The meta object id for the '{@link com.netxforge.netxtest.dragonX.USSDCODES <em>USSDCODES</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.netxforge.netxtest.dragonX.USSDCODES
+   * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUSSDCODES()
+   * @generated
+   */
+  int USSDCODES = 14;
 
 
   /**
@@ -1133,21 +679,21 @@ public interface DragonXPackage extends EPackage
   EClass getAction();
 
   /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.Action#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.Action#getActionCode <em>Action Code</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see com.netxforge.netxtest.dragonX.Action#getName()
+   * @return the meta object for the attribute '<em>Action Code</em>'.
+   * @see com.netxforge.netxtest.dragonX.Action#getActionCode()
    * @see #getAction()
    * @generated
    */
-  EAttribute getAction_Name();
+  EAttribute getAction_ActionCode();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.Action#getParameterSet <em>Parameter Set</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.Action#getParameterSet <em>Parameter Set</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter Set</em>'.
+   * @return the meta object for the containment reference list '<em>Parameter Set</em>'.
    * @see com.netxforge.netxtest.dragonX.Action#getParameterSet()
    * @see #getAction()
    * @generated
@@ -1155,567 +701,130 @@ public interface DragonXPackage extends EPackage
   EReference getAction_ParameterSet();
 
   /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSetCall <em>Parameter Set Call</em>}'.
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.Parameter <em>Parameter</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Set Call</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetCall
+   * @return the meta object for class '<em>Parameter</em>'.
+   * @see com.netxforge.netxtest.dragonX.Parameter
    * @generated
    */
-  EClass getParameterSetCall();
+  EClass getParameter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSetCall#getParameters <em>Parameters</em>}'.
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.Parameter#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetCall#getParameters()
-   * @see #getParameterSetCall()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.netxforge.netxtest.dragonX.Parameter#getName()
+   * @see #getParameter()
    * @generated
    */
-  EReference getParameterSetCall_Parameters();
+  EAttribute getParameter_Name();
 
   /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSetAnswer <em>Parameter Set Answer</em>}'.
+   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.Parameter#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Set Answer</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetAnswer
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see com.netxforge.netxtest.dragonX.Parameter#getType()
+   * @see #getParameter()
    * @generated
    */
-  EClass getParameterSetAnswer();
+  EReference getParameter_Type();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSetAnswer#getParameters <em>Parameters</em>}'.
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParamType <em>Param Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetAnswer#getParameters()
-   * @see #getParameterSetAnswer()
+   * @return the meta object for class '<em>Param Type</em>'.
+   * @see com.netxforge.netxtest.dragonX.ParamType
    * @generated
    */
-  EReference getParameterSetAnswer_Parameters();
+  EClass getParamType();
 
   /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSetUssd <em>Parameter Set Ussd</em>}'.
+   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParamType#getUeRef <em>Ue Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Set Ussd</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetUssd
+   * @return the meta object for the reference '<em>Ue Ref</em>'.
+   * @see com.netxforge.netxtest.dragonX.ParamType#getUeRef()
+   * @see #getParamType()
    * @generated
    */
-  EClass getParameterSetUssd();
+  EReference getParamType_UeRef();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSetUssd#getParameters <em>Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetUssd#getParameters()
-   * @see #getParameterSetUssd()
-   * @generated
-   */
-  EReference getParameterSetUssd_Parameters();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSetSms <em>Parameter Set Sms</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Set Sms</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetSms
-   * @generated
-   */
-  EClass getParameterSetSms();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSetSms#getParameters <em>Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetSms#getParameters()
-   * @see #getParameterSetSms()
-   * @generated
-   */
-  EReference getParameterSetSms_Parameters();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSetData <em>Parameter Set Data</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Set Data</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetData
-   * @generated
-   */
-  EClass getParameterSetData();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSetData#getParameters <em>Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetData#getParameters()
-   * @see #getParameterSetData()
-   * @generated
-   */
-  EReference getParameterSetData_Parameters();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSetMixer <em>Parameter Set Mixer</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Set Mixer</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetMixer
-   * @generated
-   */
-  EClass getParameterSetMixer();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.netxforge.netxtest.dragonX.ParameterSetMixer#getParameters <em>Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetMixer#getParameters()
-   * @see #getParameterSetMixer()
-   * @generated
-   */
-  EReference getParameterSetMixer_Parameters();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterCall <em>Parameter Call</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Call</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall
-   * @generated
-   */
-  EClass getParameterCall();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterCall#getFrom <em>From</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>From</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall#getFrom()
-   * @see #getParameterCall()
-   * @generated
-   */
-  EReference getParameterCall_From();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterCall#getTo <em>To</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>To</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall#getTo()
-   * @see #getParameterCall()
-   * @generated
-   */
-  EReference getParameterCall_To();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterCall#getCallingTime <em>Calling Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Calling Time</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall#getCallingTime()
-   * @see #getParameterCall()
-   * @generated
-   */
-  EAttribute getParameterCall_CallingTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterCall#getOfhookResponse <em>Ofhook Response</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Ofhook Response</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall#getOfhookResponse()
-   * @see #getParameterCall()
-   * @generated
-   */
-  EAttribute getParameterCall_OfhookResponse();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterCall#getResponseTime <em>Response Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Response Time</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall#getResponseTime()
-   * @see #getParameterCall()
-   * @generated
-   */
-  EAttribute getParameterCall_ResponseTime();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterAnswer <em>Parameter Answer</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Answer</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterAnswer
-   * @generated
-   */
-  EClass getParameterAnswer();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterAnswer#getFrom <em>From</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>From</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterAnswer#getFrom()
-   * @see #getParameterAnswer()
-   * @generated
-   */
-  EReference getParameterAnswer_From();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterAnswer#getListeningTime <em>Listening Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Listening Time</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterAnswer#getListeningTime()
-   * @see #getParameterAnswer()
-   * @generated
-   */
-  EAttribute getParameterAnswer_ListeningTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterAnswer#getAnswerTime <em>Answer Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Answer Time</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterAnswer#getAnswerTime()
-   * @see #getParameterAnswer()
-   * @generated
-   */
-  EAttribute getParameterAnswer_AnswerTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterAnswer#getResponse <em>Response</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Response</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterAnswer#getResponse()
-   * @see #getParameterAnswer()
-   * @generated
-   */
-  EAttribute getParameterAnswer_Response();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterUssd <em>Parameter Ussd</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Ussd</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd
-   * @generated
-   */
-  EClass getParameterUssd();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getFrom <em>From</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>From</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getFrom()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EReference getParameterUssd_From();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getCfCode <em>Cf Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Cf Code</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getCfCode()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EAttribute getParameterUssd_CfCode();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getDestination <em>Destination</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Destination</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getDestination()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EReference getParameterUssd_Destination();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getServiceDelay <em>Service Delay</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Service Delay</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getServiceDelay()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EAttribute getParameterUssd_ServiceDelay();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getBarringCode <em>Barring Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Barring Code</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getBarringCode()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EAttribute getParameterUssd_BarringCode();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getCode <em>Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Code</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getCode()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EAttribute getParameterUssd_Code();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getLiCode <em>Li Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Li Code</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getLiCode()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EAttribute getParameterUssd_LiCode();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterUssd#getUssdregistration <em>Ussdregistration</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Ussdregistration</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd#getUssdregistration()
-   * @see #getParameterUssd()
-   * @generated
-   */
-  EAttribute getParameterUssd_Ussdregistration();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterSms <em>Parameter Sms</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Sms</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSms
-   * @generated
-   */
-  EClass getParameterSms();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterSms#getFrom <em>From</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>From</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSms#getFrom()
-   * @see #getParameterSms()
-   * @generated
-   */
-  EReference getParameterSms_From();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterSms#getTo <em>To</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>To</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSms#getTo()
-   * @see #getParameterSms()
-   * @generated
-   */
-  EReference getParameterSms_To();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterSms#getMessage <em>Message</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Message</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterSms#getMessage()
-   * @see #getParameterSms()
-   * @generated
-   */
-  EAttribute getParameterSms_Message();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterData <em>Parameter Data</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Data</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterData
-   * @generated
-   */
-  EClass getParameterData();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterData#getFrom <em>From</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>From</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterData#getFrom()
-   * @see #getParameterData()
-   * @generated
-   */
-  EReference getParameterData_From();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterData#getUrl <em>Url</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Url</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterData#getUrl()
-   * @see #getParameterData()
-   * @generated
-   */
-  EAttribute getParameterData_Url();
-
-  /**
-   * Returns the meta object for the reference '{@link com.netxforge.netxtest.dragonX.ParameterData#getTo <em>To</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>To</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterData#getTo()
-   * @see #getParameterData()
-   * @generated
-   */
-  EReference getParameterData_To();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterData#getData <em>Data</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Data</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterData#getData()
-   * @see #getParameterData()
-   * @generated
-   */
-  EAttribute getParameterData_Data();
-
-  /**
-   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParameterMixer <em>Parameter Mixer</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter Mixer</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterMixer
-   * @generated
-   */
-  EClass getParameterMixer();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterMixer#getMixer <em>Mixer</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Mixer</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterMixer#getMixer()
-   * @see #getParameterMixer()
-   * @generated
-   */
-  EAttribute getParameterMixer_Mixer();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterMixer#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParamType#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterMixer#getValue()
-   * @see #getParameterMixer()
+   * @see com.netxforge.netxtest.dragonX.ParamType#getValue()
+   * @see #getParamType()
    * @generated
    */
-  EAttribute getParameterMixer_Value();
+  EAttribute getParamType_Value();
 
   /**
-   * Returns the meta object for the attribute '{@link com.netxforge.netxtest.dragonX.ParameterMixer#getOption <em>Option</em>}'.
+   * Returns the meta object for the containment reference '{@link com.netxforge.netxtest.dragonX.ParamType#getResponse <em>Response</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Option</em>'.
-   * @see com.netxforge.netxtest.dragonX.ParameterMixer#getOption()
-   * @see #getParameterMixer()
+   * @return the meta object for the containment reference '<em>Response</em>'.
+   * @see com.netxforge.netxtest.dragonX.ParamType#getResponse()
+   * @see #getParamType()
    * @generated
    */
-  EAttribute getParameterMixer_Option();
+  EReference getParamType_Response();
 
   /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.MIXEROPTIONS <em>MIXEROPTIONS</em>}'.
+   * Returns the meta object for class '{@link com.netxforge.netxtest.dragonX.ParamResponseType <em>Param Response Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>MIXEROPTIONS</em>'.
-   * @see com.netxforge.netxtest.dragonX.MIXEROPTIONS
+   * @return the meta object for class '<em>Param Response Type</em>'.
+   * @see com.netxforge.netxtest.dragonX.ParamResponseType
    * @generated
    */
-  EEnum getMIXEROPTIONS();
+  EClass getParamResponseType();
 
   /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.MIXER <em>MIXER</em>}'.
+   * Returns the meta object for the attribute list '{@link com.netxforge.netxtest.dragonX.ParamResponseType#getParamResponse <em>Param Response</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>MIXER</em>'.
-   * @see com.netxforge.netxtest.dragonX.MIXER
+   * @return the meta object for the attribute list '<em>Param Response</em>'.
+   * @see com.netxforge.netxtest.dragonX.ParamResponseType#getParamResponse()
+   * @see #getParamResponseType()
    * @generated
    */
-  EEnum getMIXER();
+  EAttribute getParamResponseType_ParamResponse();
 
   /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.USSDREGISTRATION <em>USSDREGISTRATION</em>}'.
+   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.PARAM_NAME <em>PARAM NAME</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>USSDREGISTRATION</em>'.
-   * @see com.netxforge.netxtest.dragonX.USSDREGISTRATION
+   * @return the meta object for enum '<em>PARAM NAME</em>'.
+   * @see com.netxforge.netxtest.dragonX.PARAM_NAME
    * @generated
    */
-  EEnum getUSSDREGISTRATION();
+  EEnum getPARAM_NAME();
 
   /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.CALLFORWARDING <em>CALLFORWARDING</em>}'.
+   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.PARAM_RESPONSE <em>PARAM RESPONSE</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>CALLFORWARDING</em>'.
-   * @see com.netxforge.netxtest.dragonX.CALLFORWARDING
+   * @return the meta object for enum '<em>PARAM RESPONSE</em>'.
+   * @see com.netxforge.netxtest.dragonX.PARAM_RESPONSE
    * @generated
    */
-  EEnum getCALLFORWARDING();
+  EEnum getPARAM_RESPONSE();
 
   /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.BARRING <em>BARRING</em>}'.
+   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.ACTIONCODE <em>ACTIONCODE</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>BARRING</em>'.
-   * @see com.netxforge.netxtest.dragonX.BARRING
+   * @return the meta object for enum '<em>ACTIONCODE</em>'.
+   * @see com.netxforge.netxtest.dragonX.ACTIONCODE
    * @generated
    */
-  EEnum getBARRING();
-
-  /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.LINEIDENTIFICATION <em>LINEIDENTIFICATION</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>LINEIDENTIFICATION</em>'.
-   * @see com.netxforge.netxtest.dragonX.LINEIDENTIFICATION
-   * @generated
-   */
-  EEnum getLINEIDENTIFICATION();
-
-  /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.ANSWERRESPONSE <em>ANSWERRESPONSE</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>ANSWERRESPONSE</em>'.
-   * @see com.netxforge.netxtest.dragonX.ANSWERRESPONSE
-   * @generated
-   */
-  EEnum getANSWERRESPONSE();
-
-  /**
-   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.CALLRESPONSE <em>CALLRESPONSE</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>CALLRESPONSE</em>'.
-   * @see com.netxforge.netxtest.dragonX.CALLRESPONSE
-   * @generated
-   */
-  EEnum getCALLRESPONSE();
+  EEnum getACTIONCODE();
 
   /**
    * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.UEPARAMS <em>UEPARAMS</em>}'.
@@ -1726,6 +835,16 @@ public interface DragonXPackage extends EPackage
    * @generated
    */
   EEnum getUEPARAMS();
+
+  /**
+   * Returns the meta object for enum '{@link com.netxforge.netxtest.dragonX.USSDCODES <em>USSDCODES</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>USSDCODES</em>'.
+   * @see com.netxforge.netxtest.dragonX.USSDCODES
+   * @generated
+   */
+  EEnum getUSSDCODES();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1909,15 +1028,15 @@ public interface DragonXPackage extends EPackage
     EClass ACTION = eINSTANCE.getAction();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Action Code</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
+    EAttribute ACTION__ACTION_CODE = eINSTANCE.getAction_ActionCode();
 
     /**
-     * The meta object literal for the '<em><b>Parameter Set</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Parameter Set</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1925,372 +1044,48 @@ public interface DragonXPackage extends EPackage
     EReference ACTION__PARAMETER_SET = eINSTANCE.getAction_ParameterSet();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetCallImpl <em>Parameter Set Call</em>}' class.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterImpl <em>Parameter</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetCallImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetCall()
+     * @see com.netxforge.netxtest.dragonX.impl.ParameterImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameter()
      * @generated
      */
-    EClass PARAMETER_SET_CALL = eINSTANCE.getParameterSetCall();
+    EClass PARAMETER = eINSTANCE.getParameter();
 
     /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PARAMETER_SET_CALL__PARAMETERS = eINSTANCE.getParameterSetCall_Parameters();
+    EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetAnswerImpl <em>Parameter Set Answer</em>}' class.
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetAnswerImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetAnswer()
      * @generated
      */
-    EClass PARAMETER_SET_ANSWER = eINSTANCE.getParameterSetAnswer();
+    EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
 
     /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParamTypeImpl <em>Param Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.impl.ParamTypeImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParamType()
      * @generated
      */
-    EReference PARAMETER_SET_ANSWER__PARAMETERS = eINSTANCE.getParameterSetAnswer_Parameters();
+    EClass PARAM_TYPE = eINSTANCE.getParamType();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetUssdImpl <em>Parameter Set Ussd</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetUssdImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetUssd()
-     * @generated
-     */
-    EClass PARAMETER_SET_USSD = eINSTANCE.getParameterSetUssd();
-
-    /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ue Ref</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PARAMETER_SET_USSD__PARAMETERS = eINSTANCE.getParameterSetUssd_Parameters();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetSmsImpl <em>Parameter Set Sms</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetSmsImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetSms()
-     * @generated
-     */
-    EClass PARAMETER_SET_SMS = eINSTANCE.getParameterSetSms();
-
-    /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_SET_SMS__PARAMETERS = eINSTANCE.getParameterSetSms_Parameters();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetDataImpl <em>Parameter Set Data</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetDataImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetData()
-     * @generated
-     */
-    EClass PARAMETER_SET_DATA = eINSTANCE.getParameterSetData();
-
-    /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_SET_DATA__PARAMETERS = eINSTANCE.getParameterSetData_Parameters();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSetMixerImpl <em>Parameter Set Mixer</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSetMixerImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSetMixer()
-     * @generated
-     */
-    EClass PARAMETER_SET_MIXER = eINSTANCE.getParameterSetMixer();
-
-    /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_SET_MIXER__PARAMETERS = eINSTANCE.getParameterSetMixer_Parameters();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterCallImpl <em>Parameter Call</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterCallImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterCall()
-     * @generated
-     */
-    EClass PARAMETER_CALL = eINSTANCE.getParameterCall();
-
-    /**
-     * The meta object literal for the '<em><b>From</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_CALL__FROM = eINSTANCE.getParameterCall_From();
-
-    /**
-     * The meta object literal for the '<em><b>To</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_CALL__TO = eINSTANCE.getParameterCall_To();
-
-    /**
-     * The meta object literal for the '<em><b>Calling Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_CALL__CALLING_TIME = eINSTANCE.getParameterCall_CallingTime();
-
-    /**
-     * The meta object literal for the '<em><b>Ofhook Response</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_CALL__OFHOOK_RESPONSE = eINSTANCE.getParameterCall_OfhookResponse();
-
-    /**
-     * The meta object literal for the '<em><b>Response Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_CALL__RESPONSE_TIME = eINSTANCE.getParameterCall_ResponseTime();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterAnswerImpl <em>Parameter Answer</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterAnswerImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterAnswer()
-     * @generated
-     */
-    EClass PARAMETER_ANSWER = eINSTANCE.getParameterAnswer();
-
-    /**
-     * The meta object literal for the '<em><b>From</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_ANSWER__FROM = eINSTANCE.getParameterAnswer_From();
-
-    /**
-     * The meta object literal for the '<em><b>Listening Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_ANSWER__LISTENING_TIME = eINSTANCE.getParameterAnswer_ListeningTime();
-
-    /**
-     * The meta object literal for the '<em><b>Answer Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_ANSWER__ANSWER_TIME = eINSTANCE.getParameterAnswer_AnswerTime();
-
-    /**
-     * The meta object literal for the '<em><b>Response</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_ANSWER__RESPONSE = eINSTANCE.getParameterAnswer_Response();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterUssdImpl <em>Parameter Ussd</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterUssdImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterUssd()
-     * @generated
-     */
-    EClass PARAMETER_USSD = eINSTANCE.getParameterUssd();
-
-    /**
-     * The meta object literal for the '<em><b>From</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_USSD__FROM = eINSTANCE.getParameterUssd_From();
-
-    /**
-     * The meta object literal for the '<em><b>Cf Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_USSD__CF_CODE = eINSTANCE.getParameterUssd_CfCode();
-
-    /**
-     * The meta object literal for the '<em><b>Destination</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_USSD__DESTINATION = eINSTANCE.getParameterUssd_Destination();
-
-    /**
-     * The meta object literal for the '<em><b>Service Delay</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_USSD__SERVICE_DELAY = eINSTANCE.getParameterUssd_ServiceDelay();
-
-    /**
-     * The meta object literal for the '<em><b>Barring Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_USSD__BARRING_CODE = eINSTANCE.getParameterUssd_BarringCode();
-
-    /**
-     * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_USSD__CODE = eINSTANCE.getParameterUssd_Code();
-
-    /**
-     * The meta object literal for the '<em><b>Li Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_USSD__LI_CODE = eINSTANCE.getParameterUssd_LiCode();
-
-    /**
-     * The meta object literal for the '<em><b>Ussdregistration</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_USSD__USSDREGISTRATION = eINSTANCE.getParameterUssd_Ussdregistration();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterSmsImpl <em>Parameter Sms</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterSmsImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterSms()
-     * @generated
-     */
-    EClass PARAMETER_SMS = eINSTANCE.getParameterSms();
-
-    /**
-     * The meta object literal for the '<em><b>From</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_SMS__FROM = eINSTANCE.getParameterSms_From();
-
-    /**
-     * The meta object literal for the '<em><b>To</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_SMS__TO = eINSTANCE.getParameterSms_To();
-
-    /**
-     * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_SMS__MESSAGE = eINSTANCE.getParameterSms_Message();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterDataImpl <em>Parameter Data</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterDataImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterData()
-     * @generated
-     */
-    EClass PARAMETER_DATA = eINSTANCE.getParameterData();
-
-    /**
-     * The meta object literal for the '<em><b>From</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_DATA__FROM = eINSTANCE.getParameterData_From();
-
-    /**
-     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_DATA__URL = eINSTANCE.getParameterData_Url();
-
-    /**
-     * The meta object literal for the '<em><b>To</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_DATA__TO = eINSTANCE.getParameterData_To();
-
-    /**
-     * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_DATA__DATA = eINSTANCE.getParameterData_Data();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl <em>Parameter Mixer</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.impl.ParameterMixerImpl
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParameterMixer()
-     * @generated
-     */
-    EClass PARAMETER_MIXER = eINSTANCE.getParameterMixer();
-
-    /**
-     * The meta object literal for the '<em><b>Mixer</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PARAMETER_MIXER__MIXER = eINSTANCE.getParameterMixer_Mixer();
+    EReference PARAM_TYPE__UE_REF = eINSTANCE.getParamType_UeRef();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2298,95 +1093,63 @@ public interface DragonXPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAMETER_MIXER__VALUE = eINSTANCE.getParameterMixer_Value();
+    EAttribute PARAM_TYPE__VALUE = eINSTANCE.getParamType_Value();
 
     /**
-     * The meta object literal for the '<em><b>Option</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Response</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAMETER_MIXER__OPTION = eINSTANCE.getParameterMixer_Option();
+    EReference PARAM_TYPE__RESPONSE = eINSTANCE.getParamType_Response();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.MIXEROPTIONS <em>MIXEROPTIONS</em>}' enum.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.impl.ParamResponseTypeImpl <em>Param Response Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.MIXEROPTIONS
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getMIXEROPTIONS()
+     * @see com.netxforge.netxtest.dragonX.impl.ParamResponseTypeImpl
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getParamResponseType()
      * @generated
      */
-    EEnum MIXEROPTIONS = eINSTANCE.getMIXEROPTIONS();
+    EClass PARAM_RESPONSE_TYPE = eINSTANCE.getParamResponseType();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.MIXER <em>MIXER</em>}' enum.
+     * The meta object literal for the '<em><b>Param Response</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.MIXER
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getMIXER()
      * @generated
      */
-    EEnum MIXER = eINSTANCE.getMIXER();
+    EAttribute PARAM_RESPONSE_TYPE__PARAM_RESPONSE = eINSTANCE.getParamResponseType_ParamResponse();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.USSDREGISTRATION <em>USSDREGISTRATION</em>}' enum.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.PARAM_NAME <em>PARAM NAME</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.USSDREGISTRATION
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUSSDREGISTRATION()
+     * @see com.netxforge.netxtest.dragonX.PARAM_NAME
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getPARAM_NAME()
      * @generated
      */
-    EEnum USSDREGISTRATION = eINSTANCE.getUSSDREGISTRATION();
+    EEnum PARAM_NAME = eINSTANCE.getPARAM_NAME();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.CALLFORWARDING <em>CALLFORWARDING</em>}' enum.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.PARAM_RESPONSE <em>PARAM RESPONSE</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.CALLFORWARDING
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getCALLFORWARDING()
+     * @see com.netxforge.netxtest.dragonX.PARAM_RESPONSE
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getPARAM_RESPONSE()
      * @generated
      */
-    EEnum CALLFORWARDING = eINSTANCE.getCALLFORWARDING();
+    EEnum PARAM_RESPONSE = eINSTANCE.getPARAM_RESPONSE();
 
     /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.BARRING <em>BARRING</em>}' enum.
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.ACTIONCODE <em>ACTIONCODE</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.BARRING
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getBARRING()
+     * @see com.netxforge.netxtest.dragonX.ACTIONCODE
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getACTIONCODE()
      * @generated
      */
-    EEnum BARRING = eINSTANCE.getBARRING();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.LINEIDENTIFICATION <em>LINEIDENTIFICATION</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.LINEIDENTIFICATION
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getLINEIDENTIFICATION()
-     * @generated
-     */
-    EEnum LINEIDENTIFICATION = eINSTANCE.getLINEIDENTIFICATION();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.ANSWERRESPONSE <em>ANSWERRESPONSE</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.ANSWERRESPONSE
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getANSWERRESPONSE()
-     * @generated
-     */
-    EEnum ANSWERRESPONSE = eINSTANCE.getANSWERRESPONSE();
-
-    /**
-     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.CALLRESPONSE <em>CALLRESPONSE</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.netxforge.netxtest.dragonX.CALLRESPONSE
-     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getCALLRESPONSE()
-     * @generated
-     */
-    EEnum CALLRESPONSE = eINSTANCE.getCALLRESPONSE();
+    EEnum ACTIONCODE = eINSTANCE.getACTIONCODE();
 
     /**
      * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.UEPARAMS <em>UEPARAMS</em>}' enum.
@@ -2397,6 +1160,16 @@ public interface DragonXPackage extends EPackage
      * @generated
      */
     EEnum UEPARAMS = eINSTANCE.getUEPARAMS();
+
+    /**
+     * The meta object literal for the '{@link com.netxforge.netxtest.dragonX.USSDCODES <em>USSDCODES</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.netxforge.netxtest.dragonX.USSDCODES
+     * @see com.netxforge.netxtest.dragonX.impl.DragonXPackageImpl#getUSSDCODES()
+     * @generated
+     */
+    EEnum USSDCODES = eINSTANCE.getUSSDCODES();
 
   }
 

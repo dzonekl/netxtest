@@ -110,64 +110,19 @@ public class DragonXAdapterFactory extends AdapterFactoryImpl
         return createActionAdapter();
       }
       @Override
-      public Adapter caseParameterSetCall(ParameterSetCall object)
+      public Adapter caseParameter(Parameter object)
       {
-        return createParameterSetCallAdapter();
+        return createParameterAdapter();
       }
       @Override
-      public Adapter caseParameterSetAnswer(ParameterSetAnswer object)
+      public Adapter caseParamType(ParamType object)
       {
-        return createParameterSetAnswerAdapter();
+        return createParamTypeAdapter();
       }
       @Override
-      public Adapter caseParameterSetUssd(ParameterSetUssd object)
+      public Adapter caseParamResponseType(ParamResponseType object)
       {
-        return createParameterSetUssdAdapter();
-      }
-      @Override
-      public Adapter caseParameterSetSms(ParameterSetSms object)
-      {
-        return createParameterSetSmsAdapter();
-      }
-      @Override
-      public Adapter caseParameterSetData(ParameterSetData object)
-      {
-        return createParameterSetDataAdapter();
-      }
-      @Override
-      public Adapter caseParameterSetMixer(ParameterSetMixer object)
-      {
-        return createParameterSetMixerAdapter();
-      }
-      @Override
-      public Adapter caseParameterCall(ParameterCall object)
-      {
-        return createParameterCallAdapter();
-      }
-      @Override
-      public Adapter caseParameterAnswer(ParameterAnswer object)
-      {
-        return createParameterAnswerAdapter();
-      }
-      @Override
-      public Adapter caseParameterUssd(ParameterUssd object)
-      {
-        return createParameterUssdAdapter();
-      }
-      @Override
-      public Adapter caseParameterSms(ParameterSms object)
-      {
-        return createParameterSmsAdapter();
-      }
-      @Override
-      public Adapter caseParameterData(ParameterData object)
-      {
-        return createParameterDataAdapter();
-      }
-      @Override
-      public Adapter caseParameterMixer(ParameterMixer object)
-      {
-        return createParameterMixerAdapter();
+        return createParamResponseTypeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -297,181 +252,46 @@ public class DragonXAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSetCall <em>Parameter Set Call</em>}'.
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.Parameter <em>Parameter</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetCall
+   * @see com.netxforge.netxtest.dragonX.Parameter
    * @generated
    */
-  public Adapter createParameterSetCallAdapter()
+  public Adapter createParameterAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSetAnswer <em>Parameter Set Answer</em>}'.
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParamType <em>Param Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetAnswer
+   * @see com.netxforge.netxtest.dragonX.ParamType
    * @generated
    */
-  public Adapter createParameterSetAnswerAdapter()
+  public Adapter createParamTypeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSetUssd <em>Parameter Set Ussd</em>}'.
+   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParamResponseType <em>Param Response Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetUssd
+   * @see com.netxforge.netxtest.dragonX.ParamResponseType
    * @generated
    */
-  public Adapter createParameterSetUssdAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSetSms <em>Parameter Set Sms</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetSms
-   * @generated
-   */
-  public Adapter createParameterSetSmsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSetData <em>Parameter Set Data</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetData
-   * @generated
-   */
-  public Adapter createParameterSetDataAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSetMixer <em>Parameter Set Mixer</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSetMixer
-   * @generated
-   */
-  public Adapter createParameterSetMixerAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterCall <em>Parameter Call</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterCall
-   * @generated
-   */
-  public Adapter createParameterCallAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterAnswer <em>Parameter Answer</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterAnswer
-   * @generated
-   */
-  public Adapter createParameterAnswerAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterUssd <em>Parameter Ussd</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterUssd
-   * @generated
-   */
-  public Adapter createParameterUssdAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterSms <em>Parameter Sms</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterSms
-   * @generated
-   */
-  public Adapter createParameterSmsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterData <em>Parameter Data</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterData
-   * @generated
-   */
-  public Adapter createParameterDataAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.netxforge.netxtest.dragonX.ParameterMixer <em>Parameter Mixer</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.netxforge.netxtest.dragonX.ParameterMixer
-   * @generated
-   */
-  public Adapter createParameterMixerAdapter()
+  public Adapter createParamResponseTypeAdapter()
   {
     return null;
   }
